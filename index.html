@@ -332,6 +332,7 @@
             background: rgba(255,255,255,0.05);
             border-radius: 12px;
             transition: all 0.3s ease;
+            cursor: pointer;
         }
         
         .student-card:hover {
@@ -351,6 +352,13 @@
             font-weight: bold;
             color: #000;
             flex-shrink: 0;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .student-points:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 15px rgba(78, 205, 196, 0.5);
         }
         
         .student-info {
@@ -514,6 +522,135 @@
             max-height: 90vh;
             overflow-y: auto;
             box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+        }
+        
+        .student-details-modal {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.7);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 70;
+            overflow-y: auto;
+            padding: 20px;
+        }
+        
+        .student-details-modal .modal-content {
+            background: #111;
+            padding: 30px;
+            border-radius: 12px;
+            width: 90%;
+            max-width: 600px;
+            max-height: 90vh;
+            overflow-y: auto;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+        }
+        
+        .student-header {
+            text-align: center;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        .student-header h2 {
+            font-size: 1.8rem;
+            margin-bottom: 5px;
+            color: #4ecdc4;
+        }
+        
+        .student-header .team {
+            font-size: 1.1rem;
+            color: #ffffff;
+        }
+        
+        .student-header .total-points {
+            font-size: 1.3rem;
+            font-weight: bold;
+            margin-top: 10px;
+            color: #4ecdc4;
+        }
+        
+        .programs-list {
+            margin-top: 20px;
+        }
+        
+        .program-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 15px;
+            margin-bottom: 8px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        
+        .program-item:hover {
+            background: rgba(255,255,255,0.08);
+        }
+        
+        .program-name {
+            flex: 1;
+            font-weight: 500;
+        }
+        
+        .program-details {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        .placement-badge {
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+        
+        .placement-1st {
+            background: linear-gradient(135deg, #FFD700, #FFA500);
+            color: #000;
+        }
+        
+        .placement-2nd {
+            background: linear-gradient(135deg, #C0C0C0, #A0A0A0);
+            color: #000;
+        }
+        
+        .placement-3rd {
+            background: linear-gradient(135deg, #CD7F32, #A56C27);
+            color: #000;
+        }
+        
+        .placement-grade {
+            background: linear-gradient(135deg, #4ecdc4, #45b7d1);
+            color: #000;
+        }
+        
+        .grade-badge {
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            background: rgba(255,255,255,0.1);
+        }
+        
+        .points-badge {
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            background: #4ecdc4;
+            color: #000;
+        }
+        
+        .no-placements {
+            text-align: center;
+            padding: 30px;
+            color: #888;
+            font-style: italic;
         }
         
         .placement-section {
@@ -714,6 +851,17 @@
                 flex-direction: column;
                 text-align: center;
             }
+            
+            .program-item {
+                flex-direction: column;
+                gap: 10px;
+                align-items: flex-start;
+            }
+            
+            .program-details {
+                width: 100%;
+                justify-content: space-between;
+            }
         }
     </style>
 </head>
@@ -724,7 +872,7 @@
 
 <div class="sidebar" id="sidebar">
     <div class="sidebar-header">
-        <h1 id="nav-home"><i class=""></i> Artelligence</h1>
+        <h1 id="nav-home"><i class="fas fa-palette"></i> Artelligence</h1>
     </div>
     
     <nav class="sidebar-nav">
@@ -1061,67 +1209,175 @@
             
             <div class="filters-container">
                 <div>
-                    <button class="filter-btn" data-team="all">All Teams</button>
+                    <button class="filter-btn active" data-team="all">All Teams</button>
                     <button class="filter-btn" data-team="NEONOVA">NEONOVA</button>
                     <button class="filter-btn" data-team="ASTRO-NOVA">ASTRO-NOVA</button>
-                    <button class="filter-btn active" data-team="LUMINOVA">LUMINOVA</button>
+                    <button class="filter-btn" data-team="LUMINOVA">LUMINOVA</button>
                 </div>
                 <input type="text" id="studentSearch" class="search-input" placeholder="Search student...">
             </div>
             
             <div class="students-grid" id="studentsGrid"><div class="student-card">
-                <div class="student-points">45</div>
+                <div class="student-points" onclick="showStudentDetails('Muhammed Adhnan M.S')">50</div>
+                <div class="student-info">
+                    <h4>Muhammed Adhnan M.S</h4>
+                    <div class="team">ASTRO-NOVA</div>
+                </div>
+            </div><div class="student-card">
+                <div class="student-points" onclick="showStudentDetails('Muhammed Basith')">45</div>
                 <div class="student-info">
                     <h4>Muhammed Basith</h4>
                     <div class="team">LUMINOVA</div>
                 </div>
             </div><div class="student-card">
-                <div class="student-points">42</div>
+                <div class="student-points" onclick="showStudentDetails('Muhammed Fazal')">42</div>
+                <div class="student-info">
+                    <h4>Muhammed Fazal</h4>
+                    <div class="team">NEONOVA</div>
+                </div>
+            </div><div class="student-card">
+                <div class="student-points" onclick="showStudentDetails('Muhammed Athif')">42</div>
                 <div class="student-info">
                     <h4>Muhammed Athif</h4>
                     <div class="team">LUMINOVA</div>
                 </div>
             </div><div class="student-card">
-                <div class="student-points">34</div>
+                <div class="student-points" onclick="showStudentDetails('Muhammed Faheem K.k')">38</div>
+                <div class="student-info">
+                    <h4>Muhammed Faheem K.k</h4>
+                    <div class="team">NEONOVA</div>
+                </div>
+            </div><div class="student-card">
+                <div class="student-points" onclick="showStudentDetails('Mohammed Midhlaj')">34</div>
                 <div class="student-info">
                     <h4>Mohammed Midhlaj</h4>
                     <div class="team">LUMINOVA</div>
                 </div>
             </div><div class="student-card">
-                <div class="student-points">12</div>
+                <div class="student-points" onclick="showStudentDetails('Muhammed Alim Zayyan')">23</div>
+                <div class="student-info">
+                    <h4>Muhammed Alim Zayyan</h4>
+                    <div class="team">ASTRO-NOVA</div>
+                </div>
+            </div><div class="student-card">
+                <div class="student-points" onclick="showStudentDetails('Muhammed Faheem K.m')">20</div>
+                <div class="student-info">
+                    <h4>Muhammed Faheem K.m</h4>
+                    <div class="team">NEONOVA</div>
+                </div>
+            </div><div class="student-card">
+                <div class="student-points" onclick="showStudentDetails('Muhammed Haseeb')">19</div>
+                <div class="student-info">
+                    <h4>Muhammed Haseeb</h4>
+                    <div class="team">ASTRO-NOVA</div>
+                </div>
+            </div><div class="student-card">
+                <div class="student-points" onclick="showStudentDetails('Muhammed Aman')">16</div>
+                <div class="student-info">
+                    <h4>Muhammed Aman</h4>
+                    <div class="team">NEONOVA</div>
+                </div>
+            </div><div class="student-card">
+                <div class="student-points" onclick="showStudentDetails('Adnan K.p')">16</div>
+                <div class="student-info">
+                    <h4>Adnan K.p</h4>
+                    <div class="team">ASTRO-NOVA</div>
+                </div>
+            </div><div class="student-card">
+                <div class="student-points" onclick="showStudentDetails('Muhammed Aslam')">15</div>
+                <div class="student-info">
+                    <h4>Muhammed Aslam</h4>
+                    <div class="team">NEONOVA</div>
+                </div>
+            </div><div class="student-card">
+                <div class="student-points" onclick="showStudentDetails('Mohammed P.M')">12</div>
                 <div class="student-info">
                     <h4>Mohammed P.M</h4>
                     <div class="team">LUMINOVA</div>
                 </div>
             </div><div class="student-card">
-                <div class="student-points">11</div>
+                <div class="student-points" onclick="showStudentDetails('Muhammed Sinan P.a')">11</div>
                 <div class="student-info">
                     <h4>Muhammed Sinan P.a</h4>
                     <div class="team">LUMINOVA</div>
                 </div>
             </div><div class="student-card">
-                <div class="student-points">09</div>
+                <div class="student-points" onclick="showStudentDetails('Jawhar Sidheeque')">10</div>
+                <div class="student-info">
+                    <h4>Jawhar Sidheeque</h4>
+                    <div class="team">ASTRO-NOVA</div>
+                </div>
+            </div><div class="student-card">
+                <div class="student-points" onclick="showStudentDetails('Muhammed Nihal')">09</div>
                 <div class="student-info">
                     <h4>Muhammed Nihal</h4>
                     <div class="team">LUMINOVA</div>
                 </div>
             </div><div class="student-card">
-                <div class="student-points">08</div>
+                <div class="student-points" onclick="showStudentDetails('Muhammed Irfan')">08</div>
                 <div class="student-info">
                     <h4>Muhammed Irfan</h4>
                     <div class="team">LUMINOVA</div>
                 </div>
             </div><div class="student-card">
-                <div class="student-points">06</div>
+                <div class="student-points" onclick="showStudentDetails('Sayeed A.S')">07</div>
+                <div class="student-info">
+                    <h4>Sayeed A.S</h4>
+                    <div class="team">NEONOVA</div>
+                </div>
+            </div><div class="student-card">
+                <div class="student-points" onclick="showStudentDetails('Muhammed Hanan')">07</div>
+                <div class="student-info">
+                    <h4>Muhammed Hanan</h4>
+                    <div class="team">ASTRO-NOVA</div>
+                </div>
+            </div><div class="student-card">
+                <div class="student-points" onclick="showStudentDetails('Muhammed Arshad')">07</div>
+                <div class="student-info">
+                    <h4>Muhammed Arshad</h4>
+                    <div class="team">ASTRO-NOVA</div>
+                </div>
+            </div><div class="student-card">
+                <div class="student-points" onclick="showStudentDetails('Muhammed Swabeeh')">07</div>
+                <div class="student-info">
+                    <h4>Muhammed Swabeeh</h4>
+                    <div class="team">ASTRO-NOVA</div>
+                </div>
+            </div><div class="student-card">
+                <div class="student-points" onclick="showStudentDetails('Muhammed Rabeeath')">06</div>
                 <div class="student-info">
                     <h4>Muhammed Rabeeath</h4>
                     <div class="team">LUMINOVA</div>
                 </div>
             </div><div class="student-card">
-                <div class="student-points">03</div>
+                <div class="student-points" onclick="showStudentDetails('Muhammed Labeeb')">03</div>
                 <div class="student-info">
                     <h4>Muhammed Labeeb</h4>
                     <div class="team">LUMINOVA</div>
+                </div>
+            </div><div class="student-card">
+                <div class="student-points" onclick="showStudentDetails('Shanaj')">00</div>
+                <div class="student-info">
+                    <h4>Shanaj</h4>
+                    <div class="team">NEONOVA</div>
+                </div>
+            </div><div class="student-card">
+                <div class="student-points" onclick="showStudentDetails('Muhammed Shabeeb')">00</div>
+                <div class="student-info">
+                    <h4>Muhammed Shabeeb</h4>
+                    <div class="team">NEONOVA</div>
+                </div>
+            </div><div class="student-card">
+                <div class="student-points" onclick="showStudentDetails('Muhammed Ameen V.s')">00</div>
+                <div class="student-info">
+                    <h4>Muhammed Ameen V.s</h4>
+                    <div class="team">NEONOVA</div>
+                </div>
+            </div><div class="student-card">
+                <div class="student-points" onclick="showStudentDetails('Muhammed Razeen')">00</div>
+                <div class="student-info">
+                    <h4>Muhammed Razeen</h4>
+                    <div class="team">ASTRO-NOVA</div>
                 </div>
             </div></div>
         </section>
@@ -1141,6 +1397,7 @@
     </div>
 </div>
 
+<!-- Admin Login Modal -->
 <div class="modal-overlay" id="adminModal">
     <div class="modal">
         <h3><i class="fas fa-user-shield"></i> Admin Login</h3>
@@ -1150,6 +1407,7 @@
     </div>
 </div>
 
+<!-- Placement Editor Modal -->
 <div class="placement-modal" id="placementModal">
     <div class="modal-content">
         <h2 id="placementModalTitle">Edit Placements</h2>
@@ -1225,6 +1483,86 @@
         <div class="modal-actions">
             <button class="save-btn" id="savePlacements">Save All Changes</button>
             <button class="close-btn" id="closePlacementModal">Close</button>
+        </div>
+    </div>
+</div>
+
+<!-- Student Details Modal -->
+<div class="student-details-modal" id="studentDetailsModal" style="display: none;">
+    <div class="modal-content">
+        <div class="student-header" id="studentDetailsHeader">
+            <h2>Muhammed Adhnan M.S</h2>
+            <div class="team">ASTRO-NOVA</div>
+            <div class="total-points">Total Points: 50</div>
+        </div>
+        
+        <div class="programs-list" id="studentProgramsList"><div class="program-item">
+                    <div class="program-name">Essay Writing (ARB)</div>
+                    <div class="program-details">
+                        <span class="placement-badge placement-3rd">3rd</span>
+                        <span class="grade-badge">B Grade</span>
+                        <span class="points-badge">+4</span>
+                    </div>
+                </div><div class="program-item">
+                    <div class="program-name">Essay Writing (URD)</div>
+                    <div class="program-details">
+                        <span class="placement-badge placement-1st">1st</span>
+                        <span class="grade-badge">A Grade</span>
+                        <span class="points-badge">+10</span>
+                    </div>
+                </div><div class="program-item">
+                    <div class="program-name">Poem Writing (ARB)</div>
+                    <div class="program-details">
+                        <span class="placement-badge placement-2nd">2nd</span>
+                        <span class="grade-badge">A Grade</span>
+                        <span class="points-badge">+8</span>
+                    </div>
+                </div><div class="program-item">
+                    <div class="program-name">Poem Writing (URD)</div>
+                    <div class="program-details">
+                        <span class="placement-badge placement-grade">Grade</span>
+                        <span class="grade-badge">B Grade</span>
+                        <span class="points-badge">+3</span>
+                    </div>
+                </div><div class="program-item">
+                    <div class="program-name">Short Story (ARB)</div>
+                    <div class="program-details">
+                        <span class="placement-badge placement-grade">Grade</span>
+                        <span class="grade-badge">B Grade</span>
+                        <span class="points-badge">+3</span>
+                    </div>
+                </div><div class="program-item">
+                    <div class="program-name">Short Story (URD)</div>
+                    <div class="program-details">
+                        <span class="placement-badge placement-3rd">3rd</span>
+                        <span class="grade-badge">A Grade</span>
+                        <span class="points-badge">+6</span>
+                    </div>
+                </div><div class="program-item">
+                    <div class="program-name">Mulafaza (ARB)</div>
+                    <div class="program-details">
+                        <span class="placement-badge placement-2nd">2nd</span>
+                        <span class="grade-badge">B Grade</span>
+                        <span class="points-badge">+6</span>
+                    </div>
+                </div><div class="program-item">
+                    <div class="program-name">Swarf IQ</div>
+                    <div class="program-details">
+                        <span class="placement-badge placement-2nd">2nd</span>
+                        <span class="grade-badge">B Grade</span>
+                        <span class="points-badge">+6</span>
+                    </div>
+                </div><div class="program-item">
+                    <div class="program-name">Translation</div>
+                    <div class="program-details">
+                        <span class="placement-badge placement-3rd">3rd</span>
+                        <span class="grade-badge">B Grade</span>
+                        <span class="points-badge">+4</span>
+                    </div>
+                </div></div>
+        
+        <div class="modal-actions">
+            <button class="close-btn" id="closeStudentDetails">Close</button>
         </div>
     </div>
 </div>
@@ -1407,6 +1745,33 @@ document.addEventListener('DOMContentLoaded', function() {
         return studentPoints;
     }
 
+    // Get student's program placements
+    function getStudentPlacements(studentName) {
+        const placements = [];
+        
+        state.programs.forEach(program => {
+            if (!program.placements) return;
+            
+            ['first', 'second', 'third', 'gradewinners'].forEach(place => {
+                const winners = program.placements[place];
+                if (Array.isArray(winners)) {
+                    winners.forEach(winner => {
+                        if (winner && winner.name === studentName) {
+                            placements.push({
+                                program: program.name,
+                                placement: place,
+                                grade: winner.grade,
+                                points: winner.points || calculatePoints(program.name, place, winner.grade || 'No')
+                            });
+                        }
+                    });
+                }
+            });
+        });
+        
+        return placements;
+    }
+
     // Sidebar toggle functionality
     const menuToggle = document.getElementById('menuToggle');
     const sidebar = document.getElementById('sidebar');
@@ -1544,6 +1909,24 @@ document.addEventListener('DOMContentLoaded', function() {
                 renderLeaderboard();
                 renderStudents(); // Update students page with new points
                 if (placementModal) placementModal.style.display = 'none';
+            }
+        };
+    }
+
+    // Student Details Modal
+    const studentDetailsModal = document.getElementById('studentDetailsModal');
+    const closeStudentDetails = document.getElementById('closeStudentDetails');
+
+    if (closeStudentDetails) {
+        closeStudentDetails.onclick = () => {
+            if (studentDetailsModal) studentDetailsModal.style.display = 'none';
+        };
+    }
+
+    if (studentDetailsModal) {
+        studentDetailsModal.onclick = (e) => {
+            if (e.target === studentDetailsModal) {
+                studentDetailsModal.style.display = 'none';
             }
         };
     }
@@ -1736,7 +2119,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const d = document.createElement('div'); 
             d.className = 'student-card';
             d.innerHTML = `
-                <div class="student-points">${points.toString().padStart(2, '0')}</div>
+                <div class="student-points" onclick="showStudentDetails('${student.name}')">${points.toString().padStart(2, '0')}</div>
                 <div class="student-info">
                     <h4>${student.name}</h4>
                     <div class="team">${student.team}</div>
@@ -1782,6 +2165,76 @@ document.addEventListener('DOMContentLoaded', function() {
             `;
             list.appendChild(d);
         });
+    }
+
+    // Show student details modal
+    function showStudentDetails(studentName) {
+        const student = state.students.find(s => s.name === studentName);
+        if (!student) return;
+        
+        const studentPoints = calculateStudentPoints();
+        const totalPoints = studentPoints[studentName] || 0;
+        const placements = getStudentPlacements(studentName);
+        
+        // Update modal header
+        const header = document.getElementById('studentDetailsHeader');
+        header.innerHTML = `
+            <h2>${studentName}</h2>
+            <div class="team">${student.team}</div>
+            <div class="total-points">Total Points: ${totalPoints}</div>
+        `;
+        
+        // Update programs list
+        const programsList = document.getElementById('studentProgramsList');
+        programsList.innerHTML = '';
+        
+        if (placements.length === 0) {
+            programsList.innerHTML = '<div class="no-placements">No placements yet</div>';
+        } else {
+            placements.forEach(placement => {
+                const programItem = document.createElement('div');
+                programItem.className = 'program-item';
+                
+                let placementText = '';
+                let placementClass = '';
+                
+                switch(placement.placement) {
+                    case 'first':
+                        placementText = '1st';
+                        placementClass = 'placement-1st';
+                        break;
+                    case 'second':
+                        placementText = '2nd';
+                        placementClass = 'placement-2nd';
+                        break;
+                    case 'third':
+                        placementText = '3rd';
+                        placementClass = 'placement-3rd';
+                        break;
+                    case 'gradewinners':
+                        placementText = 'Grade';
+                        placementClass = 'placement-grade';
+                        break;
+                }
+                
+                programItem.innerHTML = `
+                    <div class="program-name">${placement.program}</div>
+                    <div class="program-details">
+                        <span class="placement-badge ${placementClass}">${placementText}</span>
+                        <span class="grade-badge">${placement.grade} Grade</span>
+                        <span class="points-badge">+${placement.points}</span>
+                    </div>
+                `;
+                
+                programsList.appendChild(programItem);
+            });
+        }
+        
+        // Show modal
+        const studentDetailsModal = document.getElementById('studentDetailsModal');
+        if (studentDetailsModal) {
+            studentDetailsModal.style.display = 'flex';
+        }
     }
 
     // Placement Editor Functions
@@ -1890,8 +2343,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Make openPlacementEditor globally accessible
+    // Make functions globally accessible
     window.openPlacementEditor = openPlacementEditor;
+    window.showStudentDetails = showStudentDetails;
 
     // Initial Render
     renderLeaderboard(); 
