@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"><head>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Artelligence - Art Festival 2025</title>
@@ -853,6 +854,62 @@
             color: white;
         }
         
+        /* Enhanced Programs Page Styles */
+        .program-category-badge {
+            display: inline-block;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        
+        .category-creatia { background: #ff6b6b; color: #000; }
+        .category-log { background: #4ecdc4; color: #000; }
+        .category-general { background: #45b7d1; color: #000; }
+        .category-vocalizia { background: #9b59b6; color: #fff; }
+        
+        .program-row {
+            transition: all 0.3s ease;
+        }
+        
+        .program-row:hover {
+            background: rgba(255,255,255,0.05);
+        }
+        
+        .winners-cell {
+            font-size: 0.75rem;
+            line-height: 1.4;
+        }
+        
+        .winner-item-cell {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            margin-bottom: 2px;
+        }
+        
+        .winner-position {
+            font-weight: bold;
+            min-width: 20px;
+        }
+        
+        .winner-name {
+            flex: 1;
+        }
+        
+        .winner-grade {
+            background: rgba(255,255,255,0.1);
+            padding: 1px 4px;
+            border-radius: 4px;
+            font-size: 0.65rem;
+        }
+        
+        .no-winners {
+            color: rgba(255,255,255,0.5);
+            font-style: italic;
+        }
+        
         @media (min-width: 768px) {
             .container {
                 max-width: 750px;
@@ -902,7 +959,20 @@
                 <div class="nav-tab" data-page="schedule">Schedule</div>
             </div>
             
-            <div id="leaderboard" class="leaderboard"><div class="team-card"><h3>LUMINOVA</h3><div class="points">170</div></div><div class="team-card"><h3>NEONOVA</h3><div class="points">145</div></div><div class="team-card"><h3>ASTRO-NOVA</h3><div class="points">142</div></div></div>
+            <div id="leaderboard" class="leaderboard">
+                <div class="team-card">
+                    <h3>LUMINOVA</h3>
+                    <div class="points">170</div>
+                </div>
+                <div class="team-card">
+                    <h3>NEONOVA</h3>
+                    <div class="points">145</div>
+                </div>
+                <div class="team-card">
+                    <h3>ASTRO-NOVA</h3>
+                    <div class="points">142</div>
+                </div>
+            </div>
         </div>
 
         <!-- Home Page -->
@@ -1076,247 +1146,9 @@
                             <th>Actions</th>
                         </tr>
                     </thead>
-                    <tbody id="programsTbody"><tr>
-                <td>1</td>
-                <td>Pencil Drawing</td>
-                <td>creatia</td>
-                <td>1: -<br>2: -<br>3: -<br>Grade: -</td>
-            <td></td></tr><tr>
-                <td>2</td>
-                <td>Acrylic Painting</td>
-                <td>creatia</td>
-                <td>1: -<br>2: -<br>3: -<br>Grade: -</td>
-            <td></td></tr><tr>
-                <td>3</td>
-                <td>Calligraphy</td>
-                <td>creatia</td>
-                <td>1: -<br>2: -<br>3: -<br>Grade: Muhammed Alim Zayyan (B)</td>
-            <td></td></tr><tr>
-                <td>4</td>
-                <td>Poster Making</td>
-                <td>creatia</td>
-                <td>1: -<br>2: Muhammed Fazal (B)<br>3: Muhammed Haseeb (B)<br>Grade: -</td>
-            <td></td></tr><tr>
-                <td>5</td>
-                <td>Digital Poster Making</td>
-                <td>creatia</td>
-                <td>1: -<br>2: Muhammed Swabeeh (B), Mohammed P.M (B)<br>3: Muhammed Fazal (B)<br>Grade: Muhammed Nihal (B)</td>
-            <td></td></tr><tr>
-                <td>6</td>
-                <td>News Paper</td>
-                <td>creatia</td>
-                <td>1: -<br>2: -<br>3: -<br>Grade: -</td>
-            <td></td></tr><tr>
-                <td>7</td>
-                <td>Children Magazine</td>
-                <td>creatia</td>
-                <td>1: -<br>2: -<br>3: -<br>Grade: -</td>
-            <td></td></tr><tr>
-                <td>8</td>
-                <td>Cover Design</td>
-                <td>creatia</td>
-                <td>1: -<br>2: Team A (B), Team C (B)<br>3: Team B (B)<br>Grade: -</td>
-            <td></td></tr><tr>
-                <td>9</td>
-                <td>Essay Writing (MLM)</td>
-                <td>log</td>
-                <td>1: Muhammed Fazal (A)<br>2: Muhammed Sinan P.a (A)<br>3: Muhammed Arshad (A)<br>Grade: Muhammed Aman (B), Muhammed Nihal (B)</td>
-            <td></td></tr><tr>
-                <td>10</td>
-                <td>Essay Writing (ENG)</td>
-                <td>log</td>
-                <td>1: Muhammed Fazal (A), Muhammed Alim Zayyan (A)<br>2: Muhammed Aman (A)<br>3: Jawhar Sidheeque (B)<br>Grade: Muhammed Athif (B)</td>
-            <td></td></tr><tr>
-                <td>11</td>
-                <td>Essay Writing (ARB)</td>
-                <td>log</td>
-                <td>1: Muhammed Faheem K.k (B)<br>2: Muhammed Basith (A)<br>3: Muhammed Adhnan M.S (B)<br>Grade: Adnan K.p (B)</td>
-            <td></td></tr><tr>
-                <td>12</td>
-                <td>Essay Writing (URD)</td>
-                <td>log</td>
-                <td>1: Muhammed Adhnan M.S (A)<br>2: Mohammed Midhlaj (B)<br>3: Muhammed Hanan (B)<br>Grade: -</td>
-            <td></td></tr><tr>
-                <td>13</td>
-                <td>Poem Writing (MLM)</td>
-                <td>log</td>
-                <td>1: Muhammed Aslam (No)<br>2: Muhammed Sinan P.a (No), Muhammed Nihal (No)<br>3: Muhammed Arshad (No), Muhammed Swabeeh (No), Muhammed Aman (No)<br>Grade: -</td>
-            <td></td></tr><tr>
-                <td>14</td>
-                <td>Poem Writing (ENG)</td>
-                <td>log</td>
-                <td>1: Muhammed Athif (A)<br>2: Muhammed Alim Zayyan (B), Mohammed P.M (B)<br>3: Muhammed Fazal (B)<br>Grade: Muhammed Haseeb (B)</td>
-            <td></td></tr><tr>
-                <td>15</td>
-                <td>Poem Writing (ARB)</td>
-                <td>log</td>
-                <td>1: Muhammed Basith (A)<br>2: Muhammed Adhnan M.S (A)<br>3: Muhammed Haseeb (A)<br>Grade: -</td>
-            <td></td></tr><tr>
-                <td>16</td>
-                <td>Poem Writing (URD)</td>
-                <td>log</td>
-                <td>1: Mohammed Midhlaj (A)<br>2: Muhammed Faheem K.m (A)<br>3: Muhammed Rabeeath (A)<br>Grade: Muhammed Adhnan M.S (B)</td>
-            <td></td></tr><tr>
-                <td>17</td>
-                <td>Short Story (ARB)</td>
-                <td>log</td>
-                <td>1: Muhammed Basith (A)<br>2: Muhammed Faheem K.k (B)<br>3: Adnan K.p (A)<br>Grade: Muhammed Adhnan M.S (B)</td>
-            <td></td></tr><tr>
-                <td>18</td>
-                <td>Short Story (URD)</td>
-                <td>log</td>
-                <td>1: Muhammed Faheem K.k (A)<br>2: Mohammed Midhlaj (A)<br>3: Muhammed Adhnan M.S (A)<br>Grade: Muhammed Hanan (B)</td>
-            <td></td></tr><tr>
-                <td>19</td>
-                <td>Spelling Bee</td>
-                <td>general</td>
-                <td>1: -<br>2: -<br>3: -<br>Grade: -</td>
-            <td></td></tr><tr>
-                <td>20</td>
-                <td>Word Fight (ENG)</td>
-                <td>general</td>
-                <td>1: Muhammed Athif (A)<br>2: Jawhar Sidheeque (B)<br>3: Muhammed Faheem K.m (B)<br>Grade: -</td>
-            <td></td></tr><tr>
-                <td>21</td>
-                <td>Mulafaza (ARB)</td>
-                <td>general</td>
-                <td>1: Muhammed Faheem K.k (B)<br>2: Muhammed Adhnan M.S (B)<br>3: Muhammed Basith (B)<br>Grade: -</td>
-            <td></td></tr><tr>
-                <td>22</td>
-                <td>Swarf IQ</td>
-                <td>general</td>
-                <td>1: Muhammed Basith (A)<br>2: Muhammed Adhnan M.S (B)<br>3: Muhammed Aman (B)<br>Grade: Adnan K.p (B), Sayeed A.S (B)</td>
-            <td></td></tr><tr>
-                <td>23</td>
-                <td>Class Talent</td>
-                <td>general</td>
-                <td>1: -<br>2: -<br>3: -<br>Grade: -</td>
-            <td></td></tr><tr>
-                <td>24</td>
-                <td>Hifz (Non-stage)</td>
-                <td>general</td>
-                <td>1: -<br>2: -<br>3: -<br>Grade: -</td>
-            <td></td></tr><tr>
-                <td>25</td>
-                <td>Maths Talent</td>
-                <td>general</td>
-                <td>1: -<br>2: -<br>3: -<br>Grade: -</td>
-            <td></td></tr><tr>
-                <td>26</td>
-                <td>Hindi Vidvan</td>
-                <td>general</td>
-                <td>1: Mohammed Midhlaj (A)<br>2: Muhammed Fazal (A)<br>3: Adnan K.p (B), Muhammed Alim Zayyan (B)<br>Grade: -</td>
-            <td></td></tr><tr>
-                <td>27</td>
-                <td>Padhyaparayanam</td>
-                <td>vocalizia</td>
-                <td>1: -<br>2: -<br>3: -<br>Grade: -</td>
-            <td></td></tr><tr>
-                <td>28</td>
-                <td>Song (ENG)</td>
-                <td>vocalizia</td>
-                <td>1: -<br>2: -<br>3: -<br>Grade: -</td>
-            <td></td></tr><tr>
-                <td>29</td>
-                <td>Song (URD)</td>
-                <td>vocalizia</td>
-                <td>1: -<br>2: -<br>3: -<br>Grade: -</td>
-            <td></td></tr><tr>
-                <td>30</td>
-                <td>Nasheedha</td>
-                <td>vocalizia</td>
-                <td>1: -<br>2: -<br>3: -<br>Grade: -</td>
-            <td></td></tr><tr>
-                <td>31</td>
-                <td>Padapattu</td>
-                <td>vocalizia</td>
-                <td>1: -<br>2: -<br>3: -<br>Grade: -</td>
-            <td></td></tr><tr>
-                <td>32</td>
-                <td>Qira'th</td>
-                <td>vocalizia</td>
-                <td>1: -<br>2: -<br>3: -<br>Grade: -</td>
-            <td></td></tr><tr>
-                <td>33</td>
-                <td>Group Song</td>
-                <td>vocalizia</td>
-                <td>1: -<br>2: -<br>3: -<br>Grade: -</td>
-            <td></td></tr><tr>
-                <td>34</td>
-                <td>Qawwali</td>
-                <td>vocalizia</td>
-                <td>1: -<br>2: -<br>3: -<br>Grade: -</td>
-            <td></td></tr><tr>
-                <td>35</td>
-                <td>Speech &amp; Song</td>
-                <td>vocalizia</td>
-                <td>1: -<br>2: -<br>3: -<br>Grade: -</td>
-            <td></td></tr><tr>
-                <td>36</td>
-                <td>Speech (MLM)</td>
-                <td>vocalizia</td>
-                <td>1: -<br>2: -<br>3: -<br>Grade: -</td>
-            <td></td></tr><tr>
-                <td>37</td>
-                <td>Speech (ENG)</td>
-                <td>vocalizia</td>
-                <td>1: -<br>2: -<br>3: -<br>Grade: -</td>
-            <td></td></tr><tr>
-                <td>38</td>
-                <td>Speech (ARB)</td>
-                <td>vocalizia</td>
-                <td>1: -<br>2: -<br>3: -<br>Grade: -</td>
-            <td></td></tr><tr>
-                <td>39</td>
-                <td>Oru Nimisham</td>
-                <td>vocalizia</td>
-                <td>1: -<br>2: -<br>3: -<br>Grade: -</td>
-            <td></td></tr><tr>
-                <td>40</td>
-                <td>Chain Story</td>
-                <td>vocalizia</td>
-                <td>1: -<br>2: -<br>3: -<br>Grade: -</td>
-            <td></td></tr><tr>
-                <td>41</td>
-                <td>Wa'z</td>
-                <td>vocalizia</td>
-                <td>1: -<br>2: -<br>3: -<br>Grade: -</td>
-            <td></td></tr><tr>
-                <td>42</td>
-                <td>Story Narration</td>
-                <td>vocalizia</td>
-                <td>1: -<br>2: -<br>3: -<br>Grade: -</td>
-            <td></td></tr><tr>
-                <td>43</td>
-                <td>Sudoku</td>
-                <td>general</td>
-                <td>1: Muhammed Aslam (A)<br>2: Muhammed Faheem K.m (A)<br>3: Muhammed Athif (A)<br>Grade: Muhammed Labeeb (B)</td>
-            <td></td></tr><tr>
-                <td>44</td>
-                <td>Translation</td>
-                <td>general</td>
-                <td>1: Muhammed Athif (A)<br>2: Muhammed Faheem K.k (B)<br>3: Muhammed Adhnan M.S (B)<br>Grade: Muhammed Basith (B)</td>
-            <td></td></tr><tr>
-                <td>45</td>
-                <td>Hifz (Knowledge)</td>
-                <td>general</td>
-                <td>1: -<br>2: -<br>3: -<br>Grade: -</td>
-            <td></td></tr><tr>
-                <td>46</td>
-                <td>Typing Trilingual</td>
-                <td>general</td>
-                <td>1: -<br>2: -<br>3: -<br>Grade: -</td>
-            <td></td></tr><tr>
-                <td>47</td>
-                <td>GK Quiz</td>
-                <td>general</td>
-                <td>1: -<br>2: -<br>3: -<br>Grade: -</td>
-            <td></td></tr><tr>
-                <td>48</td>
-                <td>Geo Giant</td>
-                <td>general</td>
-                <td>1: -<br>2: -<br>3: -<br>Grade: -</td>
-            <td></td></tr></tbody>
+                    <tbody id="programsTbody">
+                        <!-- Programs will be populated by JavaScript -->
+                    </tbody>
                 </table>
             </div>
         </section>
@@ -1335,183 +1167,17 @@
                 <input type="text" id="studentSearch" class="search-input" placeholder="Search student...">
             </div>
             
-            <div class="students-grid" id="studentsGrid"><div class="student-card">
-                <div class="student-points" onclick="showStudentDetails('Muhammed Adhnan M.S')">50</div>
-                <div class="student-info">
-                    <h4>Muhammed Adhnan M.S</h4>
-                    <div class="team">ASTRO-NOVA</div>
-                </div>
-            </div><div class="student-card">
-                <div class="student-points" onclick="showStudentDetails('Muhammed Basith')">45</div>
-                <div class="student-info">
-                    <h4>Muhammed Basith</h4>
-                    <div class="team">LUMINOVA</div>
-                </div>
-            </div><div class="student-card">
-                <div class="student-points" onclick="showStudentDetails('Muhammed Fazal')">42</div>
-                <div class="student-info">
-                    <h4>Muhammed Fazal</h4>
-                    <div class="team">NEONOVA</div>
-                </div>
-            </div><div class="student-card">
-                <div class="student-points" onclick="showStudentDetails('Muhammed Athif')">39</div>
-                <div class="student-info">
-                    <h4>Muhammed Athif</h4>
-                    <div class="team">LUMINOVA</div>
-                </div>
-            </div><div class="student-card">
-                <div class="student-points" onclick="showStudentDetails('Muhammed Faheem K.k')">38</div>
-                <div class="student-info">
-                    <h4>Muhammed Faheem K.k</h4>
-                    <div class="team">NEONOVA</div>
-                </div>
-            </div><div class="student-card">
-                <div class="student-points" onclick="showStudentDetails('Mohammed Midhlaj')">34</div>
-                <div class="student-info">
-                    <h4>Mohammed Midhlaj</h4>
-                    <div class="team">LUMINOVA</div>
-                </div>
-            </div><div class="student-card">
-                <div class="student-points" onclick="showStudentDetails('Muhammed Alim Zayyan')">23</div>
-                <div class="student-info">
-                    <h4>Muhammed Alim Zayyan</h4>
-                    <div class="team">ASTRO-NOVA</div>
-                </div>
-            </div><div class="student-card">
-                <div class="student-points" onclick="showStudentDetails('Muhammed Faheem K.m')">20</div>
-                <div class="student-info">
-                    <h4>Muhammed Faheem K.m</h4>
-                    <div class="team">NEONOVA</div>
-                </div>
-            </div><div class="student-card">
-                <div class="student-points" onclick="showStudentDetails('Muhammed Aman')">16</div>
-                <div class="student-info">
-                    <h4>Muhammed Aman</h4>
-                    <div class="team">NEONOVA</div>
-                </div>
-            </div><div class="student-card">
-                <div class="student-points" onclick="showStudentDetails('Adnan K.p')">16</div>
-                <div class="student-info">
-                    <h4>Adnan K.p</h4>
-                    <div class="team">ASTRO-NOVA</div>
-                </div>
-            </div><div class="student-card">
-                <div class="student-points" onclick="showStudentDetails('Muhammed Aslam')">15</div>
-                <div class="student-info">
-                    <h4>Muhammed Aslam</h4>
-                    <div class="team">NEONOVA</div>
-                </div>
-            </div><div class="student-card">
-                <div class="student-points" onclick="showStudentDetails('Muhammed Haseeb')">13</div>
-                <div class="student-info">
-                    <h4>Muhammed Haseeb</h4>
-                    <div class="team">ASTRO-NOVA</div>
-                </div>
-            </div><div class="student-card">
-                <div class="student-points" onclick="showStudentDetails('Mohammed P.M')">12</div>
-                <div class="student-info">
-                    <h4>Mohammed P.M</h4>
-                    <div class="team">LUMINOVA</div>
-                </div>
-            </div><div class="student-card">
-                <div class="student-points" onclick="showStudentDetails('Muhammed Sinan P.a')">11</div>
-                <div class="student-info">
-                    <h4>Muhammed Sinan P.a</h4>
-                    <div class="team">LUMINOVA</div>
-                </div>
-            </div><div class="student-card">
-                <div class="student-points" onclick="showStudentDetails('Jawhar Sidheeque')">10</div>
-                <div class="student-info">
-                    <h4>Jawhar Sidheeque</h4>
-                    <div class="team">ASTRO-NOVA</div>
-                </div>
-            </div><div class="student-card">
-                <div class="student-points" onclick="showStudentDetails('Muhammed Nihal')">09</div>
-                <div class="student-info">
-                    <h4>Muhammed Nihal</h4>
-                    <div class="team">LUMINOVA</div>
-                </div>
-            </div><div class="student-card">
-                <div class="student-points" onclick="showStudentDetails('Muhammed Hanan')">07</div>
-                <div class="student-info">
-                    <h4>Muhammed Hanan</h4>
-                    <div class="team">ASTRO-NOVA</div>
-                </div>
-            </div><div class="student-card">
-                <div class="student-points" onclick="showStudentDetails('Muhammed Arshad')">07</div>
-                <div class="student-info">
-                    <h4>Muhammed Arshad</h4>
-                    <div class="team">ASTRO-NOVA</div>
-                </div>
-            </div><div class="student-card">
-                <div class="student-points" onclick="showStudentDetails('Muhammed Swabeeh')">07</div>
-                <div class="student-info">
-                    <h4>Muhammed Swabeeh</h4>
-                    <div class="team">ASTRO-NOVA</div>
-                </div>
-            </div><div class="student-card">
-                <div class="student-points" onclick="showStudentDetails('Muhammed Rabeeath')">06</div>
-                <div class="student-info">
-                    <h4>Muhammed Rabeeath</h4>
-                    <div class="team">LUMINOVA</div>
-                </div>
-            </div><div class="student-card">
-                <div class="student-points" onclick="showStudentDetails('Sayeed A.S')">03</div>
-                <div class="student-info">
-                    <h4>Sayeed A.S</h4>
-                    <div class="team">NEONOVA</div>
-                </div>
-            </div><div class="student-card">
-                <div class="student-points" onclick="showStudentDetails('Muhammed Labeeb')">03</div>
-                <div class="student-info">
-                    <h4>Muhammed Labeeb</h4>
-                    <div class="team">LUMINOVA</div>
-                </div>
-            </div><div class="student-card">
-                <div class="student-points" onclick="showStudentDetails('Shanaj')">00</div>
-                <div class="student-info">
-                    <h4>Shanaj</h4>
-                    <div class="team">NEONOVA</div>
-                </div>
-            </div><div class="student-card">
-                <div class="student-points" onclick="showStudentDetails('Muhammed Shabeeb')">00</div>
-                <div class="student-info">
-                    <h4>Muhammed Shabeeb</h4>
-                    <div class="team">NEONOVA</div>
-                </div>
-            </div><div class="student-card">
-                <div class="student-points" onclick="showStudentDetails('Muhammed Ameen V.s')">00</div>
-                <div class="student-info">
-                    <h4>Muhammed Ameen V.s</h4>
-                    <div class="team">NEONOVA</div>
-                </div>
-            </div><div class="student-card">
-                <div class="student-points" onclick="showStudentDetails('Muhammed Razeen')">00</div>
-                <div class="student-info">
-                    <h4>Muhammed Razeen</h4>
-                    <div class="team">ASTRO-NOVA</div>
-                </div>
-            </div><div class="student-card">
-                <div class="student-points" onclick="showStudentDetails('Muhammed Irfan')">00</div>
-                <div class="student-info">
-                    <h4>Muhammed Irfan</h4>
-                    <div class="team">LUMINOVA</div>
-                </div>
-            </div></div>
+            <div class="students-grid" id="studentsGrid">
+                <!-- Students will be populated by JavaScript -->
+            </div>
         </section>
 
         <!-- Schedule Page -->
         <section id="schedule" class="page">
             <h2>Schedule</h2>
-            <div class="schedule-list" id="scheduleList"><div class="schedule-item">
-                <strong>2025-10-01</strong><br>Opening &amp; Inauguration
-            </div><div class="schedule-item">
-                <strong>2025-10-02</strong><br>Creatia events - Pencil Drawing &amp; Painting
-            </div><div class="schedule-item">
-                <strong>2025-10-03</strong><br>Log events - Essays &amp; Poems
-            </div><div class="schedule-item">
-                <strong>2025-10-04</strong><br>Vocalizia - Songs &amp; Group Performances
-            </div></div>
+            <div class="schedule-list" id="scheduleList">
+                <!-- Schedule will be populated by JavaScript -->
+            </div>
         </section>
     </div>
 
@@ -1622,847 +1288,862 @@
         </div>
     </div>
 
-<script>
-    type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  "name": "Artelligence – Art Festival 2025",
-  "url": "https://artelligence-official.vercel.app",
-  "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQf2HC7Go2MD_hUFpReE3bm350APtVf6R_5ASMxGHDkIQ&s=10"
-}      
-document.addEventListener('DOMContentLoaded', function() {
-    // Points system
-    const POINTS_SYSTEM = {
-        first: { A: 10, B: 8, No: 5 },
-        second: { A: 8, B: 6, No: 3 },
-        third: { A: 6, B: 4, No: 1 },
-        gradewinners: { A: 5, B: 3, No: 0 }
-    };
+    <script>
+        type="application/ld+json"> { "@context": "https://schema.org", "@type": "Organization", "name": "Artelligence – Art Festival 2025", "url": "https://artelligence-official.vercel.app", "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQf2HC7Go2MD_hUFpReE3bm350APtVf6R_5ASMxGHDkIQ&s=10" }
+        document.addEventListener('DOMContentLoaded', function() {
+            // Points system
+            const POINTS_SYSTEM = {
+                first: { A: 10, B: 8, No: 5 },
+                second: { A: 8, B: 6, No: 3 },
+                third: { A: 6, B: 4, No: 1 },
+                gradewinners: { A: 5, B: 3, No: 0 }
+            };
 
-    const SPECIAL_PROGRAMS = [
-        'News Paper', 'Cover Design', 'Group Song', 'Qawwali', 'Speech & Song', 'GK Quiz'
-    ];
+            const SPECIAL_PROGRAMS = [
+                'News Paper', 'Cover Design', 'Group Song', 'Qawwali', 'Speech & Song', 'GK Quiz'
+            ];
 
-    const SPECIAL_POINTS_SYSTEM = {
-        first: { A: 15, B: 13, No: 10 },
-        second: { A: 13, B: 11, No: 8 },
-        third: { A: 11, B: 9, No: 6 },
-        gradewinners: { A: 5, B: 3, No: 0 }
-    };
+            const SPECIAL_POINTS_SYSTEM = {
+                first: { A: 15, B: 13, No: 10 },
+                second: { A: 13, B: 11, No: 8 },
+                third: { A: 11, B: 9, No: 6 },
+                gradewinners: { A: 5, B: 3, No: 0 }
+            };
 
-    // Students data
-    const STUDENTS = [
-        {name: 'Sayeed A.S', team: 'NEONOVA'}, {name: 'Shanaj', team: 'NEONOVA'}, {name: 'Muhammed Aslam', team: 'NEONOVA'},
-        {name: 'Muhammed Fazal', team: 'NEONOVA'}, {name: 'Muhammed Faheem K.k', team: 'NEONOVA'}, {name: 'Muhammed Faheem K.m', team: 'NEONOVA'},
-        {name: 'Muhammed Aman', team: 'NEONOVA'}, {name: 'Muhammed Shabeeb', team: 'NEONOVA'}, {name: 'Muhammed Ameen V.s', team: 'NEONOVA'},
-        {name: 'Muhammed Alim Zayyan', team: 'ASTRO-NOVA'}, {name: 'Muhammed Hanan', team: 'ASTRO-NOVA'}, {name: 'Muhammed Haseeb', team: 'ASTRO-NOVA'},
-        {name: 'Jawhar Sidheeque', team: 'ASTRO-NOVA'}, {name: 'Adnan K.p', team: 'ASTRO-NOVA'}, {name: 'Muhammed Arshad', team: 'ASTRO-NOVA'},
-        {name: 'Muhammed Adhnan M.S', team: 'ASTRO-NOVA'}, {name: 'Muhammed Razeen', team: 'ASTRO-NOVA'}, {name: 'Muhammed Swabeeh', team: 'ASTRO-NOVA'},
-        {name: 'Abdul Basith', team: 'LUMINOVA'}, {name: 'Muhammed Nihal', team: 'LUMINOVA'}, {name: 'Muhammed Rabeeath', team: 'LUMINOVA'},
-        {name: 'Muhammed Athif', team: 'LUMINOVA'}, {name: 'Muhammed Labeeb', team: 'LUMINOVA'}, {name: 'Muhammed Sinan P.a', team: 'LUMINOVA'},
-        {name: 'Mohammed P.M', team: 'LUMINOVA'}, {name: 'Mohammed Midhlaj', team: 'LUMINOVA'}, {name: 'Muhammed Irfan', team: 'LUMINOVA'}
-    ];
+            // Students data
+            const STUDENTS = [
+                {name: 'Sayeed A.S', team: 'NEONOVA'}, {name: 'Shanaj', team: 'NEONOVA'}, {name: 'Muhammed Aslam', team: 'NEONOVA'},
+                {name: 'Muhammed Fazal', team: 'NEONOVA'}, {name: 'Muhammed Faheem K.k', team: 'NEONOVA'}, {name: 'Muhammed Faheem K.m', team: 'NEONOVA'},
+                {name: 'Muhammed Aman', team: 'NEONOVA'}, {name: 'Muhammed Shabeeb', team: 'NEONOVA'}, {name: 'Muhammed Ameen V.s', team: 'NEONOVA'},
+                {name: 'Muhammed Alim Zayyan', team: 'ASTRO-NOVA'}, {name: 'Muhammed Hanan', team: 'ASTRO-NOVA'}, {name: 'Muhammed Haseeb', team: 'ASTRO-NOVA'},
+                {name: 'Jawhar Sidheeque', team: 'ASTRO-NOVA'}, {name: 'Adnan K.p', team: 'ASTRO-NOVA'}, {name: 'Muhammed Arshad', team: 'ASTRO-NOVA'},
+                {name: 'Muhammed Adhnan M.S', team: 'ASTRO-NOVA'}, {name: 'Muhammed Razeen', team: 'ASTRO-NOVA'}, {name: 'Muhammed Swabeeh', team: 'ASTRO-NOVA'},
+                {name: 'Abdul Basith', team: 'LUMINOVA'}, {name: 'Muhammed Nihal', team: 'LUMINOVA'}, {name: 'Muhammed Rabeeath', team: 'LUMINOVA'},
+                {name: 'Muhammed Athif', team: 'LUMINOVA'}, {name: 'Muhammed Labeeb', team: 'LUMINOVA'}, {name: 'Muhammed Sinan P.a', team: 'LUMINOVA'},
+                {name: 'Mohammed P.M', team: 'LUMINOVA'}, {name: 'Mohammed Midhlaj', team: 'LUMINOVA'}, {name: 'Muhammed Irfan', team: 'LUMINOVA'}
+            ];
 
-    // Programs data with all the results you provided
-    const PROGRAMS = [
-        {id: 'p1', name: 'Pencil Drawing', category: 'creatia', placements: {
-            first: [{name: 'Muhammed Irfan', grade: 'B', points: 8}],
-            second: [{name: 'Muhammed Haseeb', grade: 'B', points: 6}],
-            third: [{name: 'Sayeed A.S', grade: 'B', points: 4}],
-            gradewinners: [{name: 'Muhammed Athif', grade: 'B', points: 3}]
-        }},
-        {id: 'p2', name: 'Acrylic Painting', category: 'creatia', placements: {first: [], second: [], third: [], gradewinners: []}},
-        {id: 'p3', name: 'Calligraphy', category: 'creatia', placements: {
-            first: [],
-            second: [],
-            third: [],
-            gradewinners: [{name: 'Muhammed Alim Zayyan', grade: 'B', points: 3}]
-        }},
-        {id: 'p4', name: 'Poster Making', category: 'creatia', placements: {
-            first: [],
-            second: [{name: 'Muhammed Fazal', grade: 'B', points: 6}],
-            third: [{name: 'Muhammed Haseeb', grade: 'B', points: 4}],
-            gradewinners: []
-        }},
-        {id: 'p5', name: 'Digital Poster Making', category: 'creatia', placements: {
-            first: [],
-            second: [{name: 'Muhammed Swabeeh', grade: 'B', points: 6}, {name: 'Mohammed P.M', grade: 'B', points: 6}],
-            third: [{name: 'Muhammed Fazal', grade: 'B', points: 4}],
-            gradewinners: [{name: 'Muhammed Nihal', grade: 'B', points: 3}]
-        }},
-        {id: 'p6', name: 'News Paper', category: 'creatia', placements: {first: [], second: [], third: [], gradewinners: []}},
-        {id: 'p7', name: 'Children Magazine', category: 'creatia', placements: {first: [], second: [], third: [], gradewinners: []}},
-        {id: 'p8', name: 'Cover Design', category: 'creatia', placements: {
-            first: [],
-            second: [{name: 'Team A', grade: 'B', points: 13}, {name: 'Team C', grade: 'B', points: 13}],
-            third: [{name: 'Team B', grade: 'B', points: 11}],
-            gradewinners: []
-        }},
-        {id: 'p9', name: 'Essay Writing (MLM)', category: 'log', placements: {
-            first: [{name: 'Muhammed Fazal', grade: 'A', points: 10}],
-            second: [{name: 'Muhammed Sinan P.a', grade: 'A', points: 8}],
-            third: [{name: 'Muhammed Arshad', grade: 'A', points: 6}],
-            gradewinners: [{name: 'Muhammed Aman', grade: 'B', points: 3}, {name: 'Muhammed Nihal', grade: 'B', points: 3}]
-        }},
-        {id: 'p10', name: 'Essay Writing (ENG)', category: 'log', placements: {
-            first: [{name: 'Muhammed Fazal', grade: 'A', points: 10}, {name: 'Muhammed Alim Zayyan', grade: 'A', points: 10}],
-            second: [{name: 'Muhammed Aman', grade: 'A', points: 8}],
-            third: [{name: 'Jawhar Sidheeque', grade: 'B', points: 4}],
-            gradewinners: [{name: 'Muhammed Athif', grade: 'B', points: 3}]
-        }},
-        {id: 'p11', name: 'Essay Writing (ARB)', category: 'log', placements: {
-            first: [{name: 'Muhammed Faheem K.k', grade: 'A', points: 10}],
-            second: [{name: 'Abdul Basith', grade: 'B', points: 6}],
-            third: [{name: 'Muhammed Adhnan M.S', grade: 'B', points: 4}],
-            gradewinners: [{name: 'Adnan K.p', grade: 'B', points: 3}]
-        }},
-        {id: 'p12', name: 'Essay Writing (URD)', category: 'log', placements: {
-            first: [{name: 'Muhammed Adhnan M.S', grade: 'A', points: 10}],
-            second: [{name: 'Mohammed Midhlaj', grade: 'B', points: 6}],
-            third: [{name: 'Muhammed Hanan', grade: 'B', points: 4}],
-            gradewinners: []
-        }},
-        {id: 'p13', name: 'Poem Writing (MLM)', category: 'log', placements: {
-            first: [{name: 'Muhammed Aslam', grade: 'No', points: 5}],
-            second: [{name: 'Muhammed Sinan P.a', grade: 'No', points: 3}, {name: 'Muhammed Nihal', grade: 'No', points: 3}],
-            third: [{name: 'Muhammed Aman', grade: 'B', points: 1}, {name: 'Muhammed Arshad', grade: 'B', points: 1}, {name: 'Muhammed Swabeeh', grade: 'B', points: 1}],
-            gradewinners: []
-        }},
-        {id: 'p14', name: 'Poem Writing (ENG)', category: 'log', placements: {
-            first: [{name: 'Muhammed Athif', grade: 'A', points: 10}],
-            second: [{name: 'Muhammed Alim Zayyan', grade: 'B', points: 6}, {name: 'Mohammed P.M', grade: 'B', points: 6}],
-            third: [{name: 'Muhammed Fazal', grade: 'B', points: 4}],
-            gradewinners: [{name: 'Muhammed Haseeb', grade: 'B', points: 3}]
-        }},
-        {id: 'p15', name: 'Poem Writing (ARB)', category: 'log', placements: {
-            first: [{name: 'Abdul Basith', grade: 'A', points: 10}],
-            second: [{name: 'Muhammed Adhnan M.S', grade: 'A', points: 8}],
-            third: [{name: 'Muhammed Haseeb', grade: 'A', points: 6}],
-            gradewinners: []
-        }},
-        {id: 'p16', name: 'Poem Writing (URD)', category: 'log', placements: {
-            first: [{name: 'Mohammed Midhlaj', grade: 'A', points: 10}],
-            second: [{name: 'Muhammed Faheem K.m', grade: 'A', points: 8}],
-            third: [{name: 'Muhammed Rabeeath', grade: 'A', points: 6}],
-            gradewinners: [{name: 'Muhammed Adhnan M.S', grade: 'B', points: 3}]
-        }},
-        {id: 'p17', name: 'Short Story (ARB)', category: 'log', placements: {
-            first: [{name: 'Abdul Basith', grade: 'A', points: 10}],
-            second: [{name: 'Muhammed Faheem K.k', grade: 'B', points: 6}],
-            third: [{name: 'Adnan K.p', grade: 'B', points: 4}],
-            gradewinners: [{name: 'Muhammed Adhnan M.S', grade: 'B', points: 3}]
-        }},
-        {id: 'p18', name: 'Short Story (URD)', category: 'log', placements: {
-            first: [{name: 'Muhammed Faheem K.k', grade: 'A', points: 10}],
-            second: [{name: 'Mohammed Midhlaj', grade: 'A', points: 8}],
-            third: [{name: 'Muhammed Adhnan M.S', grade: 'A', points: 6}],
-            gradewinners: [{name: 'Muhammed Hanan', grade: 'B', points: 3}]
-        }},
-        {id: 'p19', name: 'Spelling Bee', category: 'general', placements: {first: [], second: [], third: [], gradewinners: []}},
-        {id: 'p20', name: 'Word Fight (ENG)', category: 'general', placements: {
-            first: [{name: 'Muhammed Athif', grade: 'A', points: 10}],
-            second: [{name: 'Jawhar Sidheeque', grade: 'B', points: 6}],
-            third: [{name: 'Muhammed Faheem K.m', grade: 'B', points: 4}],
-            gradewinners: []
-        }},
-        {id: 'p21', name: 'Mulafaza (ARB)', category: 'general', placements: {
-            first: [{name: 'Muhammed Faheem K.k', grade: 'B', points: 8}],
-            second: [{name: 'Muhammed Adhnan M.S', grade: 'B', points: 6}],
-            third: [{name: 'Abdul Basith', grade: 'B', points: 4}],
-            gradewinners: []
-        }},
-        {id: 'p22', name: 'Swarf IQ', category: 'general', placements: {
-            first: [{name: 'Abdul Basith', grade: 'A', points: 10}],
-            second: [{name: 'Muhammed Adhnan M.S', grade: 'B', points: 6}],
-            third: [{name: 'Muhammed Aman', grade: 'B', points: 4}],
-            gradewinners: [{name: 'Sayeed A.S', grade: 'B', points: 3}, {name: 'Adnan K.p', grade: 'B', points: 3}]
-        }},
-        {id: 'p23', name: 'Class Talent', category: 'general', placements: {first: [], second: [], third: [], gradewinners: []}},
-        {id: 'p24', name: 'Hifz (Non-stage)', category: 'general', placements: {first: [], second: [], third: [], gradewinners: []}},
-        {id: 'p25', name: 'Maths Talent', category: 'general', placements: {first: [], second: [], third: [], gradewinners: []}},
-        {id: 'p26', name: 'Hindi Vidvan', category: 'general', placements: {
-            first: [{name: 'Mohammed Midhlaj', grade: 'A', points: 10}],
-            second: [{name: 'Muhammed Fazal', grade: 'A', points: 8}],
-            third: [{name: 'Adnan K.p', grade: 'B', points: 4}, {name: 'Muhammed Alim Zayyan', grade: 'B', points: 4}],
-            gradewinners: []
-        }},
-        {id: 'p27', name: 'Padhyaparayanam', category: 'vocalizia', placements: {first: [], second: [], third: [], gradewinners: []}},
-        {id: 'p28', name: 'Song (ENG)', category: 'vocalizia', placements: {first: [], second: [], third: [], gradewinners: []}},
-        {id: 'p29', name: 'Song (URD)', category: 'vocalizia', placements: {first: [], second: [], third: [], gradewinners: []}},
-        {id: 'p30', name: 'Nasheedha', category: 'vocalizia', placements: {first: [], second: [], third: [], gradewinners: []}},
-        {id: 'p31', name: 'Padapattu', category: 'vocalizia', placements: {first: [], second: [], third: [], gradewinners: []}},
-        {id: 'p32', name: 'Qira\'th', category: 'vocalizia', placements: {first: [], second: [], third: [], gradewinners: []}},
-        {id: 'p33', name: 'Group Song', category: 'vocalizia', placements: {first: [], second: [], third: [], gradewinners: []}},
-        {id: 'p34', name: 'Qawwali', category: 'vocalizia', placements: {first: [], second: [], third: [], gradewinners: []}},
-        {id: 'p35', name: 'Speech & Song', category: 'vocalizia', placements: {first: [], second: [], third: [], gradewinners: []}},
-        {id: 'p36', name: 'Speech (MLM)', category: 'vocalizia', placements: {first: [], second: [], third: [], gradewinners: []}},
-        {id: 'p37', name: 'Speech (ENG)', category: 'vocalizia', placements: {first: [], second: [], third: [], gradewinners: []}},
-        {id: 'p38', name: 'Speech (ARB)', category: 'vocalizia', placements: {first: [], second: [], third: [], gradewinners: []}},
-        {id: 'p39', name: 'Oru Nimisham', category: 'vocalizia', placements: {first: [], second: [], third: [], gradewinners: []}},
-        {id: 'p40', name: 'Chain Story', category: 'vocalizia', placements: {first: [], second: [], third: [], gradewinners: []}},
-        {id: 'p41', name: 'Wa\'z', category: 'vocalizia', placements: {first: [], second: [], third: [], gradewinners: []}},
-        {id: 'p42', name: 'Story Narration', category: 'vocalizia', placements: {first: [], second: [], third: [], gradewinners: []}},
-        {id: 'p43', name: 'Sudoku', category: 'general', placements: {
-            first: [{name: 'Muhammed Aslam', grade: 'A', points: 10}],
-            second: [{name: 'Muhammed Faheem K.m', grade: 'A', points: 8}],
-            third: [{name: 'Muhammed Athif', grade: 'A', points: 6}],
-            gradewinners: [{name: 'Muhammed Labeeb', grade: 'B', points: 3}]
-        }},
-        {id: 'p44', name: 'Translation', category: 'general', placements: {
-            first: [{name: 'Muhammed Athif', grade: 'A', points: 10}],
-            second: [{name: 'Muhammed Faheem K.k', grade: 'B', points: 6}],
-            third: [{name: 'Muhammed Adhnan M.S', grade: 'B', points: 4}],
-            gradewinners: [{name: 'Abdul Basith', grade: 'B', points: 3}]
-        }},
-        {id: 'p45', name: 'Hifz (Knowledge)', category: 'general', placements: {first: [], second: [], third: [], gradewinners: []}},
-        {id: 'p46', name: 'Typing Trilingual', category: 'general', placements: {first: [], second: [], third: [], gradewinners: []}},
-        {id: 'p47', name: 'GK Quiz', category: 'general', placements: {first: [], second: [], third: [], gradewinners: []}},
-        {id: 'p48', name: 'Geo Giant', category: 'general', placements: {first: [], second: [], third: [], gradewinners: []}}
-    ];
+            // Programs data with all the results including Geo Giant
+            const PROGRAMS = [
+                {id: 'p1', name: 'Pencil Drawing', category: 'creatia', placements: {
+                    first: [{name: 'Muhammed Irfan', grade: 'B', points: 8}],
+                    second: [{name: 'Muhammed Haseeb', grade: 'B', points: 6}],
+                    third: [{name: 'Sayeed A.S', grade: 'B', points: 4}],
+                    gradewinners: [{name: 'Muhammed Athif', grade: 'B', points: 3}]
+                }},
+                {id: 'p2', name: 'Acrylic Painting', category: 'creatia', placements: {first: [], second: [], third: [], gradewinners: []}},
+                {id: 'p3', name: 'Calligraphy', category: 'creatia', placements: {
+                    first: [],
+                    second: [],
+                    third: [],
+                    gradewinners: [{name: 'Muhammed Alim Zayyan', grade: 'B', points: 3}]
+                }},
+                {id: 'p4', name: 'Poster Making', category: 'creatia', placements: {
+                    first: [],
+                    second: [{name: 'Muhammed Fazal', grade: 'B', points: 6}],
+                    third: [{name: 'Muhammed Haseeb', grade: 'B', points: 4}],
+                    gradewinners: []
+                }},
+                {id: 'p5', name: 'Digital Poster Making', category: 'creatia', placements: {
+                    first: [],
+                    second: [{name: 'Muhammed Swabeeh', grade: 'B', points: 6}, {name: 'Mohammed P.M', grade: 'B', points: 6}],
+                    third: [{name: 'Muhammed Fazal', grade: 'B', points: 4}],
+                    gradewinners: [{name: 'Muhammed Nihal', grade: 'B', points: 3}]
+                }},
+                {id: 'p6', name: 'News Paper', category: 'creatia', placements: {first: [], second: [], third: [], gradewinners: []}},
+                {id: 'p7', name: 'Children Magazine', category: 'creatia', placements: {first: [], second: [], third: [], gradewinners: []}},
+                {id: 'p8', name: 'Cover Design', category: 'creatia', placements: {
+                    first: [],
+                    second: [{name: 'Team A', grade: 'B', points: 13}, {name: 'Team C', grade: 'B', points: 13}],
+                    third: [{name: 'Team B', grade: 'B', points: 11}],
+                    gradewinners: []
+                }},
+                {id: 'p9', name: 'Essay Writing (MLM)', category: 'log', placements: {
+                    first: [{name: 'Muhammed Fazal', grade: 'A', points: 10}],
+                    second: [{name: 'Muhammed Sinan P.a', grade: 'A', points: 8}],
+                    third: [{name: 'Muhammed Arshad', grade: 'A', points: 6}],
+                    gradewinners: [{name: 'Muhammed Aman', grade: 'B', points: 3}, {name: 'Muhammed Nihal', grade: 'B', points: 3}]
+                }},
+                {id: 'p10', name: 'Essay Writing (ENG)', category: 'log', placements: {
+                    first: [{name: 'Muhammed Fazal', grade: 'A', points: 10}, {name: 'Muhammed Alim Zayyan', grade: 'A', points: 10}],
+                    second: [{name: 'Muhammed Aman', grade: 'A', points: 8}],
+                    third: [{name: 'Jawhar Sidheeque', grade: 'B', points: 4}],
+                    gradewinners: [{name: 'Muhammed Athif', grade: 'B', points: 3}]
+                }},
+                {id: 'p11', name: 'Essay Writing (ARB)', category: 'log', placements: {
+                    first: [{name: 'Muhammed Faheem K.k', grade: 'A', points: 10}],
+                    second: [{name: 'Abdul Basith', grade: 'B', points: 6}],
+                    third: [{name: 'Muhammed Adhnan M.S', grade: 'B', points: 4}],
+                    gradewinners: [{name: 'Adnan K.p', grade: 'B', points: 3}]
+                }},
+                {id: 'p12', name: 'Essay Writing (URD)', category: 'log', placements: {
+                    first: [{name: 'Muhammed Adhnan M.S', grade: 'A', points: 10}],
+                    second: [{name: 'Mohammed Midhlaj', grade: 'B', points: 6}],
+                    third: [{name: 'Muhammed Hanan', grade: 'B', points: 4}],
+                    gradewinners: []
+                }},
+                {id: 'p13', name: 'Poem Writing (MLM)', category: 'log', placements: {
+                    first: [{name: 'Muhammed Aslam', grade: 'No', points: 5}],
+                    second: [{name: 'Muhammed Sinan P.a', grade: 'No', points: 3}, {name: 'Muhammed Nihal', grade: 'No', points: 3}],
+                    third: [{name: 'Muhammed Aman', grade: 'B', points: 1}, {name: 'Muhammed Arshad', grade: 'B', points: 1}, {name: 'Muhammed Swabeeh', grade: 'B', points: 1}],
+                    gradewinners: []
+                }},
+                {id: 'p14', name: 'Poem Writing (ENG)', category: 'log', placements: {
+                    first: [{name: 'Muhammed Athif', grade: 'A', points: 10}],
+                    second: [{name: 'Muhammed Alim Zayyan', grade: 'B', points: 6}, {name: 'Mohammed P.M', grade: 'B', points: 6}],
+                    third: [{name: 'Muhammed Fazal', grade: 'B', points: 4}],
+                    gradewinners: [{name: 'Muhammed Haseeb', grade: 'B', points: 3}]
+                }},
+                {id: 'p15', name: 'Poem Writing (ARB)', category: 'log', placements: {
+                    first: [{name: 'Abdul Basith', grade: 'A', points: 10}],
+                    second: [{name: 'Muhammed Adhnan M.S', grade: 'A', points: 8}],
+                    third: [{name: 'Muhammed Haseeb', grade: 'A', points: 6}],
+                    gradewinners: []
+                }},
+                {id: 'p16', name: 'Poem Writing (URD)', category: 'log', placements: {
+                    first: [{name: 'Mohammed Midhlaj', grade: 'A', points: 10}],
+                    second: [{name: 'Muhammed Faheem K.m', grade: 'A', points: 8}],
+                    third: [{name: 'Muhammed Rabeeath', grade: 'A', points: 6}],
+                    gradewinners: [{name: 'Muhammed Adhnan M.S', grade: 'B', points: 3}]
+                }},
+                {id: 'p17', name: 'Short Story (ARB)', category: 'log', placements: {
+                    first: [{name: 'Abdul Basith', grade: 'A', points: 10}],
+                    second: [{name: 'Muhammed Faheem K.k', grade: 'B', points: 6}],
+                    third: [{name: 'Adnan K.p', grade: 'B', points: 4}],
+                    gradewinners: [{name: 'Muhammed Adhnan M.S', grade: 'B', points: 3}]
+                }},
+                {id: 'p18', name: 'Short Story (URD)', category: 'log', placements: {
+                    first: [{name: 'Muhammed Faheem K.k', grade: 'A', points: 10}],
+                    second: [{name: 'Mohammed Midhlaj', grade: 'A', points: 8}],
+                    third: [{name: 'Muhammed Adhnan M.S', grade: 'A', points: 6}],
+                    gradewinners: [{name: 'Muhammed Hanan', grade: 'B', points: 3}]
+                }},
+                {id: 'p19', name: 'Spelling Bee', category: 'general', placements: {first: [], second: [], third: [], gradewinners: []}},
+                {id: 'p20', name: 'Word Fight (ENG)', category: 'general', placements: {
+                    first: [{name: 'Muhammed Athif', grade: 'A', points: 10}],
+                    second: [{name: 'Jawhar Sidheeque', grade: 'B', points: 6}],
+                    third: [{name: 'Muhammed Faheem K.m', grade: 'B', points: 4}],
+                    gradewinners: []
+                }},
+                {id: 'p21', name: 'Mulafaza (ARB)', category: 'general', placements: {
+                    first: [{name: 'Muhammed Faheem K.k', grade: 'B', points: 8}],
+                    second: [{name: 'Muhammed Adhnan M.S', grade: 'B', points: 6}],
+                    third: [{name: 'Abdul Basith', grade: 'B', points: 4}],
+                    gradewinners: []
+                }},
+                {id: 'p22', name: 'Swarf IQ', category: 'general', placements: {
+                    first: [{name: 'Abdul Basith', grade: 'A', points: 10}],
+                    second: [{name: 'Muhammed Adhnan M.S', grade: 'B', points: 6}],
+                    third: [{name: 'Muhammed Aman', grade: 'B', points: 4}],
+                    gradewinners: [{name: 'Sayeed A.S', grade: 'B', points: 3}, {name: 'Adnan K.p', grade: 'B', points: 3}]
+                }},
+                {id: 'p23', name: 'Class Talent', category: 'general', placements: {first: [], second: [], third: [], gradewinners: []}},
+                {id: 'p24', name: 'Hifz (Non-stage)', category: 'general', placements: {first: [], second: [], third: [], gradewinners: []}},
+                {id: 'p25', name: 'Maths Talent', category: 'general', placements: {first: [], second: [], third: [], gradewinners: []}},
+                {id: 'p26', name: 'Hindi Vidvan', category: 'general', placements: {
+                    first: [{name: 'Mohammed Midhlaj', grade: 'A', points: 10}],
+                    second: [{name: 'Muhammed Fazal', grade: 'A', points: 8}],
+                    third: [{name: 'Adnan K.p', grade: 'B', points: 4}, {name: 'Muhammed Alim Zayyan', grade: 'B', points: 4}],
+                    gradewinners: []
+                }},
+                {id: 'p27', name: 'Padhyaparayanam', category: 'vocalizia', placements: {first: [], second: [], third: [], gradewinners: []}},
+                {id: 'p28', name: 'Song (ENG)', category: 'vocalizia', placements: {first: [], second: [], third: [], gradewinners: []}},
+                {id: 'p29', name: 'Song (URD)', category: 'vocalizia', placements: {first: [], second: [], third: [], gradewinners: []}},
+                {id: 'p30', name: 'Nasheedha', category: 'vocalizia', placements: {first: [], second: [], third: [], gradewinners: []}},
+                {id: 'p31', name: 'Padapattu', category: 'vocalizia', placements: {first: [], second: [], third: [], gradewinners: []}},
+                {id: 'p32', name: 'Qira\'th', category: 'vocalizia', placements: {first: [], second: [], third: [], gradewinners: []}},
+                {id: 'p33', name: 'Group Song', category: 'vocalizia', placements: {first: [], second: [], third: [], gradewinners: []}},
+                {id: 'p34', name: 'Qawwali', category: 'vocalizia', placements: {first: [], second: [], third: [], gradewinners: []}},
+                {id: 'p35', name: 'Speech & Song', category: 'vocalizia', placements: {first: [], second: [], third: [], gradewinners: []}},
+                {id: 'p36', name: 'Speech (MLM)', category: 'vocalizia', placements: {first: [], second: [], third: [], gradewinners: []}},
+                {id: 'p37', name: 'Speech (ENG)', category: 'vocalizia', placements: {first: [], second: [], third: [], gradewinners: []}},
+                {id: 'p38', name: 'Speech (ARB)', category: 'vocalizia', placements: {first: [], second: [], third: [], gradewinners: []}},
+                {id: 'p39', name: 'Oru Nimisham', category: 'vocalizia', placements: {first: [], second: [], third: [], gradewinners: []}},
+                {id: 'p40', name: 'Chain Story', category: 'vocalizia', placements: {first: [], second: [], third: [], gradewinners: []}},
+                {id: 'p41', name: 'Wa\'z', category: 'vocalizia', placements: {first: [], second: [], third: [], gradewinners: []}},
+                {id: 'p42', name: 'Story Narration', category: 'vocalizia', placements: {first: [], second: [], third: [], gradewinners: []}},
+                {id: 'p43', name: 'Sudoku', category: 'general', placements: {
+                    first: [{name: 'Muhammed Aslam', grade: 'A', points: 10}],
+                    second: [{name: 'Muhammed Faheem K.m', grade: 'A', points: 8}],
+                    third: [{name: 'Muhammed Athif', grade: 'A', points: 6}],
+                    gradewinners: [{name: 'Muhammed Labeeb', grade: 'B', points: 3}]
+                }},
+                {id: 'p44', name: 'Translation', category: 'general', placements: {
+                    first: [{name: 'Muhammed Athif', grade: 'A', points: 10}],
+                    second: [{name: 'Muhammed Faheem K.k', grade: 'B', points: 6}],
+                    third: [{name: 'Muhammed Adhnan M.S', grade: 'B', points: 4}],
+                    gradewinners: [{name: 'Abdul Basith', grade: 'B', points: 3}]
+                }},
+                {id: 'p45', name: 'Hifz (Knowledge)', category: 'general', placements: {first: [], second: [], third: [], gradewinners: []}},
+                {id: 'p46', name: 'Typing Trilingual', category: 'general', placements: {first: [], second: [], third: [], gradewinners: []}},
+                {id: 'p47', name: 'GK Quiz', category: 'general', placements: {first: [], second: [], third: [], gradewinners: []}},
+                {id: 'p48', name: 'Geo Giant', category: 'general', placements: {
+                    first: [],
+                    second: [{name: 'Muhammed Shabeeb', grade: 'No', points: 3}],
+                    third: [{name: 'Mohammed P.M', grade: 'No', points: 1}],
+                    gradewinners: []
+                }}
+            ];
 
-    const SCHEDULE = [
-        {date: '2025-10-01', event: 'Opening & Inauguration'},
-        {date: '2025-10-02', event: 'Creatia events - Pencil Drawing & Painting'},
-        {date: '2025-10-03', event: 'Log events - Essays & Poems'},
-        {date: '2025-10-04', event: 'Vocalizia - Songs & Group Performances'}
-    ];
+            const SCHEDULE = [
+                {date: '2025-10-01', event: 'Opening & Inauguration'},
+                {date: '2025-10-02', event: 'Creatia events - Pencil Drawing & Painting'},
+                {date: '2025-10-03', event: 'Log events - Essays & Poems'},
+                {date: '2025-10-04', event: 'Vocalizia - Songs & Group Performances'}
+            ];
 
-    let admin = false;
-    let state = {
-        students: STUDENTS.map((s, i) => ({...s, id: `s${i+1}`})), 
-        programs: PROGRAMS, 
-        schedule: SCHEDULE
-    };
+            let admin = false;
+            let state = {
+                students: STUDENTS.map((s, i) => ({...s, id: `s${i+1}`})), 
+                programs: PROGRAMS, 
+                schedule: SCHEDULE
+            };
 
-    let currentProgramId = null;
+            let currentProgramId = null;
 
-    // Load state from localStorage if available
-    function loadState() {
-        const savedState = localStorage.getItem('artelligenceState');
-        if (savedState) {
-            try {
-                const parsed = JSON.parse(savedState);
-                // Ensure all programs have proper placements structure
-                if (parsed.programs) {
-                    parsed.programs.forEach(program => {
-                        if (!program.placements) {
-                            program.placements = { first: [], second: [], third: [], gradewinners: [] };
+            // Load state from localStorage if available
+            function loadState() {
+                const savedState = localStorage.getItem('artelligenceState');
+                if (savedState) {
+                    try {
+                        const parsed = JSON.parse(savedState);
+                        // Ensure all programs have proper placements structure
+                        if (parsed.programs) {
+                            parsed.programs.forEach(program => {
+                                if (!program.placements) {
+                                    program.placements = { first: [], second: [], third: [], gradewinners: [] };
+                                }
+                                // Ensure each placement is an array
+                                ['first', 'second', 'third', 'gradewinners'].forEach(place => {
+                                    if (!Array.isArray(program.placements[place])) {
+                                        program.placements[place] = [];
+                                    }
+                                });
+                            });
                         }
-                        // Ensure each placement is an array
-                        ['first', 'second', 'third', 'gradewinners'].forEach(place => {
-                            if (!Array.isArray(program.placements[place])) {
-                                program.placements[place] = [];
-                            }
-                        });
-                    });
+                        state = parsed;
+                    } catch (e) {
+                        console.error('Error loading saved state:', e);
+                        // Reset to default state if loading fails
+                        state = {
+                            students: STUDENTS.map((s, i) => ({...s, id: `s${i+1}`})), 
+                            programs: PROGRAMS, 
+                            schedule: SCHEDULE
+                        };
+                    }
                 }
-                state = parsed;
-            } catch (e) {
-                console.error('Error loading saved state:', e);
-                // Reset to default state if loading fails
-                state = {
-                    students: STUDENTS.map((s, i) => ({...s, id: `s${i+1}`})), 
-                    programs: PROGRAMS, 
-                    schedule: SCHEDULE
-                };
             }
-        }
-    }
 
-    // Save state to localStorage
-    function saveState() {
-        localStorage.setItem('artelligenceState', JSON.stringify(state));
-    }
+            // Save state to localStorage
+            function saveState() {
+                localStorage.setItem('artelligenceState', JSON.stringify(state));
+            }
 
-    // Initialize
-    loadState();
+            // Initialize
+            loadState();
 
-    // Calculate points for a student based on placement and grade
-    function calculatePoints(programName, placement, grade) {
-        if (SPECIAL_PROGRAMS.includes(programName)) {
-            return SPECIAL_POINTS_SYSTEM[placement][grade];
-        } else {
-            return POINTS_SYSTEM[placement][grade];
-        }
-    }
-
-    // Calculate total points for each student
-    function calculateStudentPoints() {
-        const studentPoints = {};
-        
-        // Initialize all students with 0 points
-        state.students.forEach(student => {
-            studentPoints[student.name] = 0;
-        });
-        
-        // Calculate points from all programs
-        state.programs.forEach(program => {
-            if (!program.placements) return;
-            
-            ['first', 'second', 'third', 'gradewinners'].forEach(place => {
-                const winners = program.placements[place];
-                if (Array.isArray(winners)) {
-                    winners.forEach(winner => {
-                        if (winner && winner.name && studentPoints.hasOwnProperty(winner.name)) {
-                            studentPoints[winner.name] += winner.points || calculatePoints(program.name, place, winner.grade || 'No');
-                        }
-                    });
+            // Calculate points for a student based on placement and grade
+            function calculatePoints(programName, placement, grade) {
+                if (SPECIAL_PROGRAMS.includes(programName)) {
+                    return SPECIAL_POINTS_SYSTEM[placement][grade];
+                } else {
+                    return POINTS_SYSTEM[placement][grade];
                 }
-            });
-        });
-        
-        return studentPoints;
-    }
+            }
 
-    // Get student's program placements
-    function getStudentPlacements(studentName) {
-        const placements = [];
-        
-        state.programs.forEach(program => {
-            if (!program.placements) return;
-            
-            ['first', 'second', 'third', 'gradewinners'].forEach(place => {
-                const winners = program.placements[place];
-                if (Array.isArray(winners)) {
-                    winners.forEach(winner => {
-                        if (winner && winner.name === studentName) {
-                            placements.push({
-                                program: program.name,
-                                placement: place,
-                                grade: winner.grade,
-                                points: winner.points || calculatePoints(program.name, place, winner.grade || 'No')
+            // Calculate total points for each student
+            function calculateStudentPoints() {
+                const studentPoints = {};
+                
+                // Initialize all students with 0 points
+                state.students.forEach(student => {
+                    studentPoints[student.name] = 0;
+                });
+                
+                // Calculate points from all programs
+                state.programs.forEach(program => {
+                    if (!program.placements) return;
+                    
+                    ['first', 'second', 'third', 'gradewinners'].forEach(place => {
+                        const winners = program.placements[place];
+                        if (Array.isArray(winners)) {
+                            winners.forEach(winner => {
+                                if (winner && winner.name && studentPoints.hasOwnProperty(winner.name)) {
+                                    studentPoints[winner.name] += winner.points || calculatePoints(program.name, place, winner.grade || 'No');
+                                }
                             });
                         }
                     });
-                }
-            });
-        });
-        
-        return placements;
-    }
-
-    // Navigation
-    document.querySelectorAll('.nav-tab').forEach(tab => {
-        tab.onclick = () => {
-            document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
-            tab.classList.add('active');
-            
-            const page = tab.dataset.page;
-            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-            document.getElementById(page).classList.add('active');
-        };
-    });
-
-    // Admin Modal
-    const modal = document.getElementById('adminModal');
-    const adminBtn = document.getElementById('adminBtn');
-    const loginBtn = document.getElementById('loginBtn');
-
-    if (adminBtn) {
-        adminBtn.onclick = () => { 
-            if (modal) modal.style.display = 'flex'; 
-        };
-    }
-
-    if (loginBtn) {
-        loginBtn.onclick = () => {
-            const pwd = document.getElementById('adminPassword').value;
-            const error = document.getElementById('errorMsg');
-            if (pwd === '000') { 
-                admin = true; 
-                if (modal) modal.style.display = 'none'; 
-                renderPrograms(); 
-                document.getElementById('adminPassword').value = '';
-                if (error) error.textContent = '';
-            } else {
-                if (error) error.textContent = 'Incorrect password!';
+                });
+                
+                return studentPoints;
             }
-        };
-    }
 
-    // Close modal when clicking outside
-    if (modal) {
-        modal.onclick = (e) => {
-            if (e.target === modal) {
-                modal.style.display = 'none';
-                document.getElementById('adminPassword').value = '';
-                document.getElementById('errorMsg').textContent = '';
-            }
-        };
-    }
-
-    // Placement Modal
-    const placementModal = document.getElementById('placementModal');
-    const closePlacementModal = document.getElementById('closePlacementModal');
-    const savePlacements = document.getElementById('savePlacements');
-
-    if (closePlacementModal) {
-        closePlacementModal.onclick = () => {
-            if (placementModal) placementModal.style.display = 'none';
-        };
-    }
-
-    if (placementModal) {
-        placementModal.onclick = (e) => {
-            if (e.target === placementModal) {
-                placementModal.style.display = 'none';
-            }
-        };
-    }
-
-    if (savePlacements) {
-        savePlacements.onclick = () => {
-            if (currentProgramId) {
-                saveState();
-                renderPrograms();
-                renderLeaderboard();
-                renderStudents(); // Update students page with new points
-                if (placementModal) placementModal.style.display = 'none';
-            }
-        };
-    }
-
-    // Student Details Modal
-    const studentDetailsModal = document.getElementById('studentDetailsModal');
-    const closeStudentDetails = document.getElementById('closeStudentDetails');
-
-    if (closeStudentDetails) {
-        closeStudentDetails.onclick = () => {
-            if (studentDetailsModal) studentDetailsModal.style.display = 'none';
-        };
-    }
-
-    if (studentDetailsModal) {
-        studentDetailsModal.onclick = (e) => {
-            if (e.target === studentDetailsModal) {
-                studentDetailsModal.style.display = 'none';
-            }
-        };
-    }
-
-    // Add winner functionality - FIXED FOR GRADE WINNERS
-    document.querySelectorAll('.add-winner-btn').forEach(btn => {
-        btn.onclick = () => {
-            const place = btn.dataset.place;
-            let selector, gradeSelect;
-            
-            // Handle different selectors for different placement types
-            if (place === 'gradewinners') {
-                selector = document.getElementById('gradeWinnersSelector');
-                gradeSelect = document.getElementById('gradeWinnersGrade');
-            } else {
-                selector = document.getElementById(`${place}PlaceSelector`);
-                gradeSelect = document.getElementById(`${place}PlaceGrade`);
-            }
-            
-            const selectedName = selector.value;
-            const grade = gradeSelect.value;
-            
-            if (selectedName && currentProgramId) {
-                const program = state.programs.find(p => p.id === currentProgramId);
-                if (program) {
-                    // Ensure placements exist
-                    if (!program.placements) program.placements = { first: [], second: [], third: [], gradewinners: [] };
-                    if (!Array.isArray(program.placements[place])) program.placements[place] = [];
+            // Get student's program placements
+            function getStudentPlacements(studentName) {
+                const placements = [];
+                
+                state.programs.forEach(program => {
+                    if (!program.placements) return;
                     
-                    // Calculate points based on whether this is a special program
-                    const points = calculatePoints(program.name, place, grade);
-                    
-                    program.placements[place].push({
-                        name: selectedName,
-                        grade: grade,
-                        points: points
-                    });
-                    
-                    renderPlacementLists(program);
-                    selector.value = '';
-                }
-            }
-        };
-    });
-
-    // Render functions
-    function renderLeaderboard() {
-        const pts = {'NEONOVA': 0, 'ASTRO-NOVA': 0, 'LUMINOVA': 0};
-        const map = Object.fromEntries(state.students.map(s => [s.name, s]));
-        
-        state.programs.forEach(p => {
-            if (!p.placements) return;
-            
-            ['first', 'second', 'third', 'gradewinners'].forEach(place => {
-                const winners = p.placements[place];
-                if (Array.isArray(winners)) {
-                    winners.forEach(winner => {
-                        if (winner && winner.name) {
-                            // For team-based programs, add points to the team
-                            if (winner.name === 'Team A') {
-                                pts['NEONOVA'] += winner.points || calculatePoints(p.name, place, winner.grade || 'No');
-                            } else if (winner.name === 'Team B') {
-                                pts['ASTRO-NOVA'] += winner.points || calculatePoints(p.name, place, winner.grade || 'No');
-                            } else if (winner.name === 'Team C') {
-                                pts['LUMINOVA'] += winner.points || calculatePoints(p.name, place, winner.grade || 'No');
-                            } else if (winner.name && map[winner.name]) {
-                                // For individual programs, add points to the student's team
-                                pts[map[winner.name].team] += winner.points || calculatePoints(p.name, place, winner.grade || 'No');
-                            }
+                    ['first', 'second', 'third', 'gradewinners'].forEach(place => {
+                        const winners = program.placements[place];
+                        if (Array.isArray(winners)) {
+                            winners.forEach(winner => {
+                                if (winner && winner.name === studentName) {
+                                    placements.push({
+                                        program: program.name,
+                                        placement: place,
+                                        grade: winner.grade,
+                                        points: winner.points || calculatePoints(program.name, place, winner.grade || 'No')
+                                    });
+                                }
+                            });
                         }
                     });
-                }
-            });
-        });
-        
-        const cont = document.getElementById('leaderboard');
-        if (!cont) return;
-        
-        cont.innerHTML = '';
-        
-        // Sort teams by points (descending)
-        const sortedTeams = Object.keys(pts).sort((a, b) => pts[b] - pts[a]);
-        
-        sortedTeams.forEach(t => {
-            const d = document.createElement('div'); 
-            d.className = 'team-card';
-            d.innerHTML = `<h3>${t}</h3><div class="points">${pts[t]}</div>`;
-            cont.appendChild(d);
-        });
-    }
-
-    function renderPrograms(category = 'all', searchTerm = '') {
-        const tbody = document.getElementById('programsTbody'); 
-        if (!tbody) return;
-        
-        tbody.innerHTML = '';
-
-        state.programs.forEach((p, i) => {
-            if (category !== 'all' && p.category !== category) return;
-
-            // Create display text for placements with error handling
-            let firstNames = '-';
-            let secondNames = '-';
-            let thirdNames = '-';
-            let gradeWinnersNames = '-';
-
-            if (p.placements) {
-                if (Array.isArray(p.placements.first)) {
-                    firstNames = p.placements.first.map(w => `${w.name} (${w.grade})`).join(', ') || '-';
-                }
-                if (Array.isArray(p.placements.second)) {
-                    secondNames = p.placements.second.map(w => `${w.name} (${w.grade})`).join(', ') || '-';
-                }
-                if (Array.isArray(p.placements.third)) {
-                    thirdNames = p.placements.third.map(w => `${w.name} (${w.grade})`).join(', ') || '-';
-                }
-                if (Array.isArray(p.placements.gradewinners)) {
-                    gradeWinnersNames = p.placements.gradewinners.map(w => `${w.name} (${w.grade})`).join(', ') || '-';
-                }
-            }
-            
-            const rowText = `${p.name} ${p.category} ${firstNames} ${secondNames} ${thirdNames} ${gradeWinnersNames}`.toLowerCase();
-
-            if (searchTerm && !rowText.includes(searchTerm)) return;
-
-            const tr = document.createElement('tr');
-            tr.innerHTML = `
-                <td>${i+1}</td>
-                <td>${p.name}</td>
-                <td>${p.category}</td>
-                <td>1: ${firstNames}<br>2: ${secondNames}<br>3: ${thirdNames}<br>Grade: ${gradeWinnersNames}</td>
-            `;
-            
-            if (admin) {
-                tr.innerHTML += `<td><button class='edit-btn' onclick="openPlacementEditor('${p.id}')">Edit</button></td>`;
-            } else {
-                tr.innerHTML += '<td></td>';
-            }
-            
-            tbody.appendChild(tr);
-        });
-    }
-
-    // Add search functionality
-    const programSearch = document.getElementById('programSearch');
-    if (programSearch) {
-        programSearch.addEventListener('input', function() {
-            const term = this.value.toLowerCase();
-            const activeCatBtn = document.querySelector('#programs .filter-btn.active');
-            const activeCat = activeCatBtn ? activeCatBtn.dataset.cat : 'all';
-            renderPrograms(activeCat, term);
-        });
-    }
-
-    // Filter button functionality
-    document.querySelectorAll('#programs .filter-btn').forEach(btn => {
-        btn.onclick = () => {
-            document.querySelectorAll('#programs .filter-btn').forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            const cat = btn.dataset.cat;
-            const term = document.getElementById('programSearch').value.toLowerCase();
-            renderPrograms(cat, term);
-        };
-    });
-
-    function renderStudents(team = 'all', searchTerm = '') {
-        const grid = document.getElementById('studentsGrid'); 
-        if (!grid) return;
-        
-        grid.innerHTML = '';
-        
-        // Calculate student points
-        const studentPoints = calculateStudentPoints();
-        
-        // Sort students by points (descending)
-        const sortedStudents = [...state.students].sort((a, b) => {
-            return studentPoints[b.name] - studentPoints[a.name];
-        });
-        
-        sortedStudents.forEach(student => {
-            // Filter by team
-            if (team !== 'all' && student.team !== team) return;
-            
-            // Filter by search term
-            if (searchTerm && !student.name.toLowerCase().includes(searchTerm)) return;
-            
-            const points = studentPoints[student.name] || 0;
-            
-            const d = document.createElement('div'); 
-            d.className = 'student-card';
-            d.innerHTML = `
-                <div class="student-points" onclick="showStudentDetails('${student.name}')">${points.toString().padStart(2, '0')}</div>
-                <div class="student-info">
-                    <h4>${student.name}</h4>
-                    <div class="team">${student.team}</div>
-                </div>
-            `;
-            grid.appendChild(d);
-        });
-    }
-
-    // Student search functionality
-    const studentSearch = document.getElementById('studentSearch');
-    if (studentSearch) {
-        studentSearch.addEventListener('input', function() {
-            const term = this.value.toLowerCase();
-            const activeTeamBtn = document.querySelector('#students .filter-btn.active');
-            const activeTeam = activeTeamBtn ? activeTeamBtn.dataset.team : 'all';
-            renderStudents(activeTeam, term);
-        });
-    }
-
-    // Student team filter functionality
-    document.querySelectorAll('#students .filter-btn').forEach(btn => {
-        btn.onclick = () => {
-            document.querySelectorAll('#students .filter-btn').forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-            const team = btn.dataset.team;
-            const term = document.getElementById('studentSearch').value.toLowerCase();
-            renderStudents(team, term);
-        };
-    });
-
-    function renderSchedule() {
-        const list = document.getElementById('scheduleList'); 
-        if (!list) return;
-        
-        list.innerHTML = '';
-        
-        state.schedule.forEach(it => {
-            const d = document.createElement('div'); 
-            d.className = 'schedule-item';
-            d.innerHTML = `
-                <strong>${it.date}</strong><br>${it.event}
-            `;
-            list.appendChild(d);
-        });
-    }
-
-    // Show student details modal
-    function showStudentDetails(studentName) {
-        const student = state.students.find(s => s.name === studentName);
-        if (!student) return;
-        
-        const studentPoints = calculateStudentPoints();
-        const totalPoints = studentPoints[studentName] || 0;
-        const placements = getStudentPlacements(studentName);
-        
-        // Update modal header
-        const header = document.getElementById('studentDetailsHeader');
-        header.innerHTML = `
-            <h2>${studentName}</h2>
-            <div class="team">${student.team}</div>
-            <div class="total-points">Total Points: ${totalPoints}</div>
-        `;
-        
-        // Update programs list
-        const programsList = document.getElementById('studentProgramsList');
-        programsList.innerHTML = '';
-        
-        if (placements.length === 0) {
-            programsList.innerHTML = '<div style="text-align: center; color: #888; padding: 20px;">No placements yet</div>';
-        } else {
-            placements.forEach(placement => {
-                const programItem = document.createElement('div');
-                programItem.className = 'program-item';
-                
-                let placementText = '';
-                let placementClass = '';
-                
-                switch(placement.placement) {
-                    case 'first':
-                        placementText = '1st';
-                        placementClass = 'placement-1st';
-                        break;
-                    case 'second':
-                        placementText = '2nd';
-                        placementClass = 'placement-2nd';
-                        break;
-                    case 'third':
-                        placementText = '3rd';
-                        placementClass = 'placement-3rd';
-                        break;
-                    case 'gradewinners':
-                        placementText = 'Grade';
-                        placementClass = 'placement-grade';
-                        break;
-                }
-                
-                programItem.innerHTML = `
-                    <div class="program-name">${placement.program}</div>
-                    <div class="program-details">
-                        <span class="placement-badge ${placementClass}">${placementText}</span>
-                        <span class="grade-badge">${placement.grade}</span>
-                        <span class="points-badge">+${placement.points}</span>
-                    </div>
-                `;
-                
-                programsList.appendChild(programItem);
-            });
-        }
-        
-        // Show modal
-        const studentDetailsModal = document.getElementById('studentDetailsModal');
-        if (studentDetailsModal) {
-            studentDetailsModal.style.display = 'flex';
-        }
-    }
-
-    // Placement Editor Functions
-    function openPlacementEditor(pid) {
-        if (!admin) { 
-            alert('Admin login required'); 
-            return; 
-        }
-        
-        currentProgramId = pid;
-        const program = state.programs.find(p => p.id === pid);
-        
-        if (program) {
-            document.getElementById('placementModalTitle').textContent = `Edit Placements for ${program.name}`;
-            
-            // Check if this is a special program
-            const isSpecialProgram = SPECIAL_PROGRAMS.includes(program.name);
-            
-            // For special programs, show team selection
-            if (isSpecialProgram) {
-                const teamOptions = `
-                    <option value="">Select Team</option>
-                    <option value="Team A">Team A</option>
-                    <option value="Team B">Team B</option>
-                    <option value="Team C">Team C</option>
-                `;
-                document.getElementById('firstPlaceSelector').innerHTML = teamOptions;
-                document.getElementById('secondPlaceSelector').innerHTML = teamOptions;
-                document.getElementById('thirdPlaceSelector').innerHTML = teamOptions;
-                document.getElementById('gradeWinnersSelector').innerHTML = teamOptions;
-            } else {
-                // For regular programs, show student selection
-                let studentOptions = '<option value="">Select Student</option>';
-                state.students.forEach(student => {
-                    studentOptions += `<option value="${student.name}">${student.name} (${student.team})</option>`;
                 });
-                document.getElementById('firstPlaceSelector').innerHTML = studentOptions;
-                document.getElementById('secondPlaceSelector').innerHTML = studentOptions;
-                document.getElementById('thirdPlaceSelector').innerHTML = studentOptions;
-                document.getElementById('gradeWinnersSelector').innerHTML = studentOptions;
-            }
-            
-            renderPlacementLists(program);
-            if (placementModal) placementModal.style.display = 'flex';
-        }
-    }
-
-    function renderPlacementLists(program) {
-        renderPlacementList('first', program.placements?.first || []);
-        renderPlacementList('second', program.placements?.second || []);
-        renderPlacementList('third', program.placements?.third || []);
-        renderPlacementList('gradewinners', program.placements?.gradewinners || []);
-    }
-
-    function renderPlacementList(place, winners) {
-        let listElement;
-        
-        // Handle different list elements for different placement types
-        if (place === 'gradewinners') {
-            listElement = document.getElementById('gradeWinnersList');
-        } else {
-            listElement = document.getElementById(`${place}PlaceList`);
-        }
-        
-        if (!listElement) return;
-        
-        if (!Array.isArray(winners) || winners.length === 0) {
-            listElement.innerHTML = '<div style="text-align: center; color: #888; padding: 10px;">No winners added yet</div>';
-            return;
-        }
-        
-        listElement.innerHTML = '';
-        
-        winners.forEach((winner, index) => {
-            const program = state.programs.find(p => p.id === currentProgramId);
-            const points = winner.points || calculatePoints(program.name, place, winner.grade || 'No');
-            const winnerItem = document.createElement('div');
-            winnerItem.className = 'winner-item';
-            winnerItem.innerHTML = `
-                <div class="winner-info">
-                    <span>${winner.name}</span>
-                    <span>Grade: ${winner.grade}</span>
-                    <span class="winner-points">+${points} points</span>
-                </div>
-                <button class="remove-winner" data-place="${place}" data-index="${index}">
-                    <i class="fas fa-times"></i>
-                </button>
-            `;
-            listElement.appendChild(winnerItem);
-        });
-        
-        // Add event listeners to remove buttons
-        listElement.querySelectorAll('.remove-winner').forEach(btn => {
-            btn.onclick = () => {
-                const place = btn.dataset.place;
-                const index = parseInt(btn.dataset.index);
                 
-                if (currentProgramId) {
-                    const program = state.programs.find(p => p.id === currentProgramId);
-                    if (program && program.placements && Array.isArray(program.placements[place])) {
-                        program.placements[place].splice(index, 1);
-                        renderPlacementLists(program);
+                return placements;
+            }
+
+            // Navigation
+            document.querySelectorAll('.nav-tab').forEach(tab => {
+                tab.onclick = () => {
+                    document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
+                    tab.classList.add('active');
+                    
+                    const page = tab.dataset.page;
+                    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+                    document.getElementById(page).classList.add('active');
+                };
+            });
+
+            // Admin Modal
+            const modal = document.getElementById('adminModal');
+            const adminBtn = document.getElementById('adminBtn');
+            const loginBtn = document.getElementById('loginBtn');
+
+            if (adminBtn) {
+                adminBtn.onclick = () => { 
+                    if (modal) modal.style.display = 'flex'; 
+                };
+            }
+
+            if (loginBtn) {
+                loginBtn.onclick = () => {
+                    const pwd = document.getElementById('adminPassword').value;
+                    const error = document.getElementById('errorMsg');
+                    if (pwd === '000') { 
+                        admin = true; 
+                        if (modal) modal.style.display = 'none'; 
+                        renderPrograms(); 
+                        document.getElementById('adminPassword').value = '';
+                        if (error) error.textContent = '';
+                    } else {
+                        if (error) error.textContent = 'Incorrect password!';
                     }
+                };
+            }
+
+            // Close modal when clicking outside
+            if (modal) {
+                modal.onclick = (e) => {
+                    if (e.target === modal) {
+                        modal.style.display = 'none';
+                        document.getElementById('adminPassword').value = '';
+                        document.getElementById('errorMsg').textContent = '';
+                    }
+                };
+            }
+
+            // Placement Modal
+            const placementModal = document.getElementById('placementModal');
+            const closePlacementModal = document.getElementById('closePlacementModal');
+            const savePlacements = document.getElementById('savePlacements');
+
+            if (closePlacementModal) {
+                closePlacementModal.onclick = () => {
+                    if (placementModal) placementModal.style.display = 'none';
+                };
+            }
+
+            if (placementModal) {
+                placementModal.onclick = (e) => {
+                    if (e.target === placementModal) {
+                        placementModal.style.display = 'none';
+                    }
+                };
+            }
+
+            if (savePlacements) {
+                savePlacements.onclick = () => {
+                    if (currentProgramId) {
+                        saveState();
+                        renderPrograms();
+                        renderLeaderboard();
+                        renderStudents(); // Update students page with new points
+                        if (placementModal) placementModal.style.display = 'none';
+                    }
+                };
+            }
+
+            // Student Details Modal
+            const studentDetailsModal = document.getElementById('studentDetailsModal');
+            const closeStudentDetails = document.getElementById('closeStudentDetails');
+
+            if (closeStudentDetails) {
+                closeStudentDetails.onclick = () => {
+                    if (studentDetailsModal) studentDetailsModal.style.display = 'none';
+                };
+            }
+
+            if (studentDetailsModal) {
+                studentDetailsModal.onclick = (e) => {
+                    if (e.target === studentDetailsModal) {
+                        studentDetailsModal.style.display = 'none';
+                    }
+                };
+            }
+
+            // Add winner functionality - FIXED FOR GRADE WINNERS
+            document.querySelectorAll('.add-winner-btn').forEach(btn => {
+                btn.onclick = () => {
+                    const place = btn.dataset.place;
+                    let selector, gradeSelect;
+                    
+                    // Handle different selectors for different placement types
+                    if (place === 'gradewinners') {
+                        selector = document.getElementById('gradeWinnersSelector');
+                        gradeSelect = document.getElementById('gradeWinnersGrade');
+                    } else {
+                        selector = document.getElementById(`${place}PlaceSelector`);
+                        gradeSelect = document.getElementById(`${place}PlaceGrade`);
+                    }
+                    
+                    const selectedName = selector.value;
+                    const grade = gradeSelect.value;
+                    
+                    if (selectedName && currentProgramId) {
+                        const program = state.programs.find(p => p.id === currentProgramId);
+                        if (program) {
+                            // Ensure placements exist
+                            if (!program.placements) program.placements = { first: [], second: [], third: [], gradewinners: [] };
+                            if (!Array.isArray(program.placements[place])) program.placements[place] = [];
+                            
+                            // Calculate points based on whether this is a special program
+                            const points = calculatePoints(program.name, place, grade);
+                            
+                            program.placements[place].push({
+                                name: selectedName,
+                                grade: grade,
+                                points: points
+                            });
+                            
+                            renderPlacementLists(program);
+                            selector.value = '';
+                        }
+                    }
+                };
+            });
+
+            // Render functions
+            function renderLeaderboard() {
+                const pts = {'NEONOVA': 0, 'ASTRO-NOVA': 0, 'LUMINOVA': 0};
+                const map = Object.fromEntries(state.students.map(s => [s.name, s]));
+                
+                state.programs.forEach(p => {
+                    if (!p.placements) return;
+                    
+                    ['first', 'second', 'third', 'gradewinners'].forEach(place => {
+                        const winners = p.placements[place];
+                        if (Array.isArray(winners)) {
+                            winners.forEach(winner => {
+                                if (winner && winner.name) {
+                                    // For team-based programs, add points to the team
+                                    if (winner.name === 'Team A') {
+                                        pts['NEONOVA'] += winner.points || calculatePoints(p.name, place, winner.grade || 'No');
+                                    } else if (winner.name === 'Team B') {
+                                        pts['ASTRO-NOVA'] += winner.points || calculatePoints(p.name, place, winner.grade || 'No');
+                                    } else if (winner.name === 'Team C') {
+                                        pts['LUMINOVA'] += winner.points || calculatePoints(p.name, place, winner.grade || 'No');
+                                    } else if (winner.name && map[winner.name]) {
+                                        // For individual programs, add points to the student's team
+                                        pts[map[winner.name].team] += winner.points || calculatePoints(p.name, place, winner.grade || 'No');
+                                    }
+                                }
+                            });
+                        }
+                    });
+                });
+                
+                const cont = document.getElementById('leaderboard');
+                if (!cont) return;
+                
+                cont.innerHTML = '';
+                
+                // Sort teams by points (descending)
+                const sortedTeams = Object.keys(pts).sort((a, b) => pts[b] - pts[a]);
+                
+                sortedTeams.forEach(t => {
+                    const d = document.createElement('div'); 
+                    d.className = 'team-card';
+                    d.innerHTML = `<h3>${t}</h3><div class="points">${pts[t]}</div>`;
+                    cont.appendChild(d);
+                });
+            }
+
+            function renderPrograms(category = 'all', searchTerm = '') {
+                const tbody = document.getElementById('programsTbody'); 
+                if (!tbody) return;
+                
+                tbody.innerHTML = '';
+
+                state.programs.forEach((p, i) => {
+                    if (category !== 'all' && p.category !== category) return;
+
+                    // Create display text for placements with error handling
+                    let firstNames = '-';
+                    let secondNames = '-';
+                    let thirdNames = '-';
+                    let gradeWinnersNames = '-';
+
+                    if (p.placements) {
+                        if (Array.isArray(p.placements.first)) {
+                            firstNames = p.placements.first.map(w => `${w.name} (${w.grade})`).join(', ') || '-';
+                        }
+                        if (Array.isArray(p.placements.second)) {
+                            secondNames = p.placements.second.map(w => `${w.name} (${w.grade})`).join(', ') || '-';
+                        }
+                        if (Array.isArray(p.placements.third)) {
+                            thirdNames = p.placements.third.map(w => `${w.name} (${w.grade})`).join(', ') || '-';
+                        }
+                        if (Array.isArray(p.placements.gradewinners)) {
+                            gradeWinnersNames = p.placements.gradewinners.map(w => `${w.name} (${w.grade})`).join(', ') || '-';
+                        }
+                    }
+                    
+                    const rowText = `${p.name} ${p.category} ${firstNames} ${secondNames} ${thirdNames} ${gradeWinnersNames}`.toLowerCase();
+
+                    if (searchTerm && !rowText.includes(searchTerm)) return;
+
+                    const tr = document.createElement('tr');
+                    tr.className = 'program-row';
+                    tr.innerHTML = `
+                        <td>${i+1}</td>
+                        <td>${p.name}</td>
+                        <td><span class="program-category-badge category-${p.category}">${p.category}</span></td>
+                        <td class="winners-cell">
+                            <div class="winner-item-cell">
+                                <span class="winner-position">1:</span>
+                                <span class="winner-name">${firstNames}</span>
+                            </div>
+                            <div class="winner-item-cell">
+                                <span class="winner-position">2:</span>
+                                <span class="winner-name">${secondNames}</span>
+                            </div>
+                            <div class="winner-item-cell">
+                                <span class="winner-position">3:</span>
+                                <span class="winner-name">${thirdNames}</span>
+                            </div>
+                            <div class="winner-item-cell">
+                                <span class="winner-position">Grade:</span>
+                                <span class="winner-name">${gradeWinnersNames}</span>
+                            </div>
+                        </td>
+                    `;
+                    
+                    if (admin) {
+                        tr.innerHTML += `<td><button class='edit-btn' onclick="openPlacementEditor('${p.id}')">Edit</button></td>`;
+                    } else {
+                        tr.innerHTML += '<td></td>';
+                    }
+                    
+                    tbody.appendChild(tr);
+                });
+            }
+
+            // Add search functionality
+            const programSearch = document.getElementById('programSearch');
+            if (programSearch) {
+                programSearch.addEventListener('input', function() {
+                    const term = this.value.toLowerCase();
+                    const activeCatBtn = document.querySelector('#programs .filter-btn.active');
+                    const activeCat = activeCatBtn ? activeCatBtn.dataset.cat : 'all';
+                    renderPrograms(activeCat, term);
+                });
+            }
+
+            // Filter button functionality
+            document.querySelectorAll('#programs .filter-btn').forEach(btn => {
+                btn.onclick = () => {
+                    document.querySelectorAll('#programs .filter-btn').forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    const cat = btn.dataset.cat;
+                    const term = document.getElementById('programSearch').value.toLowerCase();
+                    renderPrograms(cat, term);
+                };
+            });
+
+            function renderStudents(team = 'all', searchTerm = '') {
+                const grid = document.getElementById('studentsGrid'); 
+                if (!grid) return;
+                
+                grid.innerHTML = '';
+                
+                // Calculate student points
+                const studentPoints = calculateStudentPoints();
+                
+                // Sort students by points (descending)
+                const sortedStudents = [...state.students].sort((a, b) => {
+                    return studentPoints[b.name] - studentPoints[a.name];
+                });
+                
+                sortedStudents.forEach(student => {
+                    // Filter by team
+                    if (team !== 'all' && student.team !== team) return;
+                    
+                    // Filter by search term
+                    if (searchTerm && !student.name.toLowerCase().includes(searchTerm)) return;
+                    
+                    const points = studentPoints[student.name] || 0;
+                    
+                    const d = document.createElement('div'); 
+                    d.className = 'student-card';
+                    d.innerHTML = `
+                        <div class="student-points" onclick="showStudentDetails('${student.name}')">${points.toString().padStart(2, '0')}</div>
+                        <div class="student-info">
+                            <h4>${student.name}</h4>
+                            <div class="team">${student.team}</div>
+                        </div>
+                    `;
+                    grid.appendChild(d);
+                });
+            }
+
+            // Student search functionality
+            const studentSearch = document.getElementById('studentSearch');
+            if (studentSearch) {
+                studentSearch.addEventListener('input', function() {
+                    const term = this.value.toLowerCase();
+                    const activeTeamBtn = document.querySelector('#students .filter-btn.active');
+                    const activeTeam = activeTeamBtn ? activeTeamBtn.dataset.team : 'all';
+                    renderStudents(activeTeam, term);
+                });
+            }
+
+            // Student team filter functionality
+            document.querySelectorAll('#students .filter-btn').forEach(btn => {
+                btn.onclick = () => {
+                    document.querySelectorAll('#students .filter-btn').forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+                    const team = btn.dataset.team;
+                    const term = document.getElementById('studentSearch').value.toLowerCase();
+                    renderStudents(team, term);
+                };
+            });
+
+            function renderSchedule() {
+                const list = document.getElementById('scheduleList'); 
+                if (!list) return;
+                
+                list.innerHTML = '';
+                
+                state.schedule.forEach(it => {
+                    const d = document.createElement('div'); 
+                    d.className = 'schedule-item';
+                    d.innerHTML = `
+                        <strong>${it.date}</strong><br>${it.event}
+                    `;
+                    list.appendChild(d);
+                });
+            }
+
+            // Show student details modal
+            function showStudentDetails(studentName) {
+                const student = state.students.find(s => s.name === studentName);
+                if (!student) return;
+                
+                const studentPoints = calculateStudentPoints();
+                const totalPoints = studentPoints[studentName] || 0;
+                const placements = getStudentPlacements(studentName);
+                
+                // Update modal header
+                const header = document.getElementById('studentDetailsHeader');
+                header.innerHTML = `
+                    <h2>${studentName}</h2>
+                    <div class="team">${student.team}</div>
+                    <div class="total-points">Total Points: ${totalPoints}</div>
+                `;
+                
+                // Update programs list
+                const programsList = document.getElementById('studentProgramsList');
+                programsList.innerHTML = '';
+                
+                if (placements.length === 0) {
+                    programsList.innerHTML = '<div style="text-align: center; color: #888; padding: 20px;">No placements yet</div>';
+                } else {
+                    placements.forEach(placement => {
+                        const programItem = document.createElement('div');
+                        programItem.className = 'program-item';
+                        
+                        let placementText = '';
+                        let placementClass = '';
+                        
+                        switch(placement.placement) {
+                            case 'first':
+                                placementText = '1st';
+                                placementClass = 'placement-1st';
+                                break;
+                            case 'second':
+                                placementText = '2nd';
+                                placementClass = 'placement-2nd';
+                                break;
+                            case 'third':
+                                placementText = '3rd';
+                                placementClass = 'placement-3rd';
+                                break;
+                            case 'gradewinners':
+                                placementText = 'Grade';
+                                placementClass = 'placement-grade';
+                                break;
+                        }
+                        
+                        programItem.innerHTML = `
+                            <div class="program-name">${placement.program}</div>
+                            <div class="program-details">
+                                <span class="placement-badge ${placementClass}">${placementText}</span>
+                                <span class="grade-badge">${placement.grade}</span>
+                                <span class="points-badge">+${placement.points}</span>
+                            </div>
+                        `;
+                        
+                        programsList.appendChild(programItem);
+                    });
                 }
-            };
+                
+                // Show modal
+                const studentDetailsModal = document.getElementById('studentDetailsModal');
+                if (studentDetailsModal) {
+                    studentDetailsModal.style.display = 'flex';
+                }
+            }
+
+            // Placement Editor Functions
+            function openPlacementEditor(pid) {
+                if (!admin) { 
+                    alert('Admin login required'); 
+                    return; 
+                }
+                
+                currentProgramId = pid;
+                const program = state.programs.find(p => p.id === pid);
+                
+                if (program) {
+                    document.getElementById('placementModalTitle').textContent = `Edit Placements for ${program.name}`;
+                    
+                    // Check if this is a special program
+                    const isSpecialProgram = SPECIAL_PROGRAMS.includes(program.name);
+                    
+                    // For special programs, show team selection
+                    if (isSpecialProgram) {
+                        const teamOptions = `
+                            <option value="">Select Team</option>
+                            <option value="Team A">Team A</option>
+                            <option value="Team B">Team B</option>
+                            <option value="Team C">Team C</option>
+                        `;
+                        document.getElementById('firstPlaceSelector').innerHTML = teamOptions;
+                        document.getElementById('secondPlaceSelector').innerHTML = teamOptions;
+                        document.getElementById('thirdPlaceSelector').innerHTML = teamOptions;
+                        document.getElementById('gradeWinnersSelector').innerHTML = teamOptions;
+                    } else {
+                        // For regular programs, show student selection
+                        let studentOptions = '<option value="">Select Student</option>';
+                        state.students.forEach(student => {
+                            studentOptions += `<option value="${student.name}">${student.name} (${student.team})</option>`;
+                        });
+                        document.getElementById('firstPlaceSelector').innerHTML = studentOptions;
+                        document.getElementById('secondPlaceSelector').innerHTML = studentOptions;
+                        document.getElementById('thirdPlaceSelector').innerHTML = studentOptions;
+                        document.getElementById('gradeWinnersSelector').innerHTML = studentOptions;
+                    }
+                    
+                    renderPlacementLists(program);
+                    if (placementModal) placementModal.style.display = 'flex';
+                }
+            }
+
+            function renderPlacementLists(program) {
+                renderPlacementList('first', program.placements?.first || []);
+                renderPlacementList('second', program.placements?.second || []);
+                renderPlacementList('third', program.placements?.third || []);
+                renderPlacementList('gradewinners', program.placements?.gradewinners || []);
+            }
+
+            function renderPlacementList(place, winners) {
+                let listElement;
+                
+                // Handle different list elements for different placement types
+                if (place === 'gradewinners') {
+                    listElement = document.getElementById('gradeWinnersList');
+                } else {
+                    listElement = document.getElementById(`${place}PlaceList`);
+                }
+                
+                if (!listElement) return;
+                
+                if (!Array.isArray(winners) || winners.length === 0) {
+                    listElement.innerHTML = '<div style="text-align: center; color: #888; padding: 10px;">No winners added yet</div>';
+                    return;
+                }
+                
+                listElement.innerHTML = '';
+                
+                winners.forEach((winner, index) => {
+                    const program = state.programs.find(p => p.id === currentProgramId);
+                    const points = winner.points || calculatePoints(program.name, place, winner.grade || 'No');
+                    const winnerItem = document.createElement('div');
+                    winnerItem.className = 'winner-item';
+                    winnerItem.innerHTML = `
+                        <div class="winner-info">
+                            <span>${winner.name}</span>
+                            <span>Grade: ${winner.grade}</span>
+                            <span class="winner-points">+${points} points</span>
+                        </div>
+                        <button class="remove-winner" data-place="${place}" data-index="${index}">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    `;
+                    listElement.appendChild(winnerItem);
+                });
+                
+                // Add event listeners to remove buttons
+                listElement.querySelectorAll('.remove-winner').forEach(btn => {
+                    btn.onclick = () => {
+                        const place = btn.dataset.place;
+                        const index = parseInt(btn.dataset.index);
+                        
+                        if (currentProgramId) {
+                            const program = state.programs.find(p => p.id === currentProgramId);
+                            if (program && program.placements && Array.isArray(program.placements[place])) {
+                                program.placements[place].splice(index, 1);
+                                renderPlacementLists(program);
+                            }
+                        }
+                    };
+                });
+            }
+
+            // Make functions globally accessible
+            window.openPlacementEditor = openPlacementEditor;
+            window.showStudentDetails = showStudentDetails;
+
+            // Initial Render
+            renderLeaderboard(); 
+            renderPrograms(); 
+            renderStudents(); 
+            renderSchedule();
         });
-    }
-
-    // Make functions globally accessible
-    window.openPlacementEditor = openPlacementEditor;
-    window.showStudentDetails = showStudentDetails;
-
-    // Initial Render
-    renderLeaderboard(); 
-    renderPrograms(); 
-    renderStudents(); 
-    renderSchedule();
-});
-</script>
-
-</body></html>
-
+    </script>
+</body>
+</html>
