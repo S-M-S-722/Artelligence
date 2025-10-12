@@ -23,6 +23,103 @@
         .container {
             max-width: 100%;
             padding: 15px;
+            transition: all 0.3s ease;
+        }
+        
+        /* Side Navigation Styles */
+        .side-nav {
+            position: fixed;
+            top: 0;
+            left: -280px;
+            width: 280px;
+            height: 100vh;
+            background: rgba(10, 10, 20, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            transition: all 0.3s ease;
+            padding: 20px;
+            overflow-y: auto;
+            box-shadow: 5px 0 15px rgba(0, 0, 0, 0.5);
+        }
+        
+        .side-nav.active {
+            left: 0;
+        }
+        
+        .nav-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            z-index: 999;
+            display: none;
+        }
+        
+        .nav-overlay.active {
+            display: block;
+        }
+        
+        .nav-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .nav-logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            background: linear-gradient(90deg, #ff6b6b, #4ecdc4, #45b7d1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .close-nav {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        
+        .nav-menu {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .nav-item {
+            padding: 12px 15px;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.05);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .nav-item.active, .nav-item:hover {
+            background: #4455ff;
+        }
+        
+        .nav-item i {
+            width: 20px;
+            text-align: center;
+        }
+        
+        .nav-footer {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.7);
         }
         
         .mobile-header {
@@ -34,18 +131,29 @@
             z-index: 100;
             border-radius: 10px;
             margin-bottom: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
         
         .mobile-nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 10px;
+            width: 100%;
         }
         
         .logo {
             font-size: 1.2rem;
             font-weight: bold;
+        }
+        
+        .menu-toggle {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
         }
         
         .admin-btn {
@@ -56,27 +164,6 @@
             border-radius: 6px;
             cursor: pointer;
             font-size: 0.9rem;
-        }
-        
-        .nav-tabs {
-            display: flex;
-            gap: 5px;
-            overflow-x: auto;
-            padding: 10px 0;
-            -webkit-overflow-scrolling: touch;
-        }
-        
-        .nav-tab {
-            padding: 8px 15px;
-            background: rgba(255,255,255,0.1);
-            border-radius: 20px;
-            white-space: nowrap;
-            font-size: 0.9rem;
-            transition: all 0.3s ease;
-        }
-        
-        .nav-tab.active {
-            background: #4455ff;
         }
         
         .page { 
@@ -942,36 +1029,54 @@
     </style>
 </head>
 <body>
+    <!-- Side Navigation -->
+    <div class="side-nav" id="sideNav">
+        <div class="nav-header">
+            <div class="nav-logo">Artelligence</div>
+            <button class="close-nav" id="closeNav">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        
+        <div class="nav-menu">
+            <div class="nav-item active" data-page="home">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </div>
+            <div class="nav-item" data-page="programs">
+                <i class="fas fa-list"></i>
+                <span>Programs</span>
+            </div>
+            <div class="nav-item" data-page="students">
+                <i class="fas fa-users"></i>
+                <span>Students</span>
+            </div>
+            <div class="nav-item" data-page="schedule">
+                <i class="fas fa-calendar-alt"></i>
+                <span>Schedule</span>
+            </div>
+        </div>
+        
+        <div class="nav-footer">
+            <p>Art Festival 2025</p>
+            <p>Contact: hikmanric18@gmail.com</p>
+        </div>
+    </div>
+    
+    <!-- Navigation Overlay -->
+    <div class="nav-overlay" id="navOverlay"></div>
+
     <div class="container">
         <!-- Mobile Header -->
         <div class="mobile-header">
             <div class="mobile-nav">
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
                 <div class="logo">Artelligence</div>
                 <button class="admin-btn" id="adminBtn">
                     <i class="fas fa-lock"></i> Admin
                 </button>
-            </div>
-            
-            <div class="nav-tabs">
-                <div class="nav-tab active" data-page="home">Home</div>
-                <div class="nav-tab" data-page="programs">Programs</div>
-                <div class="nav-tab" data-page="students">Students</div>
-                <div class="nav-tab" data-page="schedule">Schedule</div>
-            </div>
-            
-            <div id="leaderboard" class="leaderboard">
-                <div class="team-card">
-                    <h3>LUMINOVA</h3>
-                    <div class="points">170</div>
-                </div>
-                <div class="team-card">
-                    <h3>NEONOVA</h3>
-                    <div class="points">145</div>
-                </div>
-                <div class="team-card">
-                    <h3>ASTRO-NOVA</h3>
-                    <div class="points">142</div>
-                </div>
             </div>
         </div>
 
@@ -1289,8 +1394,56 @@
     </div>
 
     <script>
-        type="application/ld+json"> { "@context": "https://schema.org", "@type": "Organization", "name": "Artelligence – Art Festival 2025", "url": "https://artelligence-official.vercel.app", "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQf2HC7Go2MD_hUFpReE3bm350APtVf6R_5ASMxGHDkIQ&s=10" }
-        document.addEventListener('DOMContentLoaded', function() {
+ type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Artelligence – Art Festival 2025",
+  "url": "https://artelligence-official.vercel.app",
+  "logo": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQf2HC7Go2MD_hUFpReE3bm350APtVf6R_5ASMxGHDkIQ&s=10"
+}
+document.addEventListener('DOMContentLoaded', function() {
+            // Navigation functionality
+            const menuToggle = document.getElementById('menuToggle');
+            const closeNav = document.getElementById('closeNav');
+            const sideNav = document.getElementById('sideNav');
+            const navOverlay = document.getElementById('navOverlay');
+            const navItems = document.querySelectorAll('.nav-item');
+            
+            // Open side navigation
+            menuToggle.addEventListener('click', function() {
+                sideNav.classList.add('active');
+                navOverlay.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+            
+            // Close side navigation
+            function closeSideNav() {
+                sideNav.classList.remove('active');
+                navOverlay.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
+            
+            closeNav.addEventListener('click', closeSideNav);
+            navOverlay.addEventListener('click', closeSideNav);
+            
+            // Navigation item click
+            navItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    // Remove active class from all items
+                    navItems.forEach(i => i.classList.remove('active'));
+                    // Add active class to clicked item
+                    this.classList.add('active');
+                    
+                    const page = this.dataset.page;
+                    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+                    document.getElementById(page).classList.add('active');
+                    
+                    // Close side navigation after selection
+                    closeSideNav();
+                });
+            });
+
             // Points system
             const POINTS_SYSTEM = {
                 first: { A: 10, B: 8, No: 5 },
@@ -1605,18 +1758,6 @@
                 
                 return placements;
             }
-
-            // Navigation
-            document.querySelectorAll('.nav-tab').forEach(tab => {
-                tab.onclick = () => {
-                    document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('active'));
-                    tab.classList.add('active');
-                    
-                    const page = tab.dataset.page;
-                    document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-                    document.getElementById(page).classList.add('active');
-                };
-            });
 
             // Admin Modal
             const modal = document.getElementById('adminModal');
