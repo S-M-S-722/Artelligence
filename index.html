@@ -3706,9 +3706,76 @@ function updateHomePageData() {
             renderSchedule();
             updateHomePageData(); // Initialize home page data
         });
+        <script>
+const menuToggle = document.getElementById("menuToggle");
+const closeNav = document.getElementById("closeNav");
+const sideNav = document.getElementById("sideNav");
+const navOverlay = document.getElementById("navOverlay");
+const navItems = document.querySelectorAll(".nav-item");
+const pages = document.querySelectorAll(".page");
+
+// Toggle side navigation
+menuToggle.addEventListener("click", () => {
+    sideNav.classList.add("active");
+    navOverlay.classList.add("active");
+});
+closeNav.addEventListener("click", closeMenu);
+navOverlay.addEventListener("click", closeMenu);
+
+function closeMenu() {
+    sideNav.classList.remove("active");
+    navOverlay.classList.remove("active");
+}
+
+// Page switching
+navItems.forEach(item => {
+    item.addEventListener("click", () => {
+        const pageId = item.getAttribute("data-page");
+
+        navItems.forEach(i => i.classList.remove("active"));
+        item.classList.add("active");
+
+        pages.forEach(p => p.classList.remove("active"));
+        document.getElementById(pageId).classList.add("active");
+
+        closeMenu();
+    });
+});
+
+// Filter Programs
+const filterButtons = document.querySelectorAll(".filter-btn");
+const programRows = document.querySelectorAll(".program-row");
+const programSearch = document.getElementById("programSearch");
+
+filterButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        filterButtons.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        const category = btn.getAttribute("data-cat");
+        filterPrograms(category, programSearch.value);
+    });
+});
+
+programSearch.addEventListener("input", () => {
+    const activeCat = document.querySelector(".filter-btn.active").getAttribute("data-cat");
+    filterPrograms(activeCat, programSearch.value);
+});
+
+function filterPrograms(category, searchText) {
+    programRows.forEach(row => {
+        const cat = row.querySelector(".program-category-badge").textContent.trim().toLowerCase();
+        const prog = row.children[1].textContent.toLowerCase();
+        const matchCat = category === "all" || cat === category;
+        const matchText = prog.includes(searchText.toLowerCase());
+        row.style.display = matchCat && matchText ? "" : "none";
+    });
+}
+</script>
+
     </script>
 </body>
 </html>
+
 
 
 
