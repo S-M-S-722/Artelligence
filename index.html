@@ -2642,21 +2642,16 @@
             ];
 
             // Programs data with all the results including the new programs
-            const PROGRAMS = 
-                {id: 'p1', name: 'Pencil Drawing', category: 'creatia', placements: {
-                    first: [{name: 'Muhammed Irfan', grade: 'B', points: 8}],
-                    second: [{name: 'Muhammed Haseeb', grade: 'B', points: 6}],
-                    third: [{name: 'Sayeed A.S', grade: 'B', points: 4}],
-                    gradewinners: [{name: 'Muhammed Athif', grade: 'B', points: 3}]
-                }},
-                {id: 'p2', name: 'Acrylic Painting', category: 'creatia', placements: {first: [], second: [], third: [], gradewinners: []}},
-                {id: 'p3', name: 'Calligraphy', category: 'creatia', placements: {
-                    first: [],
-                    second: [],
-                    third: [],
-                    gradewinners: [{name: 'Muhammed Alim Zayyan', grade: 'B', points: 3}]
-                }},
-                {id: 'p4', name: 'Poster Making', category: 'creatia', placements: {
+            const PROGRAMS = [
+    {id: 'p1', name: 'Pencil Drawing', category: 'creatia', placements: {
+        first: [{name: 'Muhammed Irfan', grade: 'B', points: 8}],
+        second: [{name: 'Muhammed Haseeb', grade: 'B', points: 6}],
+        third: [{name: 'Sayeed A.S', grade: 'B', points: 4}],
+        gradewinners: [{name: 'Muhammed Athif', grade: 'B', points: 3}]
+    }},
+    {id: 'p2', name: 'Acrylic Painting', category: 'creatia', placements: {first: [], second: [], third: [], gradewinners: []}},
+    {id: 'p3', name: 'Calligraphy', category: 'creatia', placements: {first: [], second: [], third: [], gradewinners: [{name: 'Muhammed Alim Zayyan', grade: 'B', points: 3}]}},
+    {id: 'p4', name: 'Poster Making', category: 'creatia', placements: {
                     first: [],
                     second: [{name: 'Muhammed Fazal', grade: 'No', points: 6}],
                     third: [{name: 'Muhammed Haseeb', grade: 'No', points: 4}],
@@ -2773,13 +2768,13 @@
                 {id: 'p31', name: 'Padapattu', category: 'vocalizia', placements: {first: [{name:'Mohammed Midhlaj', grade: 'A', points: 10}], second: [{name:' Shanaj', grade: 'A', points: 8}], third: [{name:'Muhammed Hanan', grade: 'B', points: 4},{name:'Muhammed Sinan P.a', grade: 'B', points: 4}], gradewinners: []}},
                 {id: 'p32', name: 'Qira\'th', category: 'vocalizia', placements: {first: [{name: 'Muhammed Adhnan M.S', grade: 'B', points: 8}], second: [{name: 'Muhammed Haseeb', grade: 'B', points: 6}], third: [{name: 'Muhammed Faheem K.k', grade: 'No', points: 1}], gradewinners: []}},
                 {id: 'p34', name: 'Qawwali', category: 'vocalizia', placements: {first: [], second: [], third: [], gradewinners: []}},
-                {id: 'p35', name: 'Speech & Song', category: 'vocalizia', placements: {first: [{name: 'Team C', grade: 'B', points: 13}], second: [{name: 'Team B', grade: 'B', points: 10}], third: [{name: 'Team A', grade: 'No'points: 13}], gradewinners: []}},
-                {id: 'p36', name: 'Speech (ENG)category: 'vocalizia', placements: 
-                {first: [ {name:'Muhammed Athif', grade: 'A', points: 10}]
+                {id: 'p35', name: 'Speech & Song', category: 'vocalizia', placements: {first: [{name: 'Team C', grade: 'B', points: 13}], second: [{name: 'Team B', grade: 'B', points: 10}], third: [{name: 'Team A', grade: 'No' , points: 13}], gradewinners: []}},
+                {id: 'p36', name: 'Speech (ENG)' , category: 'vocalizia', placements: 
+                {first: [ {name:'Muhammed Athif', grade: 'A', points: 10}],
                 second: [{name: 'Mohammed P.M', grade: 'A', points: 8}],
                 third: [{name: 'Muhammed Alim Zayyan', grade: 'B', points: 3}],
-                gradewinners: [{name: 'Jawhar Sidheeque', grade: 'B', points: 3}]}}},
-                {id: 'p37', name: 'Speech (MLM)category: 'vocalizia', placements: 
+                gradewinners: [{name: 'Jawhar Sidheeque', grade: 'B', points: 3}]}},
+                {id: 'p37', name: 'Speech (MLM)' , category: 'vocalizia', placements: 
                     {first: [{name: 'Muhammed Arshad', grade: 'A', points: 10},{name: 'Muhammed Aman', grade: 'A', points: 10}],
                      second: [{name: 'Muhammed Sinan P.a', grade: 'A', points: 8}],
                       third: [{name: 'Muhammed Midhlaj', grade: 'B', points: 3}],
@@ -2812,13 +2807,14 @@
                     gradewinners: [{name: 'Abdul Basith', grade: 'B', points: 3}]
                 }},
                 {id: 'p46', name: 'Typing Billingual', category: 'general', placements: {first: [], second: [{name: 'Muhammed Swabeeh', grade: 'B', points: 6}], third: [{name: 'Muhammed Haseeb', grade: 'B', points: 4}], gradewinners: [{name: 'Sayeed A.s', grade: 'B', points: 3}]}},
-                {id: 'p47', name: 'GK Quiz', category: 'general', placements: {first: ['Team C', grade: 'B', points: 13], second: ['Team B', grade: 'B', points: 10], third: ['Team A', grade: 'No', points: 5], gradewinners: []}},
+                {id: 'p47', name: 'GK Quiz', category: 'general', placements: {first: [{name: 'Team C', grade: 'B', points: 13}], second: [{name: 'Team B', grade: 'B', points: 10}], third: [{name: 'Team A', grade: 'No', points: 5}], gradewinners: []}},
                 {id: 'p48', name: 'Geo Giant', category: 'general', placements: {
                     first: [],
                     second: [{name: 'Muhammed Shabeeb', grade: 'No', points: 3}],
                     third: [{name: 'Mohammed P.M', grade: 'No', points: 1}],
                     gradewinners: []
-                }};
+                }}
+];
 
             const SCHEDULE = [
                 {date: '2025-10-01', event: 'Opening & Inauguration'},
@@ -3706,76 +3702,9 @@ function updateHomePageData() {
             renderSchedule();
             updateHomePageData(); // Initialize home page data
         });
-        <script>
-const menuToggle = document.getElementById("menuToggle");
-const closeNav = document.getElementById("closeNav");
-const sideNav = document.getElementById("sideNav");
-const navOverlay = document.getElementById("navOverlay");
-const navItems = document.querySelectorAll(".nav-item");
-const pages = document.querySelectorAll(".page");
-
-// Toggle side navigation
-menuToggle.addEventListener("click", () => {
-    sideNav.classList.add("active");
-    navOverlay.classList.add("active");
-});
-closeNav.addEventListener("click", closeMenu);
-navOverlay.addEventListener("click", closeMenu);
-
-function closeMenu() {
-    sideNav.classList.remove("active");
-    navOverlay.classList.remove("active");
-}
-
-// Page switching
-navItems.forEach(item => {
-    item.addEventListener("click", () => {
-        const pageId = item.getAttribute("data-page");
-
-        navItems.forEach(i => i.classList.remove("active"));
-        item.classList.add("active");
-
-        pages.forEach(p => p.classList.remove("active"));
-        document.getElementById(pageId).classList.add("active");
-
-        closeMenu();
-    });
-});
-
-// Filter Programs
-const filterButtons = document.querySelectorAll(".filter-btn");
-const programRows = document.querySelectorAll(".program-row");
-const programSearch = document.getElementById("programSearch");
-
-filterButtons.forEach(btn => {
-    btn.addEventListener("click", () => {
-        filterButtons.forEach(b => b.classList.remove("active"));
-        btn.classList.add("active");
-        const category = btn.getAttribute("data-cat");
-        filterPrograms(category, programSearch.value);
-    });
-});
-
-programSearch.addEventListener("input", () => {
-    const activeCat = document.querySelector(".filter-btn.active").getAttribute("data-cat");
-    filterPrograms(activeCat, programSearch.value);
-});
-
-function filterPrograms(category, searchText) {
-    programRows.forEach(row => {
-        const cat = row.querySelector(".program-category-badge").textContent.trim().toLowerCase();
-        const prog = row.children[1].textContent.toLowerCase();
-        const matchCat = category === "all" || cat === category;
-        const matchText = prog.includes(searchText.toLowerCase());
-        row.style.display = matchCat && matchText ? "" : "none";
-    });
-}
-</script>
-
     </script>
 </body>
 </html>
-
 
 
 
