@@ -7,6 +7,151 @@
     <link rel="icon" href="https://ik.imagekit.io/shaz/Prompt%20Generate%20Inspire.jpg?updatedAt=1761135540346" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        /* Artelligence Banner Styles */
+        .artelligence-banner {
+            background: linear-gradient(135deg, #1a0033, #001a33, #000814);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            border-bottom: 3px solid #4ecdc4;
+            margin-bottom: 20px;
+        }
+        
+        .banner-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+        }
+        
+        .banner-logo {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 3px solid #4ecdc4;
+            box-shadow: 0 0 20px rgba(78, 205, 196, 0.5);
+        }
+        
+        .banner-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .banner-text {
+            text-align: center;
+        }
+        
+        .banner-text h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            background: linear-gradient(90deg, #ff6b6b, #4ecdc4, #45b7d1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 0 10px rgba(78, 205, 196, 0.5));
+        }
+        
+        .banner-text h2 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #4ecdc4;
+        }
+        
+        .banner-text p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 25px;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .banner-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .banner-btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #FFD700;
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        
+        .banner-btn:hover {
+            background-color: #ffed4e;
+            transform: translateY(-2px);
+        }
+        
+        .banner-btn.secondary {
+            background-color: transparent;
+            border: 2px solid #FFD700;
+            color: #FFD700;
+        }
+        
+        .banner-btn.secondary:hover {
+            background-color: rgba(255, 215, 0, 0.1);
+        }
+        
+        /* Existing styles */
+        * { 
+            box-sizing: border-box; 
+            margin: 0; 
+            padding: 0; 
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        body { 
+            background: linear-gradient(135deg, #1a0033, #001a33, #000814); 
+            color: #e9f0ff; 
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 100%;
+            padding: 15px;
+            transition: all 0.3s ease;
+        }
+        
+        /* Rest of your existing CSS styles remain unchanged */
+        /* ... (all your existing CSS code) ... */
+    </style>
+</head>
+<body style="overflow: auto;">
+    <!-- Artelligence Banner -->
+    <div class="artelligence-banner">
+        <div class="banner-content">
+            <div class="banner-logo">
+                <img src="https://ik.imagekit.io/shaz/Prompt%20Generate%20Inspire.jpg?updatedAt=1761135540346" alt="Artelligence Logo">
+            </div>
+            <div class="banner-text">
+                <h1>Artelligence</h1>
+                <h2>Art Festival 2025</h2>
+                <p>Welcome to Artelligence 2025<br>Join the biggest art festival of 2025! Explore competitions, showcase your talent, and win exciting prizes.</p>
+                <div class="banner-buttons">
+                    <a href="#" class="banner-btn">Explore Programs</a>
+                    <a href="#" class="banner-btn secondary">Know About Us</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Rest of your existing HTML code remains unchanged -->
+    <!-- ... (all your existing HTML code) ... -->
+</body>
+</html>
+<style>
         * { 
             box-sizing: border-box; 
             margin: 0; 
@@ -180,21 +325,6 @@
             display: block; 
         }
         
-        .welcome-section {
-            text-align: center;
-            margin-bottom: 20px;
-            padding: 20px;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 12px;
-        }
-        
-        .welcome-section h2 {
-            font-size: 1.5rem;
-            margin-bottom: 10px;
-            background: linear-gradient(90deg, #ff6b6b, #4ecdc4, #45b7d1);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
         
         .cards-container {
             display: flex;
@@ -1080,23 +1210,7 @@
 
         <!-- Home Page -->
         <section id="home" class="page active">
-            <!-- Logo and Title -->
-            <div class="logo-container">
-                <div class="logo-img">
-                    <i class="fas fa-palette"></i>
-                </div>
-                <div class="logo-text">
-                    <h1>Artelligence</h1>
-                    <p>Art Festival 2025</p>
-                </div>
-            </div>
-
-            <div class="welcome-section">
-                <h2>Welcome to Artelligence 2025</h2>
-                <p>Join the biggest art festival of 2025! Explore competitions, showcase your talent, and win exciting prizes.</p>
-            </div>
-
-            <div class="cards-container">
+<div class="cards-container">
                 <div class="upcoming-card">
                     <h2><i class="fas fa-calendar-check"></i> Upcoming Program</h2>
                     <h3>Qira'th</h3>
@@ -1124,16 +1238,16 @@
                                 <div class="team-members">9 Team Members</div>
                             </div>
                             <div class="team-stats">
-                                <div class="team-points">187 Points</div>
-                                <div class="team-percentage">36%</div>
+                                <div class="team-points">351 Points</div>
+                                <div class="team-percentage">39%</div>
                             </div>
                         </div><div class="team-rank-item">
                             <div class="team-info">
                                 <div class="team-name">ASTRO-NOVA</div>
-                                <div class="team-members">9 Team Members</div>
+                                <div class="team-members">10 Team Members</div>
                             </div>
                             <div class="team-stats">
-                                <div class="team-points">173 Points</div>
+                                <div class="team-points">296 Points</div>
                                 <div class="team-percentage">33%</div>
                             </div>
                         </div><div class="team-rank-item">
@@ -1142,8 +1256,8 @@
                                 <div class="team-members">9 Team Members</div>
                             </div>
                             <div class="team-stats">
-                                <div class="team-points">162 Points</div>
-                                <div class="team-percentage">31%</div>
+                                <div class="team-points">261 Points</div>
+                                <div class="team-percentage">29%</div>
                             </div>
                         </div></div>
             </div>
@@ -1180,8 +1294,7 @@
             <div class="topper-name">Creatia Topper</div>
         </div>
         <div class="topper-card">
-         <div 
-    class="topper-icon">Intelligent</div>
+         <div class="topper-icon">Intelligent</div>
             <div class="topper-title">Muhammed Athif</div>
             <div class="topper-name">General Topper</div>
         </div>
@@ -1205,7 +1318,7 @@
             <div class="contact-info">
                 <p>Contact: hikmanric18@gmail.com</p>
             </div>
-        </section>
+        </div></section>
 
         <!-- Programs Page -->
         <section id="programs" class="page">
@@ -1719,6 +1832,28 @@
                         </td>
                     <td></td></tr><tr class="program-row">
                         <td>23</td>
+                        <td>Hifz</td>
+                        <td><span class="program-category-badge category-general">general</span></td>
+                        <td class="winners-cell">
+                            <div class="winner-item-cell">
+                                <span class="winner-position">1:</span>
+                                <span class="winner-name">Muhammed Adhnan M.S (A)</span>
+                            </div>
+                            <div class="winner-item-cell">
+                                <span class="winner-position">2:</span>
+                                <span class="winner-name">Muhammed Ameen (B)</span>
+                            </div>
+                            <div class="winner-item-cell">
+                                <span class="winner-position">3:</span>
+                                <span class="winner-name">Muhammed Haseeb,Muhammed Shabeeb (B)</span>
+                            </div>
+                            <div class="winner-item-cell">
+                                <span class="winner-position">Grade:</span>
+                                <span class="winner-name">-</span>
+                            </div>
+                        </td>
+                    <td></td></tr><tr class="program-row">
+                        <td>24</td>
                         <td>Maths Talent</td>
                         <td><span class="program-category-badge category-general">general</span></td>
                         <td class="winners-cell">
@@ -1728,11 +1863,11 @@
                             </div>
                             <div class="winner-item-cell">
                                 <span class="winner-position">2:</span>
-                                <span class="winner-name">Muhammed Faheem K.m (B),Muhammed Shabeeb (B)</span>
+                                <span class="winner-name">Muhammed Faheem K.m (B), Muhammed Shabeeb (B)</span>
                             </div>
                             <div class="winner-item-cell">
                                 <span class="winner-position">3:</span>
-                                <span class="winner-name">-</span>
+                                <span class="winner-name">Adnan K.p (No)</span>
                             </div>
                             <div class="winner-item-cell">
                                 <span class="winner-position">Grade:</span>
@@ -1740,7 +1875,7 @@
                             </div>
                         </td>
                     <td></td></tr><tr class="program-row">
-                        <td>24</td>
+                        <td>25</td>
                         <td>Hindi Vidvan</td>
                         <td><span class="program-category-badge category-general">general</span></td>
                         <td class="winners-cell">
@@ -1762,7 +1897,7 @@
                             </div>
                         </td>
                     <td></td></tr><tr class="program-row">
-                        <td>25</td>
+                        <td>26</td>
                         <td>Padhyaparayanam</td>
                         <td><span class="program-category-badge category-vocalizia">vocalizia</span></td>
                         <td class="winners-cell">
@@ -1772,19 +1907,19 @@
                             </div>
                             <div class="winner-item-cell">
                                 <span class="winner-position">2:</span>
-                                <span class="winner-name">Abdul Basith (A),Muhammed Hanan (A)</span>
+                                <span class="winner-name">Muhammed Hanan (A), Abdul Basith (A)</span>
                             </div>
                             <div class="winner-item-cell">
                                 <span class="winner-position">3:</span>
-                                <span class="winner-name">Muhammed Fazal (B),Muhammed Arshad (B) </span>
+                                <span class="winner-name">Muhammed Fazal (B), Muhammed Fazal (B), Muhammed Arshad (B)</span>
                             </div>
                             <div class="winner-item-cell">
                                 <span class="winner-position">Grade:</span>
-                                <span class="winner-name">Muhammed Aslam (B)</span>
+                                <span class="winner-name">Aslam (B)</span>
                             </div>
                         </td>
                     <td></td></tr><tr class="program-row">
-                        <td>26</td>
+                        <td>27</td>
                         <td>Song (ENG)</td>
                         <td><span class="program-category-badge category-vocalizia">vocalizia</span></td>
                         <td class="winners-cell">
@@ -1806,7 +1941,7 @@
                             </div>
                         </td>
                     <td></td></tr><tr class="program-row">
-                        <td>27</td>
+                        <td>28</td>
                         <td>Song (URD)</td>
                         <td><span class="program-category-badge category-vocalizia">vocalizia</span></td>
                         <td class="winners-cell">
@@ -1816,29 +1951,29 @@
                             </div>
                             <div class="winner-item-cell">
                                 <span class="winner-position">2:</span>
-                                <span class="winner-name">Muhammed Alim Zayyan (A) </span>
+                                <span class="winner-name">Muhammed Alim Zayyan (A)</span>
                             </div>
                             <div class="winner-item-cell">
                                 <span class="winner-position">3:</span>
-                                <span class="winner-name">Muhammed Sinan P.a (A) ,Muhammed Hanan ( A)</span>
+                                <span class="winner-name">Muhammed Sinan P.a (A), Muhammed Hanan (A)</span>
                             </div>
                             <div class="winner-item-cell">
                                 <span class="winner-position">Grade:</span>
-                                <span class="winner-name">Muhammed Faheem K.m (B),Muhammed Rabeeath (B)</span>
+                                <span class="winner-name">Muhammed Rabeeath (B), Muhammed Faheem K.m (B)</span>
                             </div>
                         </td>
                     <td></td></tr><tr class="program-row">
-                        <td>28</td>
+                        <td>29</td>
                         <td>Nasheedha</td>
                         <td><span class="program-category-badge category-vocalizia">vocalizia</span></td>
                         <td class="winners-cell">
                             <div class="winner-item-cell">
                                 <span class="winner-position">1:</span>
-                                <span class="winner-name">Mohammed Midhlaj (A),Muhammed Adhnan M.S (A),</span>
+                                <span class="winner-name">Mohammed Midhlaj (A), Muhammed Adhnan M.S (A)</span>
                             </div>
                             <div class="winner-item-cell">
                                 <span class="winner-position">2:</span>
-                                <span class="winner-name">Muhammed Irfan (A) </span>
+                                <span class="winner-name">Muhammed Irfan (A)</span>
                             </div>
                             <div class="winner-item-cell">
                                 <span class="winner-position">3:</span>
@@ -1850,21 +1985,21 @@
                             </div>
                         </td>
                     <td></td></tr><tr class="program-row">
-                        <td>29</td>
+                        <td>30</td>
                         <td>Padapattu</td>
                         <td><span class="program-category-badge category-vocalizia">vocalizia</span></td>
                         <td class="winners-cell">
                             <div class="winner-item-cell">
                                 <span class="winner-position">1:</span>
-                                <span class="winner-name">Mohammed Midhlaj (A) </span>
+                                <span class="winner-name">Mohammed Midhlaj (A)</span>
                             </div>
                             <div class="winner-item-cell">
                                 <span class="winner-position">2:</span>
-                                <span class="winner-name">Shanaj (A)</span>
+                                <span class="winner-name"> Shanaj (A)</span>
                             </div>
                             <div class="winner-item-cell">
                                 <span class="winner-position">3:</span>
-                                <span class="winner-name">Muhammed Hanan (B),Muhammed Sinan P.a (B)</span>
+                                <span class="winner-name">Muhammed Hanan (B), Muhammed Sinan P.a (B)</span>
                             </div>
                             <div class="winner-item-cell">
                                 <span class="winner-position">Grade:</span>
@@ -1872,7 +2007,7 @@
                             </div>
                         </td>
                     <td></td></tr><tr class="program-row">
-                        <td>30</td>
+                        <td>31</td>
                         <td>Qira'th</td>
                         <td><span class="program-category-badge category-vocalizia">vocalizia</span></td>
                         <td class="winners-cell">
@@ -1894,7 +2029,7 @@
                             </div>
                         </td>
                     <td></td></tr><tr class="program-row">
-                        <td>31</td>
+                        <td>32</td>
                         <td>Qawwali</td>
                         <td><span class="program-category-badge category-vocalizia">vocalizia</span></td>
                         <td class="winners-cell">
@@ -1916,43 +2051,21 @@
                             </div>
                         </td>
                     <td></td></tr><tr class="program-row">
-                        <td>32</td>
+                        <td>33</td>
                         <td>Speech &amp; Song</td>
                         <td><span class="program-category-badge category-vocalizia">vocalizia</span></td>
                         <td class="winners-cell">
                             <div class="winner-item-cell">
                                 <span class="winner-position">1:</span>
-                                <span class="winner-name">  Team C (B) </span>
+                                <span class="winner-name">Team C (B)</span>
                             </div>
                             <div class="winner-item-cell">
                                 <span class="winner-position">2:</span>
-                                <span class="winner-name"> Team B (B)</span>
+                                <span class="winner-name">Team B (B)</span>
                             </div>
                             <div class="winner-item-cell">
                                 <span class="winner-position">3:</span>
-                                <span class="winner-name"> Team A (No)</span>
-                            </div>
-                            <div class="winner-item-cell">
-                                <span class="winner-position">Grade:</span>
-                                <span class="winner-name">-</span>
-                            </div>
-                        </td>
-                    <td></td></tr><tr class="program-row">
-                        <td>32</td>
-                        <td>Mashup</td>
-                        <td><span class="program-category-badge category-vocalizia">vocalizia</span></td>
-                        <td class="winners-cell">
-                            <div class="winner-item-cell">
-                                <span class="winner-position">1:</span>
-                                <span class="winner-name">  Team C (A) </span>
-                            </div>
-                            <div class="winner-item-cell">
-                                <span class="winner-position">2:</span>
-                                <span class="winner-name"></span>
-                            </div>
-                            <div class="winner-item-cell">
-                                <span class="winner-position">3:</span>
-                                <span class="winner-name"> Team A (No), Team B (No)</span>
+                                <span class="winner-name">Team A (No)</span>
                             </div>
                             <div class="winner-item-cell">
                                 <span class="winner-position">Grade:</span>
@@ -1961,20 +2074,20 @@
                         </td>
                     <td></td></tr><tr class="program-row">
                         <td>34</td>
-                        <td>Speech (MLM)</td>
+                        <td>Speech &amp; Song</td>
                         <td><span class="program-category-badge category-vocalizia">vocalizia</span></td>
                         <td class="winners-cell">
                             <div class="winner-item-cell">
                                 <span class="winner-position">1:</span>
-                                <span class="winner-name">Muhmmed Arshad (A),Muhammed Aman (A)</span>
+                                <span class="winner-name">Team C (A)</span>
                             </div>
                             <div class="winner-item-cell">
                                 <span class="winner-position">2:</span>
-                                <span class="winner-name">Muhammed Sinan P.a (A)</span>
+                                <span class="winner-name">-</span>
                             </div>
                             <div class="winner-item-cell">
                                 <span class="winner-position">3:</span>
-                                <span class="winner-name">Mohammed Midhlaj (B)</span>
+                                <span class="winner-name">Team B (No), Team A (No)</span>
                             </div>
                             <div class="winner-item-cell">
                                 <span class="winner-position">Grade:</span>
@@ -2005,6 +2118,28 @@
                         </td>
                     <td></td></tr><tr class="program-row">
                         <td>36</td>
+                        <td>Speech (MLM)</td>
+                        <td><span class="program-category-badge category-vocalizia">vocalizia</span></td>
+                        <td class="winners-cell">
+                            <div class="winner-item-cell">
+                                <span class="winner-position">1:</span>
+                                <span class="winner-name">Muhammed Arshad (A), Muhammed Aman (A)</span>
+                            </div>
+                            <div class="winner-item-cell">
+                                <span class="winner-position">2:</span>
+                                <span class="winner-name">Muhammed Sinan P.a (A)</span>
+                            </div>
+                            <div class="winner-item-cell">
+                                <span class="winner-position">3:</span>
+                                <span class="winner-name">Mohammed Midhlaj (B)</span>
+                            </div>
+                            <div class="winner-item-cell">
+                                <span class="winner-position">Grade:</span>
+                                <span class="winner-name">Muhammed Aslam (B), Muhammed Alim Zayyan (B)</span>
+                            </div>
+                        </td>
+                    <td></td></tr><tr class="program-row">
+                        <td>37</td>
                         <td>Speech (ARB)</td>
                         <td><span class="program-category-badge category-vocalizia">vocalizia</span></td>
                         <td class="winners-cell">
@@ -2026,7 +2161,7 @@
                             </div>
                         </td>
                     <td></td></tr><tr class="program-row">
-                        <td>37</td>
+                        <td>38</td>
                         <td>Oru Nimisham</td>
                         <td><span class="program-category-badge category-vocalizia">vocalizia</span></td>
                         <td class="winners-cell">
@@ -2048,7 +2183,7 @@
                             </div>
                         </td>
                     <td></td></tr><tr class="program-row">
-                        <td>38</td>
+                        <td>39</td>
                         <td>Chain Story</td>
                         <td><span class="program-category-badge category-vocalizia">vocalizia</span></td>
                         <td class="winners-cell">
@@ -2070,7 +2205,7 @@
                             </div>
                         </td>
                     <td></td></tr><tr class="program-row">
-                        <td>39</td>
+                        <td>40</td>
                         <td>Wa'z</td>
                         <td><span class="program-category-badge category-vocalizia">vocalizia</span></td>
                         <td class="winners-cell">
@@ -2092,7 +2227,7 @@
                             </div>
                         </td>
                     <td></td></tr><tr class="program-row">
-                        <td>40</td>
+                        <td>41</td>
                         <td>Story Narration</td>
                         <td><span class="program-category-badge category-vocalizia">vocalizia</span></td>
                         <td class="winners-cell">
@@ -2106,7 +2241,7 @@
                             </div>
                             <div class="winner-item-cell">
                                 <span class="winner-position">3:</span>
-                                <span class="winner-name">Muhammed Arshad (No) </span>
+                                <span class="winner-name">Muhammed Arshad (No)</span>
                             </div>
                             <div class="winner-item-cell">
                                 <span class="winner-position">Grade:</span>
@@ -2114,7 +2249,7 @@
                             </div>
                         </td>
                     <td></td></tr><tr class="program-row">
-                        <td>41</td>
+                        <td>42</td>
                         <td>Sudoku</td>
                         <td><span class="program-category-badge category-general">general</span></td>
                         <td class="winners-cell">
@@ -2136,7 +2271,7 @@
                             </div>
                         </td>
                     <td></td></tr><tr class="program-row">
-                        <td>42</td>
+                        <td>43</td>
                         <td>Translation</td>
                         <td><span class="program-category-badge category-general">general</span></td>
                         <td class="winners-cell">
@@ -2155,28 +2290,6 @@
                             <div class="winner-item-cell">
                                 <span class="winner-position">Grade:</span>
                                 <span class="winner-name">Abdul Basith (B)</span>
-                            </div>
-                        </td>
-                    <td></td></tr><tr class="program-row">
-                        <td>43</td>
-                        <td>Hifz </td>
-                        <td><span class="program-category-badge category-general">general</span></td>
-                        <td class="winners-cell">
-                            <div class="winner-item-cell">
-                                <span class="winner-position">1:</span>
-                                <span class="winner-name">Muhammed Adhnan M.S (A)</span>
-                            </div>
-                            <div class="winner-item-cell">
-                                <span class="winner-position">2:</span>
-                                <span class="winner-name">Muhammed Ameen (B)</span>
-                            </div>
-                            <div class="winner-item-cell">
-                                <span class="winner-position">3:</span>
-                                <span class="winner-name">Muhammed Haseeb (B),Muhammed Shabeeb (B)</span>
-                            </div>
-                            <div class="winner-item-cell">
-                                <span class="winner-position">Grade:</span>
-                                <span class="winner-name">-</span>
                             </div>
                         </td>
                     <td></td></tr><tr class="program-row">
@@ -2265,111 +2378,129 @@
             </div>
             
             <div class="students-grid" id="studentsGrid"><div class="student-card">
-                        <div class="student-points" onclick="showStudentDetails('Muhammed Fazal')">45</div>
-                        <div class="student-info">
-                            <h4>Muhammed Fazal</h4>
-                            <div class="team">NEONOVA</div>
-                        </div>
-                    </div><div class="student-card">
-                        <div class="student-points" onclick="showStudentDetails('Abdul Basith')">43</div>
-                        <div class="student-info">
-                            <h4>Abdul Basith</h4>
-                            <div class="team">LUMINOVA</div>
-                        </div>
-                    </div><div class="student-card">
-                        <div class="student-points" onclick="showStudentDetails('Muhammed Athif')">42</div>
-                        <div class="student-info">
-                            <h4>Muhammed Athif</h4>
-                            <div class="team">LUMINOVA</div>
-                        </div>
-                    </div><div class="student-card">
-                        <div class="student-points" onclick="showStudentDetails('Muhammed Faheem K.k')">40</div>
-                        <div class="student-info">
-                            <h4>Muhammed Faheem K.k</h4>
-                            <div class="team">NEONOVA</div>
-                        </div>
-                    </div><div class="student-card">
-                        <div class="student-points" onclick="showStudentDetails('Muhammed Adhnan M.S')">40</div>
+                        <div class="student-points" onclick="showStudentDetails('Muhammed Adhnan M.S')">68</div>
                         <div class="student-info">
                             <h4>Muhammed Adhnan M.S</h4>
                             <div class="team">ASTRO-NOVA</div>
                         </div>
                     </div><div class="student-card">
-                        <div class="student-points" onclick="showStudentDetails('Mohammed Midhlaj')">34</div>
+                        <div class="student-points" onclick="showStudentDetails('Muhammed Athif')">68</div>
+                        <div class="student-info">
+                            <h4>Muhammed Athif</h4>
+                            <div class="team">LUMINOVA</div>
+                        </div>
+                    </div><div class="student-card">
+                        <div class="student-points" onclick="showStudentDetails('Mohammed Midhlaj')">68</div>
                         <div class="student-info">
                             <h4>Mohammed Midhlaj</h4>
                             <div class="team">LUMINOVA</div>
                         </div>
                     </div><div class="student-card">
-                        <div class="student-points" onclick="showStudentDetails('Muhammed Haseeb')">25</div>
+                        <div class="student-points" onclick="showStudentDetails('Muhammed Fazal')">53</div>
                         <div class="student-info">
-                            <h4>Muhammed Haseeb</h4>
-                            <div class="team">ASTRO-NOVA</div>
+                            <h4>Muhammed Fazal</h4>
+                            <div class="team">NEONOVA</div>
                         </div>
                     </div><div class="student-card">
-                        <div class="student-points" onclick="showStudentDetails('Muhammed Alim Zayyan')">23</div>
+                        <div class="student-points" onclick="showStudentDetails('Abdul Basith')">51</div>
                         <div class="student-info">
-                            <h4>Muhammed Alim Zayyan</h4>
-                            <div class="team">ASTRO-NOVA</div>
+                            <h4>Abdul Basith</h4>
+                            <div class="team">LUMINOVA</div>
                         </div>
                     </div><div class="student-card">
-                        <div class="student-points" onclick="showStudentDetails('Muhammed Arshad')">23</div>
-                        <div class="student-info">
-                            <h4>Muhammed Arshad</h4>
-                            <div class="team">ASTRO-NOVA</div>
-                        </div>
-                    </div><div class="student-card">
-                        <div class="student-points" onclick="showStudentDetails('Team B')">21</div>
+                        <div class="student-points" onclick="showStudentDetails('Team B')">49</div>
                         <div class="student-info">
                             <h4>Team B</h4>
                             <div class="team">ASTRO-NOVA</div>
                         </div>
                     </div><div class="student-card">
-                        <div class="student-points" onclick="showStudentDetails('Muhammed Faheem K.m')">20</div>
+                        <div class="student-points" onclick="showStudentDetails('Muhammed Faheem K.k')">41</div>
                         <div class="student-info">
-                            <h4>Muhammed Faheem K.m</h4>
+                            <h4>Muhammed Faheem K.k</h4>
                             <div class="team">NEONOVA</div>
                         </div>
                     </div><div class="student-card">
-                        <div class="student-points" onclick="showStudentDetails('Muhammed Aman')">16</div>
+                        <div class="student-points" onclick="showStudentDetails('Muhammed Alim Zayyan')">38</div>
                         <div class="student-info">
-                            <h4>Muhammed Aman</h4>
-                            <div class="team">NEONOVA</div>
-                        </div>
-                    </div><div class="student-card">
-                        <div class="student-points" onclick="showStudentDetails('Mohammed P.M')">16</div>
-                        <div class="student-info">
-                            <h4>Mohammed P.M</h4>
-                            <div class="team">LUMINOVA</div>
-                        </div>
-                    </div><div class="student-card">
-                        <div class="student-points" onclick="showStudentDetails('Muhammed Aslam')">15</div>
-                        <div class="student-info">
-                            <h4>Muhammed Aslam</h4>
-                            <div class="team">NEONOVA</div>
-                        </div>
-                    </div><div class="student-card">
-                        <div class="student-points" onclick="showStudentDetails('Muhammed Swabeeh')">13</div>
-                        <div class="student-info">
-                            <h4>Muhammed Swabeeh</h4>
+                            <h4>Muhammed Alim Zayyan</h4>
                             <div class="team">ASTRO-NOVA</div>
                         </div>
                     </div><div class="student-card">
-                        <div class="student-points" onclick="showStudentDetails('Adnan K.p')">11</div>
+                        <div class="student-points" onclick="showStudentDetails('Muhammed Arshad')">38</div>
                         <div class="student-info">
-                            <h4>Adnan K.p</h4>
+                            <h4>Muhammed Arshad</h4>
                             <div class="team">ASTRO-NOVA</div>
                         </div>
                     </div><div class="student-card">
-                        <div class="student-points" onclick="showStudentDetails('Muhammed Sinan P.a')">11</div>
+                        <div class="student-points" onclick="showStudentDetails('Muhammed Sinan P.a')">37</div>
                         <div class="student-info">
                             <h4>Muhammed Sinan P.a</h4>
                             <div class="team">LUMINOVA</div>
                         </div>
                     </div><div class="student-card">
-                        <div class="student-points" onclick="showStudentDetails('Jawhar Sidheeque')">10</div>
+                        <div class="student-points" onclick="showStudentDetails('Muhammed Faheem K.m')">34</div>
+                        <div class="student-info">
+                            <h4>Muhammed Faheem K.m</h4>
+                            <div class="team">NEONOVA</div>
+                        </div>
+                    </div><div class="student-card">
+                        <div class="student-points" onclick="showStudentDetails('Muhammed Haseeb')">28</div>
+                        <div class="student-info">
+                            <h4>Muhammed Haseeb</h4>
+                            <div class="team">ASTRO-NOVA</div>
+                        </div>
+                    </div><div class="student-card">
+                        <div class="student-points" onclick="showStudentDetails('Shanaj')">27</div>
+                        <div class="student-info">
+                            <h4>Shanaj</h4>
+                            <div class="team">NEONOVA</div>
+                        </div>
+                    </div><div class="student-card">
+                        <div class="student-points" onclick="showStudentDetails('Mohammed P.M')">27</div>
+                        <div class="student-info">
+                            <h4>Mohammed P.M</h4>
+                            <div class="team">LUMINOVA</div>
+                        </div>
+                    </div><div class="student-card">
+                        <div class="student-points" onclick="showStudentDetails('Muhammed Aman')">26</div>
+                        <div class="student-info">
+                            <h4>Muhammed Aman</h4>
+                            <div class="team">NEONOVA</div>
+                        </div>
+                    </div><div class="student-card">
+                        <div class="student-points" onclick="showStudentDetails('Muhammed Hanan')">25</div>
+                        <div class="student-info">
+                            <h4>Muhammed Hanan</h4>
+                            <div class="team">ASTRO-NOVA</div>
+                        </div>
+                    </div><div class="student-card">
+                        <div class="student-points" onclick="showStudentDetails('Jawhar Sidheeque')">23</div>
                         <div class="student-info">
                             <h4>Jawhar Sidheeque</h4>
+                            <div class="team">ASTRO-NOVA</div>
+                        </div>
+                    </div><div class="student-card">
+                        <div class="student-points" onclick="showStudentDetails('Muhammed Aslam')">18</div>
+                        <div class="student-info">
+                            <h4>Muhammed Aslam</h4>
+                            <div class="team">NEONOVA</div>
+                        </div>
+                    </div><div class="student-card">
+                        <div class="student-points" onclick="showStudentDetails('Muhammed Irfan')">17</div>
+                        <div class="student-info">
+                            <h4>Muhammed Irfan</h4>
+                            <div class="team">LUMINOVA</div>
+                        </div>
+                    </div><div class="student-card">
+                        <div class="student-points" onclick="showStudentDetails('Adnan K.p')">14</div>
+                        <div class="student-info">
+                            <h4>Adnan K.p</h4>
+                            <div class="team">ASTRO-NOVA</div>
+                        </div>
+                    </div><div class="student-card">
+                        <div class="student-points" onclick="showStudentDetails('Muhammed Swabeeh')">13</div>
+                        <div class="student-info">
+                            <h4>Muhammed Swabeeh</h4>
                             <div class="team">ASTRO-NOVA</div>
                         </div>
                     </div><div class="student-card">
@@ -2379,39 +2510,21 @@
                             <div class="team">LUMINOVA</div>
                         </div>
                     </div><div class="student-card">
-                        <div class="student-points" onclick="showStudentDetails('Muhammed Irfan')">09</div>
+                        <div class="student-points" onclick="showStudentDetails('Muhammed Shabeeb')">09</div>
                         <div class="student-info">
-                            <h4>Muhammed Irfan</h4>
+                            <h4>Muhammed Shabeeb</h4>
+                            <div class="team">NEONOVA</div>
+                        </div>
+                    </div><div class="student-card">
+                        <div class="student-points" onclick="showStudentDetails('Muhammed Rabeeath')">09</div>
+                        <div class="student-info">
+                            <h4>Muhammed Rabeeath</h4>
                             <div class="team">LUMINOVA</div>
                         </div>
                     </div><div class="student-card">
                         <div class="student-points" onclick="showStudentDetails('Sayeed A.S')">07</div>
                         <div class="student-info">
                             <h4>Sayeed A.S</h4>
-                            <div class="team">NEONOVA</div>
-                        </div>
-                    </div><div class="student-card">
-                        <div class="student-points" onclick="showStudentDetails('Muhammed Hanan')">07</div>
-                        <div class="student-info">
-                            <h4>Muhammed Hanan</h4>
-                            <div class="team">ASTRO-NOVA</div>
-                        </div>
-                    </div><div class="student-card">
-                        <div class="student-points" onclick="showStudentDetails('Muhammed Rabeeath')">06</div>
-                        <div class="student-info">
-                            <h4>Muhammed Rabeeath</h4>
-                            <div class="team">LUMINOVA</div>
-                        </div>
-                    </div><div class="student-card">
-                        <div class="student-points" onclick="showStudentDetails('Shanaj')">03</div>
-                        <div class="student-info">
-                            <h4>Shanaj</h4>
-                            <div class="team">NEONOVA</div>
-                        </div>
-                    </div><div class="student-card">
-                        <div class="student-points" onclick="showStudentDetails('Muhammed Shabeeb')">03</div>
-                        <div class="student-info">
-                            <h4>Muhammed Shabeeb</h4>
                             <div class="team">NEONOVA</div>
                         </div>
                     </div><div class="student-card">
@@ -2438,56 +2551,15 @@
         <!-- Schedule Page -->
         <section id="schedule" class="page">
             <h2>Schedule</h2>
-<div class="schedule-list" id="scheduleList">
-    <div class="schedule-item">
-        <strong>2025-10-02</strong><br>Creatia events - Pencil Drawing &amp; Painting
-    </div>
-    <div class="schedule-item">
-        <strong>2025-10-03</strong><br>Log events - Essays &amp; Poems
-    </div>
-    <div class="schedule-item">
-        <strong>2025-10-17</strong><br>Vocalizia - Songs &amp; Group Performances
-    </div>
-    <div class="schedule-item">
-        <strong>2025-10-17</strong><br>QIRA'TH — 6:00 – 6:30
-    </div>
-    <div class="schedule-item">
-        <strong>2025-10-17</strong><br>SONG ENG — 6:30 – 7:00
-    </div>
-    <div class="schedule-item">
-        <strong>2025-10-17</strong><br>HIFZ — 7:00 – 7:30
-    </div>
-    <div class="schedule-item">
-        <strong>2025-10-17</strong><br>PADHYAPARAYANAM — 7:30 – 8:00
-    </div>
-    <div class="schedule-item">
-        <strong>2025-10-17</strong><br>SPEECH MLM — 8:00 – 8:30
-    </div>
-    <div class="schedule-item">
-        <strong>2025-10-17</strong><br>SPEECH &amp; SONG — 10:00 – 10:30
-    </div>
-    <div class="schedule-item">
-        <strong>2025-10-17</strong><br>PADAPATTU — 10:30 – 11:00
-    </div>
-    <div class="schedule-item">
-        <strong>2025-10-17</strong><br>SPEECH ENG — 11:05 – 11:30
-    </div>
-    <div class="schedule-item">
-        <strong>2025-10-17</strong><br>NASHEEDA — 2:35 – 3:00
-    </div>
-    <div class="schedule-item">
-        <strong>2025-10-17</strong><br>STORY NARRATION — 3:05 – 3:30
-    </div>
-    <div class="schedule-item">
-        <strong>2025-10-17</strong><br>MASHUP — 3:30 – 4:00
-    </div>
-    <div class="schedule-item">
-        <strong>2025-10-17</strong><br>GK QUIZ — 8:30 – 9:00
-    </div>
-    <div class="schedule-item">
-        <strong>2025-10-18</strong><br>CLASS TALENT — 8:30 – 9:00
-    </div>
-</div>
+<div class="schedule-list" id="scheduleList"><div class="schedule-item">
+                        <strong>2025-10-01</strong><br>Opening &amp; Inauguration
+                    </div><div class="schedule-item">
+                        <strong>2025-10-02</strong><br>Creatia events - Pencil Drawing &amp; Painting
+                    </div><div class="schedule-item">
+                        <strong>2025-10-03</strong><br>Log events - Essays &amp; Poems
+                    </div><div class="schedule-item">
+                        <strong>2025-10-04</strong><br>Vocalizia - Songs &amp; Group Performances
+                    </div></div>
 
         </section>
     </div>
@@ -3770,8 +3842,6 @@ function updateHomePageData() {
             updateHomePageData(); // Initialize home page data
         });
     </script>
-</body>
-</html>
 
 
 
@@ -3788,3 +3858,21 @@ function updateHomePageData() {
 
 
 
+
+
+<audio class="audio-output" style="display: none;"></audio><div id="volume-booster-visusalizer">
+                    <div class="sound">
+                        <div class="sound-icon"></div>
+                        <div class="sound-wave sound-wave_one"></div>
+                        <div class="sound-wave sound-wave_two"></div>
+                        <div class="sound-wave sound-wave_three"></div>
+                    </div>
+                    <div class="segments-box">
+                        <div data-range="1-20" class="segment"><span></span></div>
+                        <div data-range="21-40" class="segment"><span></span></div>
+                        <div data-range="41-60" class="segment"><span></span></div>
+                        <div data-range="61-80" class="segment"><span></span></div>
+                        <div data-range="81-100" class="segment"><span></span></div>
+                    </div>
+                </div></body></html>
+                
