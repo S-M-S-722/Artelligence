@@ -796,254 +796,261 @@
             border-radius: 12px;
         }
         
-        /* Modal styles */
-        .modal-overlay { 
-            position: fixed; 
-            inset: 0; 
-            background: rgba(0,0,0,0.7); 
-            display: none; 
-            justify-content: center; 
-            align-items: center; 
-            z-index: 1000; 
-            padding: 15px;
-        }
-        
-        .modal-overlay .modal { 
-            background: #111; 
+        /* About Page Styles */
+        .about-container {
+            max-width: 1100px;
+            margin: 0 auto;
             padding: 20px;
-            border-radius: 12px; 
-            width: 100%;
-            max-width: 400px;
-            text-align: center; 
-            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
         }
         
-        .modal-overlay input { 
-            width: 100%; 
-            padding: 12px; 
-            margin: 15px 0; 
-            border-radius: 6px; 
-            border: 1px solid rgba(255,255,255,0.2);
-            background: rgba(255,255,255,0.1);
-            color: white;
-        }
-        
-        .modal-overlay button { 
-            padding: 10px 20px; 
-            border: none; 
-            border-radius: 6px; 
-            background: #4455ff; 
-            color: white; 
-            cursor: pointer; 
-            font-weight: bold;
-            width: 100%;
-            margin-top: 10px;
-        }
-        
-        .error-msg {
-            color: #ff5555;
-            margin: 10px 0;
-            min-height: 20px;
-            font-size: 0.9rem;
-        }
-        
-        .placement-modal .modal-content {
-            background: #111;
-            padding: 20px;
-            border-radius: 12px;
-            width: 100%;
-            max-width: 400px;
-            max-height: 80vh;
-            overflow-y: auto;
-        }
-        
-        .placement-section {
-            margin-bottom: 20px;
-            padding: 15px;
-            background: rgba(255,255,255,0.05);
-            border-radius: 10px;
-        }
-        
-        .placement-section h3 {
-            margin-bottom: 10px;
-            color: #4ecdc4;
-            font-size: 1rem;
-        }
-        
-        .winners-list {
-            margin: 10px 0;
-            min-height: 40px;
-            padding: 10px;
-            background: rgba(0,0,0,0.3);
-            border-radius: 8px;
-            font-size: 0.8rem;
-        }
-        
-        .winner-item {
+        .about-header {
             display: flex;
+            align-items: center;
             justify-content: space-between;
-            align-items: center;
-            padding: 8px;
-            margin-bottom: 6px;
-            background: rgba(255,255,255,0.1);
-            border-radius: 6px;
+            margin-bottom: 22px;
         }
         
-        .winner-info {
+        .about-brand {
             display: flex;
-            gap: 10px;
+            gap: 12px;
             align-items: center;
         }
         
-        .winner-points {
-            background: #4ecdc4;
-            color: #000;
-            padding: 3px 6px;
-            border-radius: 4px;
-            font-size: 0.7rem;
-            font-weight: bold;
-        }
-        
-        .remove-winner {
-            background: #ff6b6b;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            width: 25px;
-            height: 25px;
-            cursor: pointer;
+        .about-logo {
+            width: 56px;
+            height: 56px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #7dd3fc, #4ade80);
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 0.7rem;
+            font-weight: 800;
+            color: #052026;
         }
         
-        .add-winner-form {
+        .about-site-title {
+            font-size: 22px;
+            margin: 0;
+        }
+        
+        .about-lead {
+            margin: 6px 0 0;
+            color: #94a3b8;
+        }
+        
+        .about-nav a {
+            color: #94a3b8;
+            text-decoration: none;
+            margin-left: 18px;
+        }
+        
+        .about-hero {
+            display: grid;
+            grid-template-columns: 1fr 360px;
+            gap: 28px;
+            align-items: start;
+            margin-bottom: 28px;
+        }
+        
+        .about-panel {
+            background: #0b1220;
+            padding: 20px;
+            border-radius: 14px;
+            box-shadow: 0 6px 18px rgba(3,6,18,0.6);
+        }
+        
+        .about-intro h2 {
+            margin: 0 0 8px;
+            font-size: 28px;
+        }
+        
+        .about-intro p {
+            color: #94a3b8;
+            margin: 0 0 12px;
+            line-height: 1.5;
+        }
+        
+        .about-pill {
+            display: inline-block;
+            background: rgba(255,255,255,0.03);
+            padding: 8px 12px;
+            border-radius: 999px;
+            color: #7dd3fc;
+            font-weight: 600;
+            margin-right: 8px;
+        }
+        
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+            margin-top: 14px;
+        }
+        
+        .about-stat {
+            background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+            padding: 14px;
+            border-radius: 12px;
+            text-align: center;
+        }
+        
+        .about-stat h3 {
+            margin: 0;
+            font-size: 18px;
+        }
+        
+        .about-stat p {
+            margin: 6px 0 0;
+            color: #94a3b8;
+        }
+        
+        .about-section {
+            margin-bottom: 22px;
+        }
+        
+        .about-two-col {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 18px;
+        }
+        
+        .about-team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 14px;
+        }
+        
+        .about-member {
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            padding: 12px;
+            border-radius: 12px;
+            background: linear-gradient(180deg, rgba(255,255,255,0.01), transparent);
+        }
+        
+        .about-avatar {
+            width: 64px;
+            height: 64px;
+            border-radius: 10px;
+            background: linear-gradient(135deg,#e6eef8 0%, #7dd3fc 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #052026;
+            font-weight: 700;
+        }
+        
+        .about-meta h4 {
+            margin: 0 0 4px;
+        }
+        
+        .about-meta p {
+            margin: 0;
+            color: #94a3b8;
+            font-size: 14px;
+        }
+        
+        .about-timeline {
+            padding: 12px;
+            border-radius: 12px;
+            background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));
+        }
+        
+        .about-event {
+            display: flex;
+            gap: 12px;
+            padding: 10px 0;
+            border-bottom: 1px dashed rgba(255,255,255,0.03);
+        }
+        
+        .about-event:last-child {
+            border-bottom: none;
+        }
+        
+        .about-year {
+            font-weight: 700;
+            width: 88px;
+            color: #7dd3fc;
+        }
+        
+        .about-values {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        
+        .about-value {
+            background: rgba(255,255,255,0.03);
+            padding: 10px 14px;
+            border-radius: 10px;
+        }
+        
+        .about-media {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+        
+        .about-media img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        
+        .about-contact-row {
+            display: grid;
+            grid-template-columns: 1fr 380px;
+            gap: 18px;
+        }
+        
+        .about-form {
             display: flex;
             flex-direction: column;
-            gap: 8px;
-            margin-top: 10px;
-        }
-        
-        .add-winner-form select {
-            padding: 8px;
-            border-radius: 6px;
-            border: 1px solid rgba(255,255,255,0.2);
-            background: rgba(255,255,255,0.1);
-            color: white;
-        }
-        
-        .add-winner-btn {
-            padding: 8px 15px;
-            border: none;
-            border-radius: 6px;
-            background: #4ecdc4;
-            color: #000;
-            cursor: pointer;
-            font-weight: bold;
-            font-size: 0.8rem;
-        }
-        
-        .student-details-modal .modal-content {
-            background: #111;
-            padding: 20px;
-            border-radius: 12px;
-            width: 100%;
-            max-width: 400px;
-            max-height: 80vh;
-            overflow-y: auto;
-        }
-        
-        .student-header {
-            text-align: center;
-            margin-bottom: 20px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-        }
-        
-        .student-header h2 {
-            font-size: 1.3rem;
-            margin-bottom: 5px;
-            color: #4ecdc4;
-        }
-        
-        .programs-list {
-            margin-top: 15px;
-        }
-        
-        .program-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px;
-            margin-bottom: 6px;
-            background: rgba(255,255,255,0.05);
-            border-radius: 8px;
-            font-size: 0.8rem;
-        }
-        
-        .program-name {
-            flex: 1;
-        }
-        
-        .program-details {
-            display: flex;
-            gap: 8px;
-            align-items: center;
-        }
-        
-        .placement-badge {
-            padding: 3px 8px;
-            border-radius: 15px;
-            font-size: 0.7rem;
-            font-weight: bold;
-        }
-        
-        .placement-1st { background: #FFD700; color: #000; }
-        .placement-2nd { background: #C0C0C0; color: #000; }
-        .placement-3rd { background: #CD7F32; color: #000; }
-        .placement-grade { background: #4ecdc4; color: #000; }
-        
-        .grade-badge {
-            padding: 3px 6px;
-            border-radius: 4px;
-            font-size: 0.7rem;
-            background: rgba(255,255,255,0.1);
-        }
-        
-        .points-badge {
-            padding: 3px 8px;
-            border-radius: 15px;
-            font-size: 0.7rem;
-            background: #4ecdc4;
-            color: #000;
-        }
-        
-        .modal-actions {
-            display: flex;
             gap: 10px;
-            margin-top: 20px;
         }
         
-        .save-btn, .close-btn {
-            padding: 10px 20px;
+        .about-form input, .about-form textarea {
+            background: transparent;
+            border: 1px solid rgba(255,255,255,0.06);
+            padding: 10px;
+            border-radius: 8px;
+            color: inherit;
+        }
+        
+        .about-button {
+            background: #7dd3fc;
             border: none;
-            border-radius: 6px;
+            padding: 10px 14px;
+            border-radius: 10px;
+            font-weight: 700;
             cursor: pointer;
-            font-weight: bold;
-            flex: 1;
         }
         
-        .save-btn {
-            background: #4ecdc4;
-            color: #000;
+        .about-footer {
+            margin-top: 28px;
+            padding: 14px;
+            text-align: center;
+            color: #94a3b8;
+            font-size: 14px;
         }
         
-        .close-btn {
-            background: #666;
-            color: white;
+        .fadein {
+            animation: fadeIn .7s ease both;
         }
         
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: none; }
+        }
+        
+        .typing {
+            border-right: 2px solid rgba(255,255,255,0.6);
+            padding-right: 6px;
+        }
+        
+        /* Responsive */
         @media (min-width: 768px) {
             .container {
                 max-width: 750px;
@@ -1052,10 +1059,6 @@
             
             .students-grid {
                 grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .add-winner-form {
-                flex-direction: row;
             }
             
             .team-ranks {
@@ -1072,6 +1075,19 @@
                 text-align: center;
                 margin-top: 10px;
             }
+        }
+        
+        @media (max-width: 900px) {
+            .about-hero { grid-template-columns: 1fr; }
+            .about-contact-row { grid-template-columns: 1fr; }
+            .about-two-col { grid-template-columns: 1fr; }
+            .about-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        
+        @media (max-width: 560px) {
+            .about-grid { grid-template-columns: 1fr; }
+            .about-logo { display: none; }
+            .about-brand { gap: 8px; }
         }
     </style>
 </head>
@@ -1115,6 +1131,10 @@
                 <i class="fas fa-calendar-alt"></i>
                 <span>Schedule</span>
             </div>
+            <div class="nav-item" data-page="about">
+                <i class="fas fa-info-circle"></i>
+                <span>About</span>
+            </div>
         </div>
         
         <div class="nav-footer">
@@ -1137,8 +1157,8 @@
                 <h2>Art Festival 2025</h2>
                 <p>Welcome to Artelligence 2025<br>Join the biggest art festival of 2025! Explore competitions, showcase your talent, and win exciting prizes.</p>
                 <div class="banner-buttons">
-                    <a href="#" class="banner-btn">Explore Programs</a>
-                    <a href="#" class="banner-btn secondary">Know About Us</a>
+                    <a href="#" class="banner-btn" id="explorePrograms">Explore Programs</a>
+                    <a href="#" class="banner-btn secondary" id="knowAboutUs">Know About Us</a>
                 </div>
             </div>
         </div>
@@ -1291,7 +1311,6 @@
                             <th>Program</th>
                             <th>Category</th>
                             <th>Winners</th>
-                            <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody id="programsTbody">
@@ -1327,111 +1346,159 @@
                 <!-- Schedule will be populated by JavaScript -->
             </div>
         </section>
-    </div>
 
-    <!-- Admin Login Modal -->
-    <div class="modal-overlay" id="adminModal">
-        <div class="modal">
-            <h3><i class="fas fa-user-shield"></i> Admin Login</h3>
-            <input type="password" id="adminPassword" placeholder="Enter admin password">
-            <div class="error-msg" id="errorMsg"></div>
-            <button id="loginBtn">Login</button>
-        </div>
-    </div>
+        <!-- About Page -->
+        <section id="about" class="page">
+            <div class="about-container">
+                <header class="about-header">
+                    <div class="about-brand">
+                        <div class="about-logo">A</div>
+                        <div>
+                            <h1 class="about-site-title">Artelligence — About</h1>
+                            <p class="about-lead">We're a creative student team passionate about innovation and excellence.</p>
+                        </div>
+                    </div>
+                    <nav class="about-nav">
+                        <a href="#" data-page="home">Home</a>
+                        <a href="#" data-page="programs">Programs</a>
+                        <a href="#" data-page="team">Team</a>
+                        <a href="#" data-page="contact">Contact</a>
+                    </nav>
+                </header>
 
-    <!-- Placement Editor Modal -->
-    <div class="modal-overlay placement-modal" id="placementModal">
-        <div class="modal-content">
-            <h2 id="placementModalTitle">Edit Placements</h2>
-            
-            <div class="placement-section">
-                <h3><i class="fas fa-trophy"></i> 1st Place Winners</h3>
-                <div class="winners-list" id="firstPlaceList">
-                    <div style="text-align: center; color: #888; padding: 10px;">No winners added yet</div>
-                </div>
-                <div class="add-winner-form">
-                    <select id="firstPlaceSelector"></select>
-                    <select id="firstPlaceGrade">
-                        <option value="A">A Grade</option>
-                        <option value="B">B Grade</option>
-                        <option value="No">No Grade</option>
-                    </select>
-                    <button class="add-winner-btn" data-place="first">Add 1st Place</button>
-                </div>
-            </div>
-            
-            <div class="placement-section">
-                <h3><i class="fas fa-medal"></i> 2nd Place Winners</h3>
-                <div class="winners-list" id="secondPlaceList">
-                    <div style="text-align: center; color: #888; padding: 10px;">No winners added yet</div>
-                </div>
-                <div class="add-winner-form">
-                    <select id="secondPlaceSelector"></select>
-                    <select id="secondPlaceGrade">
-                        <option value="A">A Grade</option>
-                        <option value="B">B Grade</option>
-                        <option value="No">No Grade</option>
-                    </select>
-                    <button class="add-winner-btn" data-place="second">Add 2nd Place</button>
-                </div>
-            </div>
-            
-            <div class="placement-section">
-                <h3><i class="fas fa-award"></i> 3rd Place Winners</h3>
-                <div class="winners-list" id="thirdPlaceList">
-                    <div style="text-align: center; color: #888; padding: 10px;">No winners added yet</div>
-                </div>
-                <div class="add-winner-form">
-                    <select id="thirdPlaceSelector"></select>
-                    <select id="thirdPlaceGrade">
-                        <option value="A">A Grade</option>
-                        <option value="B">B Grade</option>
-                        <option value="No">No Grade</option>
-                    </select>
-                    <button class="add-winner-btn" data-place="third">Add 3rd Place</button>
-                </div>
-            </div>
+                <main>
+                    <section class="about-hero">
+                        <div class="about-panel about-intro fadein">
+                            <span class="about-pill">About Us</span>
+                            <h2>Who we are</h2>
+                            <p>Artelligence is a student-led organization (est. 2021) based in Kerala, South India. Our main focus is to create meaningful learning experiences, host cultural and educational events, and support youth with skills in arts, IT, and public speaking.</p>
 
-            <div class="placement-section">
-                <h3><i class="fas fa-certificate"></i> Grade Winners</h3>
-                <div class="winners-list" id="gradeWinnersList">
-                    <div style="text-align: center; color: #888; padding: 10px;">No winners added yet</div>
-                </div>
-                <div class="add-winner-form">
-                    <select id="gradeWinnersSelector"></select>
-                    <select id="gradeWinnersGrade">
-                        <option value="A">A Grade (+5 points)</option>
-                        <option value="B">B Grade (+3 points)</option>
-                        <option value="No">No Grade (+0 points)</option>
-                    </select>
-                    <button class="add-winner-btn" data-place="gradewinners">Add Grade Winners</button>
-                </div>
-            </div>
-            
-            <div class="modal-actions">
-                <button class="save-btn" id="savePlacements">Save All Changes</button>
-                <button class="close-btn" id="closePlacementModal">Close</button>
-            </div>
-        </div>
-    </div>
+                            <div class="about-grid">
+                                <div class="about-stat">
+                                    <h3>50+</h3>
+                                    <p>Events & Workshops</p>
+                                </div>
+                                <div class="about-stat">
+                                    <h3>1200+</h3>
+                                    <p>Participants</p>
+                                </div>
+                                <div class="about-stat">
+                                    <h3>10+</h3>
+                                    <p>Active Projects</p>
+                                </div>
+                            </div>
+                        </div>
 
-    <!-- Student Details Modal -->
-    <div class="modal-overlay student-details-modal" id="studentDetailsModal">
-        <div class="modal-content">
-            <div class="student-header" id="studentDetailsHeader">
-                <h2>Student Name</h2>
-                <div class="team">Team</div>
-                <div class="total-points">Total Points: 0</div>
+                        <aside class="about-panel fadein">
+                            <h3>Quick facts</h3>
+                            <p style="color:#94a3b8;margin-bottom:12px">Based in: Kerala, India · Founded: 2021 · Focus: Education • Arts • Skills</p>
+                            <div style="display:flex;gap:8px;margin-bottom:10px">
+                                <button class="about-button" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Join Us</button>
+                                <a href="#" data-page="programs" style="align-self:center;color:#94a3b8;text-decoration:none">See Programs →</a>
+                            </div>
+
+                            <h4 style="margin-top:12px">Contact</h4>
+                            <p style="color:#94a3b8;font-size:14px;margin:6px 0">Email: <a href="mailto:hikmanric18@gmail.com" style="color:#7dd3fc;text-decoration:none">hikmanric18@gmail.com</a></p>
+                            <p style="color:#94a3b8;font-size:13px">Follow us: <a href="#" style="color:#7dd3fc;text-decoration:none">Instagram</a> • <a href="#" style="color:#7dd3fc;text-decoration:none">Facebook</a></p>
+                        </aside>
+                    </section>
+
+                    <section id="mission" class="about-panel fadein">
+                        <h3>Mission & Vision</h3>
+                        <p style="color:#94a3b8;margin-top:6px">Our mission is to inspire creativity, knowledge, and teamwork among students. We envision a community where every young person has the skills and confidence to lead projects, express themselves, and build a brighter future.</p>
+                        <div class="about-two-col" style="margin-top:12px">
+                            <div>
+                                <h4>What we do</h4>
+                                <ul style="color:#94a3b8;line-height:1.7">
+                                    <li>Organise workshops: art, public speaking, coding</li>
+                                    <li>Run events & competitions: drawing, essays, music</li>
+                                    <li>Publish articles and guides through our Publishing Division</li>
+                                    <li>Mentoring and skill-based training for students</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4>Achievements & Milestones</h4>
+                                <div class="about-timeline" style="margin-top:8px">
+                                    <div class="about-event"><div class="about-year">2021</div><div><strong>Founded</strong><div style="color:#94a3b8">Small team, big dream — Artelligence begins with a focus on student growth.</div></div></div>
+                                    <div class="about-event"><div class="about-year">2022</div><div><strong>Publishing Division</strong><div style="color:#94a3b8">Launched first magazine and online articles.</div></div></div>
+                                    <div class="about-event"><div class="about-year">2024</div><div><strong>1000+ Participants</strong><div style="color:#94a3b8">Reached a wider student audience with events and courses.</div></div></div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="team" class="about-panel fadein">
+                        <h3>Team</h3>
+                        <p style="color:#94a3b8">Meet the core members who run Artelligence.</p>
+                        <div class="about-team-grid" style="margin-top:12px">
+                            <div class="about-member">
+                                <div class="about-avatar">S</div>
+                                <div class="about-meta"><h4>Shaz</h4><p>Opposition Secretary • IT Expert</p></div>
+                            </div>
+                            <div class="about-member">
+                                <div class="about-avatar">A</div>
+                                <div class="about-meta"><h4>Adnan KP</h4><p>Coordinator • Events</p></div>
+                            </div>
+                            <div class="about-member">
+                                <div class="about-avatar">M</div>
+                                <div class="about-meta"><h4>Muhammed</h4><p>Publications • Writer</p></div>
+                            </div>
+                            <div class="about-member">
+                                <div class="about-avatar">N</div>
+                                <div class="about-meta"><h4>Nav</h4><p>Design & Media</p></div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="story" class="about-panel fadein">
+                        <h3>Our Story</h3>
+                        <p style="color:#94a3b8">It all began in 2021 when a small group of students decided to create something meaningful. We started with small workshops and quickly grew into an organisation that runs regular events, publishes student writing, and connects learners from across the region.</p>
+                    </section>
+
+                    <section id="values" class="about-panel fadein">
+                        <h3>Values & Principles</h3>
+                        <div class="about-values" style="margin-top:10px">
+                            <div class="about-value">Creativity</div>
+                            <div class="about-value">Discipline</div>
+                            <div class="about-value">Community Growth</div>
+                            <div class="about-value">Integrity</div>
+                            <div class="about-value">Curiosity</div>
+                        </div>
+                    </section>
+
+                    <section class="about-panel fadein">
+                        <h3>Gallery</h3>
+                        <div class="about-media" style="margin-top:10px">
+                            <img src="https://ik.imagekit.io/shaz/Prompt%20Generate%20Inspire.jpg?updatedAt=1761135540346" alt="Event image">
+                            <img src="https://ik.imagekit.io/shaz/another-placeholder.jpg" alt="Team photo">
+                        </div>
+                    </section>
+
+                    <section id="contact" class="about-panel fadein">
+                        <h3>Get in touch</h3>
+                        <div class="about-contact-row" style="margin-top:10px">
+                            <div>
+                                <p style="color:#94a3b8">Have a project, collaboration or question? Send us a message and we'll get back as soon as possible.</p>
+                                <div style="margin-top:12px;color:#94a3b8"><strong>Email:</strong> <a href="mailto:hikmanric18@gmail.com" style="color:#7dd3fc;text-decoration:none">hikmanric18@gmail.com</a></div>
+                                <div style="margin-top:6px;color:#94a3b8"><strong>Follow:</strong> <a href="#" style="color:#7dd3fc;text-decoration:none">Instagram</a> • <a href="#" style="color:#7dd3fc;text-decoration:none">Twitter</a></div>
+                            </div>
+
+                            <form class="about-form" onsubmit="handleForm(event)">
+                                <input type="text" id="name" placeholder="Your name" required>
+                                <input type="email" id="email" placeholder="Your email" required>
+                                <textarea id="message" rows="4" placeholder="Your message" required></textarea>
+                                <button type="submit" class="about-button">Send message</button>
+                            </form>
+                        </div>
+                    </section>
+
+                </main>
+
+                <footer class="about-footer">
+                    © <span id="year"></span> Artelligence — Built with passion. • <a href="#" style="color:#94a3b8;text-decoration:none">Privacy</a>
+                </footer>
             </div>
-            
-            <div class="programs-list" id="studentProgramsList">
-                <div style="text-align: center; color: #888; padding: 20px;">No placements yet</div>
-            </div>
-            
-            <div class="modal-actions">
-                <button class="close-btn" id="closeStudentDetails">Close</button>
-            </div>
-        </div>
+        </section>
     </div>
 
     <script>
@@ -1442,6 +1509,8 @@
             const sideNav = document.getElementById('sideNav');
             const navOverlay = document.getElementById('navOverlay');
             const navItems = document.querySelectorAll('.nav-item');
+            const exploreProgramsBtn = document.getElementById('explorePrograms');
+            const knowAboutUsBtn = document.getElementById('knowAboutUs');
             
             // Open side navigation
             menuToggle.addEventListener('click', function() {
@@ -1477,212 +1546,73 @@
                 });
             });
 
-            // Points system
-            const POINTS_SYSTEM = {
-                first: { A: 10, B: 8, No: 5 },
-                second: { A: 8, B: 6, No: 3 },
-                third: { A: 6, B: 4, No: 1 },
-                gradewinners: { A: 5, B: 3, No: 0 }
-            };
+            // Banner button functionality
+            exploreProgramsBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                // Remove active class from all items
+                navItems.forEach(i => i.classList.remove('active'));
+                // Add active class to programs item
+                document.querySelector('[data-page="programs"]').classList.add('active');
+                
+                document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+                document.getElementById('programs').classList.add('active');
+            });
 
-            const SPECIAL_PROGRAMS = [
-                'News Paper', 'Cover Design', 'Group Song', 'Qawwali', 'Speech & Song', 'GK Quiz'
-            ];
+            knowAboutUsBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                // Remove active class from all items
+                navItems.forEach(i => i.classList.remove('active'));
+                // Add active class to about item
+                document.querySelector('[data-page="about"]').classList.add('active');
+                
+                document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+                document.getElementById('about').classList.add('active');
+            });
 
-            const SPECIAL_POINTS_SYSTEM = {
-                first: { A: 15, B: 13, No: 10 },
-                second: { A: 13, B: 11, No: 8 },
-                third: { A: 11, B: 9, No: 6 },
-                gradewinners: { A: 5, B: 3, No: 0 }
-            };
+            // About page navigation
+            document.querySelectorAll('.about-nav a').forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const page = this.dataset.page;
+                    if (page) {
+                        // Remove active class from all items
+                        navItems.forEach(i => i.classList.remove('active'));
+                        // Add active class to the corresponding item
+                        document.querySelector(`[data-page="${page}"]`).classList.add('active');
+                        
+                        document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+                        document.getElementById(page).classList.add('active');
+                    }
+                });
+            });
 
-            // Students data
-            const STUDENTS = [
-                {name: 'Sayeed A.S', team: 'NEONOVA'}, {name: 'Shanaj', team: 'NEONOVA'}, {name: 'Muhammed Aslam', team: 'NEONOVA'},
-                {name: 'Muhammed Fazal', team: 'NEONOVA'}, {name: 'Muhammed Faheem K.k', team: 'NEONOVA'}, {name: 'Muhammed Faheem K.m', team: 'NEONOVA'},
-                {name: 'Muhammed Aman', team: 'NEONOVA'}, {name: 'Muhammed Shabeeb', team: 'NEONOVA'}, {name: 'Muhammed Ameen V.s', team: 'NEONOVA'},
-                {name: 'Muhammed Alim Zayyan', team: 'ASTRO-NOVA'}, {name: 'Muhammed Hanan', team: 'ASTRO-NOVA'}, {name: 'Muhammed Haseeb', team: 'ASTRO-NOVA'},
-                {name: 'Jawhar Sidheeque', team: 'ASTRO-NOVA'}, {name: 'Adnan K.p', team: 'ASTRO-NOVA'}, {name: 'Muhammed Arshad', team: 'ASTRO-NOVA'},
-                {name: 'Muhammed Adhnan M.S', team: 'ASTRO-NOVA'}, {name: 'Team B', team: 'ASTRO-NOVA'},{name: 'Muhammed Razeen', team: 'ASTRO-NOVA'}, {name: 'Muhammed Swabeeh', team: 'ASTRO-NOVA'},
-                {name: 'Abdul Basith', team: 'LUMINOVA'}, {name: 'Muhammed Nihal', team: 'LUMINOVA'}, {name: 'Muhammed Rabeeath', team: 'LUMINOVA'},
-                {name: 'Muhammed Athif', team: 'LUMINOVA'}, {name: 'Muhammed Labeeb', team: 'LUMINOVA'}, {name: 'Muhammed Sinan P.a', team: 'LUMINOVA'},
-                {name: 'Mohammed P.M', team: 'LUMINOVA'}, {name: 'Mohammed Midhlaj', team: 'LUMINOVA'}, {name: 'Muhammed Irfan', team: 'LUMINOVA'}
-            ];
-
-            // Programs data with all the results including the new programs
+            // Sample data for programs, students, and schedule
             const PROGRAMS = [
-                {id: 'p1', name: 'Pencil Drawing', category: 'creatia', placements: {
-                    first: [{name: 'Muhammed Irfan', grade: 'B', points: 8}],
-                    second: [{name: 'Muhammed Haseeb', grade: 'B', points: 6}],
-                    third: [{name: 'Sayeed A.S', grade: 'B', points: 4}],
-                    gradewinners: [{name: 'Muhammed Athif', grade: 'B', points: 3}]
-                }},
-                {id: 'p2', name: 'Acrylic Painting', category: 'creatia', placements: {first: [], second: [], third: [], gradewinners: []}},
-                {id: 'p3', name: 'Calligraphy', category: 'creatia', placements: {first: [], second: [], third: [], gradewinners: [{name: 'Muhammed Alim Zayyan', grade: 'B', points: 3}]}},
-                {id: 'p4', name: 'Poster Making', category: 'creatia', placements: {
-                    first: [],
-                    second: [{name: 'Muhammed Fazal', grade: 'No', points: 3}],
-                    third: [{name: 'Muhammed Haseeb', grade: 'No', points: 1}],
-                    gradewinners: []
-                }},
-                {id: 'p5', name: 'Digital Poster Making', category: 'creatia', placements: {
-                    first: [],
-                    second: [{name: 'Muhammed Swabeeh', grade: 'B', points: 6}, {name: 'Mohammed P.M', grade: 'B', points: 6}],
-                    third: [{name: 'Muhammed Fazal', grade: 'B', points: 4}],
-                    gradewinners: [{name: 'Muhammed Nihal', grade: 'B', points: 3}]
-                }},
-                {id: 'p6', name: 'News Paper', category: 'creatia', placements: {first: [{name: 'Team A', grade: 'B', points: 13}], second: [{name: 'Team C', grade: 'B', points: 10}], third: [{name: 'Team B', grade: 'B', points: 8}], gradewinners: []}},
-                {id: 'p8', name: 'Cover Design', category: 'creatia', placements: {
-                    first: [],
-                    second: [{name: 'Team A', grade: 'B', points: 10}, {name: 'Team C', grade: 'B', points: 10}],
-                    third: [{name: 'Team B', grade: 'B', points: 8}],
-                    gradewinners: []
-                }},
-                {id: 'p9', name: 'Essay Writing (MLM)', category: 'log', placements: {
-                    first: [{name: 'Muhammed Fazal', grade: 'A', points: 10}],
-                    second: [{name: 'Muhammed Sinan P.a', grade: 'A', points: 8}],
-                    third: [{name: 'Muhammed Arshad', grade: 'A', points: 6}],
-                    gradewinners: [{name: 'Muhammed Aman', grade: 'B', points: 3}, {name: 'Muhammed Nihal', grade: 'B', points: 3}]
-                }},
-                {id: 'p10', name: 'Essay Writing (ENG)', category: 'log', placements: {
-                    first: [{name: 'Muhammed Fazal', grade: 'A', points: 10}, {name: 'Muhammed Alim Zayyan', grade: 'A', points: 10}],
-                    second: [{name: 'Muhammed Aman', grade: 'A', points: 8}],
-                    third: [{name: 'Jawhar Sidheeque', grade: 'B', points: 4}],
-                    gradewinners: [{name: 'Muhammed Athif', grade: 'B', points: 3}]
-                }},
-                {id: 'p11', name: 'Essay Writing (ARB)', category: 'log', placements: {
-                    first: [{name: 'Muhammed Faheem K.k', grade: 'B', points: 8}],
-                    second: [{name: 'Abdul Basith', grade: 'B', points: 6}],
-                    third: [{name: 'Team B', grade: 'No',points:4}],
-                    gradewinners: []
-                }},
-                {id: 'p12', name: 'Essay Writing (URD)', category: 'log', placements: {
-                    first: [{name: 'Muhammed Adhnan M.S', grade: 'A', points: 10}],
-                    second: [{name: 'Mohammed Midhlaj', grade: 'B', points: 6}],
-                    third: [{name: 'Muhammed Hanan', grade: 'B', points: 4}],
-                    gradewinners: []
-                }},
-                {id: 'p13', name: 'Poem Writing (MLM)', category: 'log', placements: {
-                    first: [{name: 'Muhammed Aslam', grade: 'No', points: 5}],
-                    second: [{name: 'Muhammed Sinan P.a', grade: 'No', points: 3}, {name: 'Muhammed Nihal', grade: 'No', points: 3}],
-                    third: [{name: 'Muhammed Aman', grade: 'No', points: 1}, {name: 'Muhammed Arshad', grade: 'No', points: 1}, {name: 'Muhammed Swabeeh', grade: 'No', points: 1}],
-                    gradewinners: []
-                }},
-                {id: 'p14', name: 'Poem Writing (ENG)', category: 'log', placements: {
-                    first: [{name: 'Muhammed Athif', grade: 'A', points: 10}],
-                    second: [{name: 'Muhammed Alim Zayyan', grade: 'B', points: 6}, {name: 'Mohammed P.M', grade: 'B', points: 6}],
-                    third: [{name: 'Muhammed Fazal', grade: 'B', points: 4}],
-                    gradewinners: [{name: 'Muhammed Haseeb', grade: 'B', points: 3}]
-                }},
-                {id: 'p15', name: 'Poem Writing (ARB)', category: 'log', placements: {
-                    first: [{name: 'Abdul Basith', grade: 'A', points: 10}],
-                    second: [{name: 'Muhammed Adhnan M.S', grade: 'A', points: 8}],
-                    third: [{name: 'Muhammed Haseeb', grade: 'A', points: 6}],
-                    gradewinners: []
-                }},
-                {id: 'p16', name: 'Poem Writing (URD)', category: 'log', placements: {
-                    first: [{name: 'Mohammed Midhlaj', grade: 'A', points: 10}],
-                    second: [{name: 'Muhammed Faheem K.m', grade: 'A', points: 8}],
-                    third: [{name: 'Muhammed Rabeeath', grade: 'A', points: 6}],
-                    gradewinners: [{name: 'Team B', grade: 'B', points: 3}]
-                }},
-                {id: 'p17', name: 'Short Story (ARB)', category: 'log', placements: {
-                    first: [{name: 'Abdul Basith', grade: 'A', points: 10}],
-                    second: [{name: 'Muhammed Faheem K.k', grade: 'B', points: 6}],
-                    third: [{name: 'Adnan K.p', grade: 'B', points: 4}],
-                    gradewinners: [{name: 'Team B', grade: 'B', points: 3}]
-                }},
-                {id: 'p18', name: 'Short Story (URD)', category: 'log', placements: {
-                    first: [{name: 'Muhammed Faheem K.k', grade: 'A', points: 10}],
-                    second: [{name: 'Mohammed Midhlaj', grade: 'A', points: 8}],
-                    third: [{name: 'Muhammed Adhnan M.S', grade: 'A', points: 6}],
-                    gradewinners: [{name: 'Muhammed Hanan', grade: 'B', points: 3}]
-                }},
-                {id: 'p19', name: 'Spelling Bee', category: 'general', placements: {first: [{name: 'Muhammed Athif', grade: 'B', points: 8}], second: [{name: 'Muhammed Fazal', grade: 'No', points: 3}], third: [{name: 'Muhammed Alim Zayyan', grade: 'No', points: 1}], gradewinners: []}},
-                {id: 'p20', name: 'Word Fight (ENG)', category: 'general', placements: {
-                    first: [{name: 'Muhammed Athif', grade: 'A', points: 10}],
-                    second: [{name: 'Jawhar Sidheeque', grade: 'B', points: 6}],
-                    third: [{name: 'Muhammed Faheem K.m', grade: 'B', points: 4}],
-                    gradewinners: [{name: 'Muhammed Haseeb', grade: 'B', points: 4}, {name: 'Mohammed P.M', grade: 'B', points: 3}]
-                }},
-                {id: 'p21', name: 'Mulafaza (ARB)', category: 'general', placements: {
-                    first: [{name: 'Muhammed Faheem K.k', grade: 'B', points: 8}],
-                    second: [{name: 'Muhammed Adhnan M.S', grade: 'B', points: 6}],
-                    third: [{name: 'Abdul Basith', grade: 'B', points: 4}],
-                    gradewinners: []
-                }},
-                {id: 'p22', name: 'Swarf IQ', category: 'general', placements: {
-                    first: [{name: 'Abdul Basith', grade: 'A', points: 10}],
-                    second: [{name: 'Muhammed Adhnan M.S', grade: 'B', points: 6}],
-                    third: [{name: 'Muhammed Aman', grade: 'B', points: 4}],
-                    gradewinners: [{name: 'Sayeed A.S', grade: 'B', points: 3}, {name: 'Adnan K.p', grade: 'B', points: 3}]
-                }},
-                {id: 'p23', name: 'Class Talent', category: 'general', placements: {first: [], second: [], third: [], gradewinners: []}},
-                {id: 'p24', name: 'Hifz', category: 'general', placements: {first: [{name: 'Muhammed Adhnan M.S', grade: 'A', points: 10}], second: [{name: 'Muhammed Ameen V.s', grade: 'B', points: 6}], third: [{name: 'Muhammed Haseeb', grade: 'No', points: 1},{name: 'Muhammed Shabeeb', grade: 'No', points: 1}], gradewinners: []}},
-                {id: 'p25', name: 'Maths Talent', category: 'general', placements: {first: [{name: 'Muhammed Athif', grade: 'B', points: 8}], second: [{name: 'Muhammed Faheem K.m', grade: 'B', points: 6},{name: 'Muhammed Shabeeb', grade: 'B', points: 6}], third: [{name: 'Adnan K.p', grade: 'No', points: 1}], gradewinners: []}},
-                {id: 'p26', name: 'Hindi Vidvan', category: 'general', placements: {
-                    first: [{name: 'Mohammed Midhlaj', grade: 'A', points: 10}],
-                    second: [{name: 'Muhammed Fazal', grade: 'A', points: 8}],
-                    third: [{name: 'Adnan K.p', grade: 'B', points: 4}, {name: 'Muhammed Alim Zayyan', grade: 'B', points: 4}],
-                    gradewinners: []
-                }},
-                {id: 'p27', name: 'Padhyaparayanam', category: 'vocalizia', placements: {first: [{name: 'Mohammed Midhlaj', grade: 'A', points: 10}], second: [{name: 'Muhammed Hanan', grade: 'A', points: 8},{name: 'Abdul Basith', grade: 'A', points: 8}], third: [{name: 'Muhammed Fazal', grade: 'B', points: 4},{name: 'Muhammed Arshad', grade: 'B', points: 4}], gradewinners: [{name: 'Aslam', grade: 'B', points: 4}]}},
-                {id: 'p28', name: 'Song (ENG)', category: 'vocalizia', placements: {first: [{name: 'Jawhar Sidheeque', grade: 'A', points: 10}],
-                     second: [{name: 'Mohammed P.M', grade: 'No', points: 3}],
-                      third: [],
-                     gradewinners: []}},
-                {id: 'p29', name: 'Song (URD)', category: 'vocalizia', placements: {first: [{name: 'Shanaj', grade: 'A', points: 10}], second: [{name: 'Muhammed Alim Zayyan', grade: 'A', points: 8}], third: [{name: 'Muhammed Sinan P.a', grade: 'A', points: 6},{name: 'Muhammed Hanan', grade: 'A', points: 6}], gradewinners: [{name: 'Muhammed Rabeeath', grade: 'B', points: 3},{name: 'Muhammed Faheem K.m', grade: 'B', points: 8}]}},
-                {id: 'p30', name: 'Nasheedha', category: 'vocalizia', placements: {first: [{name: 'Mohammed Midhlaj', grade: 'A', points: 10},{name: 'Muhammed Adhnan M.S', grade: 'A', points: 10}], second: [{name: 'Muhammed Irfan', grade: 'A', points: 8}], third: [{name: 'Shanaj', grade: 'B', points: 4}], gradewinners: []}},
-                {id: 'p31', name: 'Padapattu', category: 'vocalizia', placements: {first: [{name:'Mohammed Midhlaj', grade: 'A', points: 10}], second: [{name:' Shanaj', grade: 'A', points: 8}], third: [{name:'Muhammed Hanan', grade: 'B', points: 4},{name:'Muhammed Sinan P.a', grade: 'B', points: 4}], gradewinners: []}},
-                {id: 'p32', name: 'Qira\'th', category: 'vocalizia', placements: {first: [{name: 'Muhammed Adhnan M.S', grade: 'B', points: 8}], second: [{name: 'Muhammed Haseeb', grade: 'B', points: 6}], third: [{name: 'Muhammed Faheem K.k', grade: 'No', points: 1}], gradewinners: []}},
-                {id: 'p34', name: 'Qawwali', category: 'vocalizia', placements: {first: [], second: [], third: [], gradewinners: []}},
-                {id: 'p35', name: 'Speech & Song', category: 'vocalizia', placements: {first: [{name: 'Team C', grade: 'B', points: 13}], second: [{name: 'Team B', grade: 'B', points: 10}], third: [{name: 'Team A', grade: 'No' , points: 5}], gradewinners: []}},
-                {id: 'p36', name: 'Mashup', category: 'vocalizia', placements: {first: [{name: 'Team C', grade: 'A', points: 15}], second: [], third: [{name: 'Team B', grade: 'No', points: 5},{name: 'Team A', grade: 'No' , points: 5}], gradewinners: []}},
-                {id: 'p37', name: 'Speech (ENG)' , category: 'vocalizia', placements: 
-                {first: [ {name:'Muhammed Athif', grade: 'A', points: 10}],
-                second: [{name: 'Mohammed P.M', grade: 'A', points: 8}],
-                third: [{name: 'Muhammed Alim Zayyan', grade: 'B', points: 4}],
-                gradewinners: [{name: 'Jawhar Sidheeque', grade: 'B', points: 3}]}},
-                {id: 'p38', name: 'Speech (MLM)' , category: 'vocalizia', placements: 
-                    {first: [{name: 'Muhammed Arshad', grade: 'A', points: 10},{name: 'Muhammed Aman', grade: 'A', points: 10}],
-                     second: [{name: 'Muhammed Sinan P.a', grade: 'A', points: 8}],
-                      third: [{name: 'Mohammed Midhlaj', grade: 'B', points: 4}],
-                     gradewinners: [{name: 'Muhammed Aslam', grade: 'B', points: 3},{name: 'Muhammed Alim Zayyan', grade: 'B', points: 3}]}},
-                {id: 'p39', name: 'Speech (ARB)', category: 'vocalizia', placements: {first: [], second: [], third: [], gradewinners: []}},
-                {id: 'p40', name: 'Oru Nimisham', category: 'vocalizia', placements: {
-                    first: [{name: 'Muhammed Arshad', grade: 'B', points: 8}],
-                    second: [{name: 'Muhammed Fazal', grade: 'No', points: 3}],
-                    third: [{name: 'Muhammed Nihal', grade: 'No', points: 1}],
-                    gradewinners: []
-                }},
-                {id: 'p41', name: 'Chain Story', category: 'vocalizia', placements: {
-                    first: [{name: 'Muhammed Arshad', grade: 'B', points: 8}],
-                    second: [{name: 'Shanaj', grade: 'No', points: 3}],
-                    third: [{name: 'Muhammed Irfan', grade: 'No', points: 1}],
-                    gradewinners: []
-                }},
-                {id: 'p42', name: 'Wa\'z', category: 'vocalizia', placements: {first: [], second: [], third: [], gradewinners: []}},
-                {id: 'p43', name: 'Story Narration', category: 'vocalizia', placements: {first: [{name: 'Shanaj', grade: 'A', points: 10}], second: [{name: 'Muhammed Sinan P.a', grade: 'A', points: 8}], third: [{name: 'Muhammed Arshad', grade: 'No', points: 1}], gradewinners: []}},
-                {id: 'p44', name: 'Sudoku', category: 'general', placements: {
-                    first: [{name: 'Muhammed Aslam', grade: 'A', points: 10}],
-                    second: [{name: 'Muhammed Faheem K.m', grade: 'A', points: 8}],
-                    third: [{name: 'Muhammed Athif', grade: 'A', points: 6}],
-                    gradewinners: [{name: 'Muhammed Labeeb', grade: 'B', points: 3}]
-                }},
-                {id: 'p45', name: 'Translation', category: 'general', placements: {
-                    first: [{name: 'Muhammed Athif', grade: 'A', points: 10}],
-                    second: [{name: 'Muhammed Faheem K.k', grade: 'B', points: 6}],
-                    third: [{name: 'Muhammed Adhnan M.S', grade: 'B', points: 4}],
-                    gradewinners: [{name: 'Abdul Basith', grade: 'B', points: 3}]
-                }},
-                {id: 'p46', name: 'Typing Billingual', category: 'general', placements: {first: [], second: [{name: 'Muhammed Swabeeh', grade: 'B', points: 6}], third: [{name: 'Muhammed Haseeb', grade: 'B', points: 4}], gradewinners: [{name: 'Sayeed A.s', grade: 'B', points: 3}]}},
-                {id: 'p47', name: 'GK Quiz', category: 'general', placements: {first: [{name: 'Team C', grade: 'B', points: 13}], second: [{name: 'Team B', grade: 'B', points: 10}], third: [{name: 'Team A', grade: 'No', points: 5}], gradewinners: []}},
-                {id: 'p48', name: 'Geo Giant', category: 'general', placements: {
-                    first: [],
-                    second: [{name: 'Muhammed Shabeeb', grade: 'No', points: 3}],
-                    third: [{name: 'Mohammed P.M', grade: 'No', points: 1}],
-                    gradewinners: []
-                }}
+                {id: 'p1', name: 'Pencil Drawing', category: 'creatia', winners: 'Muhammed Irfan'},
+                {id: 'p2', name: 'Acrylic Painting', category: 'creatia', winners: 'Muhammed Haseeb'},
+                {id: 'p3', name: 'Calligraphy', category: 'creatia', winners: 'Muhammed Alim Zayyan'},
+                {id: 'p4', name: 'Essay Writing (MLM)', category: 'log', winners: 'Muhammed Fazal'},
+                {id: 'p5', name: 'Essay Writing (ENG)', category: 'log', winners: 'Muhammed Fazal, Muhammed Alim Zayyan'},
+                {id: 'p6', name: 'Spelling Bee', category: 'general', winners: 'Muhammed Athif'},
+                {id: 'p7', name: 'Word Fight (ENG)', category: 'general', winners: 'Muhammed Athif'},
+                {id: 'p8', name: 'Song (ENG)', category: 'vocalizia', winners: 'Jawhar Sidheeque'},
+                {id: 'p9', name: 'Song (URD)', category: 'vocalizia', winners: 'Shanaj'},
+                {id: 'p10', name: 'Qira\'th', category: 'vocalizia', winners: 'Muhammed Adhnan M.S'}
+            ];
+
+            const STUDENTS = [
+                {name: 'Sayeed A.S', team: 'NEONOVA', points: 45},
+                {name: 'Shanaj', team: 'NEONOVA', points: 52},
+                {name: 'Muhammed Aslam', team: 'NEONOVA', points: 38},
+                {name: 'Muhammed Fazal', team: 'NEONOVA', points: 65},
+                {name: 'Muhammed Alim Zayyan', team: 'ASTRO-NOVA', points: 58},
+                {name: 'Muhammed Hanan', team: 'ASTRO-NOVA', points: 42},
+                {name: 'Muhammed Haseeb', team: 'ASTRO-NOVA', points: 49},
+                {name: 'Jawhar Sidheeque', team: 'ASTRO-NOVA', points: 55},
+                {name: 'Abdul Basith', team: 'LUMINOVA', points: 62},
+                {name: 'Muhammed Nihal', team: 'LUMINOVA', points: 47},
+                {name: 'Muhammed Rabeeath', team: 'LUMINOVA', points: 41},
+                {name: 'Muhammed Athif', team: 'LUMINOVA', points: 68}
             ];
 
             const SCHEDULE = [
@@ -1692,484 +1622,6 @@
                 {date: '2025-10-04', event: 'Vocalizia - Songs & Group Performances'}
             ];
 
-            let admin = false;
-            let state = {
-                students: STUDENTS.map((s, i) => ({...s, id: `s${i+1}`})), 
-                programs: PROGRAMS, 
-                schedule: SCHEDULE
-            };
-
-            let currentProgramId = null;
-
-            // Load state from localStorage if available
-            function loadState() {
-                const savedState = localStorage.getItem('artelligenceState');
-                if (savedState) {
-                    try {
-                        const parsed = JSON.parse(savedState);
-                        // Ensure all programs have proper placements structure
-                        if (parsed.programs) {
-                            parsed.programs.forEach(program => {
-                                if (!program.placements) {
-                                    program.placements = { first: [], second: [], third: [], gradewinners: [] };
-                                }
-                                // Ensure each placement is an array
-                                ['first', 'second', 'third', 'gradewinners'].forEach(place => {
-                                    if (!Array.isArray(program.placements[place])) {
-                                        program.placements[place] = [];
-                                    }
-                                });
-                            });
-                        }
-                        state = parsed;
-                    } catch (e) {
-                        console.error('Error loading saved state:', e);
-                        // Reset to default state if loading fails
-                        state = {
-                            students: STUDENTS.map((s, i) => ({...s, id: `s${i+1}`})), 
-                            programs: PROGRAMS, 
-                            schedule: SCHEDULE
-                        };
-                    }
-                }
-            }
-
-            // Save state to localStorage
-            function saveState() {
-                localStorage.setItem('artelligenceState', JSON.stringify(state));
-            }
-
-            // Initialize
-            loadState();
-
-            // Calculate points for a student based on placement and grade
-            function calculatePoints(programName, placement, grade) {
-                if (SPECIAL_PROGRAMS.includes(programName)) {
-                    return SPECIAL_POINTS_SYSTEM[placement][grade];
-                } else {
-                    return POINTS_SYSTEM[placement][grade];
-                }
-            }
-
-            // Calculate total points for each student
-            function calculateStudentPoints() {
-                const studentPoints = {};
-                
-                // Initialize all students with 0 points
-                state.students.forEach(student => {
-                    studentPoints[student.name] = 0;
-                });
-                
-                // Calculate points from all programs
-                state.programs.forEach(program => {
-                    if (!program.placements) return;
-                    
-                    ['first', 'second', 'third', 'gradewinners'].forEach(place => {
-                        const winners = program.placements[place];
-                        if (Array.isArray(winners)) {
-                            winners.forEach(winner => {
-                                if (winner && winner.name && studentPoints.hasOwnProperty(winner.name)) {
-                                    studentPoints[winner.name] += winner.points || calculatePoints(program.name, place, winner.grade || 'No');
-                                }
-                            });
-                        }
-                    });
-                });
-                
-                return studentPoints;
-            }
-
-            // Get student's program placements
-            function getStudentPlacements(studentName) {
-                const placements = [];
-                
-                state.programs.forEach(program => {
-                    if (!program.placements) return;
-                    
-                    ['first', 'second', 'third', 'gradewinners'].forEach(place => {
-                        const winners = program.placements[place];
-                        if (Array.isArray(winners)) {
-                            winners.forEach(winner => {
-                                if (winner && winner.name === studentName) {
-                                    placements.push({
-                                        program: program.name,
-                                        placement: place,
-                                        grade: winner.grade,
-                                        points: winner.points || calculatePoints(program.name, place, winner.grade || 'No')
-                                    });
-                                }
-                            });
-                        }
-                    });
-                });
-                
-                return placements;
-            }
-
-            // Calculate and display team ranks
-            function updateTeamRanks() {
-                const teamPoints = {
-                    'NEONOVA': 0,
-                    'ASTRO-NOVA': 0, 
-                    'LUMINOVA': 0
-                };
-                
-                // Calculate points for each team from all programs
-                state.programs.forEach(program => {
-                    if (!program.placements) return;
-                    
-                    ['first', 'second', 'third', 'gradewinners'].forEach(place => {
-                        const winners = program.placements[place];
-                        if (Array.isArray(winners)) {
-                            winners.forEach(winner => {
-                                if (winner && winner.name) {
-                                    // For team-based programs (like Group Song, Qawwali, etc.)
-                                    if (winner.name === 'Team A') {
-                                        teamPoints['NEONOVA'] += winner.points || calculatePoints(program.name, place, winner.grade || 'No');
-                                    } else if (winner.name === 'Team B') {
-                                        teamPoints['ASTRO-NOVA'] += winner.points || calculatePoints(program.name, place, winner.grade || 'No');
-                                    } else if (winner.name === 'Team C') {
-                                        teamPoints['LUMINOVA'] += winner.points || calculatePoints(program.name, place, winner.grade || 'No');
-                                    } else {
-                                        // For individual programs, find the student's team
-                                        const student = state.students.find(s => s.name === winner.name);
-                                        if (student && student.team) {
-                                            teamPoints[student.team] += winner.points || calculatePoints(program.name, place, winner.grade || 'No');
-                                        }
-                                    }
-                                }
-                            });
-                        }
-                    });
-                });
-                
-                // Sort teams by points (descending)
-                const sortedTeams = Object.entries(teamPoints)
-                    .sort((a, b) => b[1] - a[1])
-                    .map(([team, points]) => ({ team, points }));
-                
-                // Calculate total points for percentage
-                const totalPoints = sortedTeams.reduce((sum, team) => sum + team.points, 0);
-                
-                // Update the team ranks section
-                const teamRanksContainer = document.querySelector('.team-ranks');
-                if (teamRanksContainer) {
-                    teamRanksContainer.innerHTML = '';
-                    
-                    sortedTeams.forEach((teamData, index) => {
-                        const team = teamData.team;
-                        const points = teamData.points;
-                        const percentage = totalPoints > 0 ? Math.round((points / totalPoints) * 100) : 0;
-                        
-                        // Count team members
-                        const memberCount = state.students.filter(s => s.team === team).length;
-                        
-                        const teamItem = document.createElement('div');
-                        teamItem.className = 'team-rank-item';
-                        
-                        teamItem.innerHTML = `
-                            <div class="team-info">
-                                <div class="team-name">${team}</div>
-                                <div class="team-members">${memberCount} Team Members</div>
-                            </div>
-                            <div class="team-stats">
-                                <div class="team-points">${points} Points</div>
-                                <div class="team-percentage">${percentage}%</div>
-                            </div>
-                        `;
-                        
-                        teamRanksContainer.appendChild(teamItem);
-                    });
-                }
-            }
-
-            // Calculate and display top scorers
-            function updateTopScorers() {
-                const studentPoints = calculateStudentPoints();
-                
-                // Convert to array and sort by points (descending)
-                const sortedStudents = Object.entries(studentPoints)
-                    .map(([name, points]) => ({ name, points }))
-                    .sort((a, b) => b.points - a.points);
-                
-                // Group students by points to handle ties
-                const groupedByPoints = {};
-                sortedStudents.forEach(student => {
-                    if (!groupedByPoints[student.points]) {
-                        groupedByPoints[student.points] = [];
-                    }
-                    groupedByPoints[student.points].push(student.name);
-                });
-                
-                // Get unique point values in descending order
-                const uniquePoints = Object.keys(groupedByPoints)
-                    .map(Number)
-                    .sort((a, b) => b - a);
-                
-                // Update the top scorers section
-                const topScorersContainer = document.querySelector('.top-scorers');
-                if (topScorersContainer) {
-                    topScorersContainer.innerHTML = '';
-                    
-                    // Show top 3 positions (1st, 2nd, 3rd)
-                    let position = 1;
-                    let displayed = 0;
-                    
-                    for (let i = 0; i < uniquePoints.length && displayed < 3; i++) {
-                        const points = uniquePoints[i];
-                        const students = groupedByPoints[points];
-                        
-                        // Only show one 3rd place
-                        if (position === 3 && students.length > 1) {
-                            // For 3rd place, only show the first student
-                            const studentName = students[0];
-                            
-                            const scorerDiv = document.createElement('div');
-                            scorerDiv.className = 'top-scorer';
-                            
-                            scorerDiv.innerHTML = `
-                                <div class="scorer-circle scorer-3rd" data-rank="3rd">3</div>
-                                <div class="scorer-name">${studentName}</div>
-                                <div class="scorer-points">${points} Points</div>
-                            `;
-                            
-                            topScorersContainer.appendChild(scorerDiv);
-                            displayed++;
-                        } else {
-                            // For 1st and 2nd place, show all students with commas
-                            students.forEach(studentName => {
-                                if (displayed < 3) {
-                                    const rankClass = position === 1 ? 'scorer-1st' : 
-                                                    position === 2 ? 'scorer-2nd' : 
-                                                    'scorer-3rd';
-                                    const rankText = position === 1 ? '1st' : 
-                                                   position === 2 ? '2nd' : 
-                                                   '3rd';
-                                    
-                                    const scorerDiv = document.createElement('div');
-                                    scorerDiv.className = 'top-scorer';
-                                    
-                                    scorerDiv.innerHTML = `
-                                        <div class="scorer-circle ${rankClass}" data-rank="${rankText}">${position}</div>
-                                        <div class="scorer-name">${students.join(', ')}</div>
-                                        <div class="scorer-points">${points} Points</div>
-                                    `;
-                                    
-                                    topScorersContainer.appendChild(scorerDiv);
-                                    displayed++;
-                                }
-                            });
-                        }
-                        
-                        position++;
-                    }
-                }
-            }
-
-            // Update section toppers based on category performance
-            function updateSectionToppers() {
-                const categoryPoints = {
-                    'log': {},
-                    'creatia': {},
-                    'general': {},
-                    'vocalizia': {}
-                };
-                
-                // Calculate points for each student in each category
-                state.programs.forEach(program => {
-                    if (!program.placements) return;
-                    
-                    ['first', 'second', 'third', 'gradewinners'].forEach(place => {
-                        const winners = program.placements[place];
-                        if (Array.isArray(winners)) {
-                            winners.forEach(winner => {
-                                if (winner && winner.name && winner.name !== 'Team A' && winner.name !== 'Team B' && winner.name !== 'Team C') {
-                                    if (!categoryPoints[program.category][winner.name]) {
-                                        categoryPoints[program.category][winner.name] = 0;
-                                    }
-                                    categoryPoints[program.category][winner.name] += winner.points || calculatePoints(program.name, place, winner.grade || 'No');
-                                }
-                            });
-                        }
-                    });
-                });
-                
-                // Find top performers for each category
-                const toppers = {
-                    'log': { name: '', points: 0 },
-                    'creatia': { name: '', points: 0 },
-                    'general': { name: '', points: 0 },
-                    'vocalizia': { name: '', points: 0 }
-                };
-                
-                Object.keys(categoryPoints).forEach(category => {
-                    const students = Object.entries(categoryPoints[category]);
-                    if (students.length > 0) {
-                        const topStudent = students.sort((a, b) => b[1] - a[1])[0];
-                        toppers[category] = { name: topStudent[0], points: topStudent[1] };
-                    }
-                });
-                
-                // Update section toppers display
-                const toppersGrid = document.querySelector('.toppers-grid');
-                if (toppersGrid) {
-                    toppersGrid.innerHTML = '';
-                    
-                    const topperData = [
-                        { icon: 'The Writer', title: toppers.log.name || 'Not Available', name: 'Log Topper' },
-                        { icon: 'The Artist', title: toppers.creatia.name || 'Not Available', name: 'Creatia Topper' },
-                        { icon: 'The Intelligent', title: toppers.general.name || 'Not Available', name: 'General Topper' },
-                        { icon: 'The Vocalist', title: toppers.vocalizia.name || 'Not Available', name: 'Vocalizia Topper' }
-                    ];
-                    
-                    topperData.forEach(topper => {
-                        const topperCard = document.createElement('div');
-                        topperCard.className = 'topper-card';
-                        
-                        topperCard.innerHTML = `
-                            <div class="topper-icon">${topper.icon}</div>
-                            <div class="topper-title">${topper.title}</div>
-                            <div class="topper-name">${topper.name}</div>
-                        `;
-                        
-                        toppersGrid.appendChild(topperCard);
-                    });
-                }
-            }
-
-            // Update all home page data
-            function updateHomePageData() {
-                updateTeamRanks();
-            }
-
-            // Admin Modal
-            const modal = document.getElementById('adminModal');
-            const adminBtn = document.getElementById('adminBtn');
-            const loginBtn = document.getElementById('loginBtn');
-
-            if (adminBtn) {
-                adminBtn.onclick = () => { 
-                    if (modal) modal.style.display = 'flex'; 
-                };
-            }
-
-            if (loginBtn) {
-                loginBtn.onclick = () => {
-                    const pwd = document.getElementById('adminPassword').value;
-                    const error = document.getElementById('errorMsg');
-                    if (pwd === '000') { 
-                        admin = true; 
-                        if (modal) modal.style.display = 'none'; 
-                        renderPrograms(); 
-                        document.getElementById('adminPassword').value = '';
-                        if (error) error.textContent = '';
-                    } else {
-                        if (error) error.textContent = 'Incorrect password!';
-                    }
-                };
-            }
-
-            // Close modal when clicking outside
-            if (modal) {
-                modal.onclick = (e) => {
-                    if (e.target === modal) {
-                        modal.style.display = 'none';
-                        document.getElementById('adminPassword').value = '';
-                        document.getElementById('errorMsg').textContent = '';
-                    }
-                };
-            }
-
-            // Placement Modal
-            const placementModal = document.getElementById('placementModal');
-            const closePlacementModal = document.getElementById('closePlacementModal');
-            const savePlacements = document.getElementById('savePlacements');
-
-            if (closePlacementModal) {
-                closePlacementModal.onclick = () => {
-                    if (placementModal) placementModal.style.display = 'none';
-                };
-            }
-
-            if (placementModal) {
-                placementModal.onclick = (e) => {
-                    if (e.target === placementModal) {
-                        placementModal.style.display = 'none';
-                    }
-                };
-            }
-
-            if (savePlacements) {
-                savePlacements.onclick = () => {
-                    if (currentProgramId) {
-                        saveState();
-                        renderPrograms();
-                        renderStudents();
-                        updateHomePageData();
-                        if (placementModal) placementModal.style.display = 'none';
-                    }
-                };
-            }
-
-            // Student Details Modal
-            const studentDetailsModal = document.getElementById('studentDetailsModal');
-            const closeStudentDetails = document.getElementById('closeStudentDetails');
-
-            if (closeStudentDetails) {
-                closeStudentDetails.onclick = () => {
-                    if (studentDetailsModal) studentDetailsModal.style.display = 'none';
-                };
-            }
-
-            if (studentDetailsModal) {
-                studentDetailsModal.onclick = (e) => {
-                    if (e.target === studentDetailsModal) {
-                        studentDetailsModal.style.display = 'none';
-                    }
-                };
-            }
-
-            // Add winner functionality
-            document.querySelectorAll('.add-winner-btn').forEach(btn => {
-                btn.onclick = () => {
-                    const place = btn.dataset.place;
-                    let selector, gradeSelect;
-                    
-                    // Handle different selectors for different placement types
-                    if (place === 'gradewinners') {
-                        selector = document.getElementById('gradeWinnersSelector');
-                        gradeSelect = document.getElementById('gradeWinnersGrade');
-                    } else {
-                        selector = document.getElementById(`${place}PlaceSelector`);
-                        gradeSelect = document.getElementById(`${place}PlaceGrade`);
-                    }
-                    
-                    const selectedName = selector.value;
-                    const grade = gradeSelect.value;
-                    
-                    if (selectedName && currentProgramId) {
-                        const program = state.programs.find(p => p.id === currentProgramId);
-                        if (program) {
-                            // Ensure placements exist
-                            if (!program.placements) program.placements = { first: [], second: [], third: [], gradewinners: [] };
-                            if (!Array.isArray(program.placements[place])) program.placements[place] = [];
-                            
-                            // Calculate points based on whether this is a special program
-                            const points = calculatePoints(program.name, place, grade);
-                            
-                            program.placements[place].push({
-                                name: selectedName,
-                                grade: grade,
-                                points: points
-                            });
-                            
-                            renderPlacementLists(program);
-                            selector.value = '';
-                        }
-                    }
-                };
-            });
-
             // Render functions
             function renderPrograms(category = 'all', searchTerm = '') {
                 const tbody = document.getElementById('programsTbody'); 
@@ -2177,31 +1629,10 @@
                 
                 tbody.innerHTML = '';
 
-                state.programs.forEach((p, i) => {
+                PROGRAMS.forEach((p, i) => {
                     if (category !== 'all' && p.category !== category) return;
-
-                    // Create display text for placements with error handling
-                    let firstNames = '-';
-                    let secondNames = '-';
-                    let thirdNames = '-';
-                    let gradeWinnersNames = '-';
-
-                    if (p.placements) {
-                        if (Array.isArray(p.placements.first)) {
-                            firstNames = p.placements.first.map(w => `${w.name} (${w.grade})`).join(', ') || '-';
-                        }
-                        if (Array.isArray(p.placements.second)) {
-                            secondNames = p.placements.second.map(w => `${w.name} (${w.grade})`).join(', ') || '-';
-                        }
-                        if (Array.isArray(p.placements.third)) {
-                            thirdNames = p.placements.third.map(w => `${w.name} (${w.grade})`).join(', ') || '-';
-                        }
-                        if (Array.isArray(p.placements.gradewinners)) {
-                            gradeWinnersNames = p.placements.gradewinners.map(w => `${w.name} (${w.grade})`).join(', ') || '-';
-                        }
-                    }
                     
-                    const rowText = `${p.name} ${p.category} ${firstNames} ${secondNames} ${thirdNames} ${gradeWinnersNames}`.toLowerCase();
+                    const rowText = `${p.name} ${p.category} ${p.winners}`.toLowerCase();
 
                     if (searchTerm && !rowText.includes(searchTerm)) return;
 
@@ -2211,31 +1642,8 @@
                         <td>${i+1}</td>
                         <td>${p.name}</td>
                         <td><span class="program-category-badge category-${p.category}">${p.category}</span></td>
-                        <td class="winners-cell">
-                            <div class="winner-item-cell">
-                                <span class="winner-position">1:</span>
-                                <span class="winner-name">${firstNames}</span>
-                            </div>
-                            <div class="winner-item-cell">
-                                <span class="winner-position">2:</span>
-                                <span class="winner-name">${secondNames}</span>
-                            </div>
-                            <div class="winner-item-cell">
-                                <span class="winner-position">3:</span>
-                                <span class="winner-name">${thirdNames}</span>
-                            </div>
-                            <div class="winner-item-cell">
-                                <span class="winner-position">Grade:</span>
-                                <span class="winner-name">${gradeWinnersNames}</span>
-                            </div>
-                        </td>
+                        <td>${p.winners}</td>
                     `;
-                    
-                    if (admin) {
-                        tr.innerHTML += `<td><button class='edit-btn' onclick="openPlacementEditor('${p.id}')">Edit</button></td>`;
-                    } else {
-                        tr.innerHTML += '<td></td>';
-                    }
                     
                     tbody.appendChild(tr);
                 });
@@ -2269,12 +1677,9 @@
                 
                 grid.innerHTML = '';
                 
-                // Calculate student points
-                const studentPoints = calculateStudentPoints();
-                
                 // Sort students by points (descending)
-                const sortedStudents = [...state.students].sort((a, b) => {
-                    return studentPoints[b.name] - studentPoints[a.name];
+                const sortedStudents = [...STUDENTS].sort((a, b) => {
+                    return b.points - a.points;
                 });
                 
                 sortedStudents.forEach(student => {
@@ -2284,12 +1689,10 @@
                     // Filter by search term
                     if (searchTerm && !student.name.toLowerCase().includes(searchTerm)) return;
                     
-                    const points = studentPoints[student.name] || 0;
-                    
                     const d = document.createElement('div'); 
                     d.className = 'student-card';
                     d.innerHTML = `
-                        <div class="student-points" onclick="showStudentDetails('${student.name}')">${points.toString().padStart(2, '0')}</div>
+                        <div class="student-points">${student.points.toString().padStart(2, '0')}</div>
                         <div class="student-info">
                             <h4>${student.name}</h4>
                             <div class="team">${student.team}</div>
@@ -2327,7 +1730,7 @@
                 
                 list.innerHTML = '';
                 
-                state.schedule.forEach(it => {
+                SCHEDULE.forEach(it => {
                     const d = document.createElement('div'); 
                     d.className = 'schedule-item';
                     d.innerHTML = `
@@ -2337,191 +1740,27 @@
                 });
             }
 
-            // Show student details modal
-            function showStudentDetails(studentName) {
-                const student = state.students.find(s => s.name === studentName);
-                if (!student) return;
-                
-                const studentPoints = calculateStudentPoints();
-                const totalPoints = studentPoints[studentName] || 0;
-                const placements = getStudentPlacements(studentName);
-                
-                // Update modal header
-                const header = document.getElementById('studentDetailsHeader');
-                header.innerHTML = `
-                    <h2>${studentName}</h2>
-                    <div class="team">${student.team}</div>
-                    <div class="total-points">Total Points: ${totalPoints}</div>
-                `;
-                
-                // Update programs list
-                const programsList = document.getElementById('studentProgramsList');
-                programsList.innerHTML = '';
-                
-                if (placements.length === 0) {
-                    programsList.innerHTML = '<div style="text-align: center; color: #888; padding: 20px;">No placements yet</div>';
-                } else {
-                    placements.forEach(placement => {
-                        const programItem = document.createElement('div');
-                        programItem.className = 'program-item';
-                        
-                        let placementText = '';
-                        let placementClass = '';
-                        
-                        switch(placement.placement) {
-                            case 'first':
-                                placementText = '1st';
-                                placementClass = 'placement-1st';
-                                break;
-                            case 'second':
-                                placementText = '2nd';
-                                placementClass = 'placement-2nd';
-                                break;
-                            case 'third':
-                                placementText = '3rd';
-                                placementClass = 'placement-3rd';
-                                break;
-                            case 'gradewinners':
-                                placementText = 'Grade';
-                                placementClass = 'placement-grade';
-                                break;
-                        }
-                        
-                        programItem.innerHTML = `
-                            <div class="program-name">${placement.program}</div>
-                            <div class="program-details">
-                                <span class="placement-badge ${placementClass}">${placementText}</span>
-                                <span class="grade-badge">${placement.grade}</span>
-                                <span class="points-badge">+${placement.points}</span>
-                            </div>
-                        `;
-                        
-                        programsList.appendChild(programItem);
-                    });
-                }
-                
-                // Show modal
-                const studentDetailsModal = document.getElementById('studentDetailsModal');
-                if (studentDetailsModal) {
-                    studentDetailsModal.style.display = 'flex';
-                }
-            }
-
-            // Placement Editor Functions
-            function openPlacementEditor(pid) {
-                if (!admin) { 
-                    alert('Admin login required'); 
-                    return; 
-                }
-                
-                currentProgramId = pid;
-                const program = state.programs.find(p => p.id === pid);
-                
-                if (program) {
-                    document.getElementById('placementModalTitle').textContent = `Edit Placements for ${program.name}`;
-                    
-                    // Check if this is a special program
-                    const isSpecialProgram = SPECIAL_PROGRAMS.includes(program.name);
-                    
-                    // For special programs, show team selection
-                    if (isSpecialProgram) {
-                        const teamOptions = `
-                            <option value="">Select Team</option>
-                            <option value="Team A">Team A</option>
-                            <option value="Team B">Team B</option>
-                            <option value="Team C">Team C</option>
-                        `;
-                        document.getElementById('firstPlaceSelector').innerHTML = teamOptions;
-                        document.getElementById('secondPlaceSelector').innerHTML = teamOptions;
-                        document.getElementById('thirdPlaceSelector').innerHTML = teamOptions;
-                        document.getElementById('gradeWinnersSelector').innerHTML = teamOptions;
-                    } else {
-                        // For regular programs, show student selection
-                        let studentOptions = '<option value="">Select Student</option>';
-                        state.students.forEach(student => {
-                            studentOptions += `<option value="${student.name}">${student.name} (${student.team})</option>`;
-                        });
-                        document.getElementById('firstPlaceSelector').innerHTML = studentOptions;
-                        document.getElementById('secondPlaceSelector').innerHTML = studentOptions;
-                        document.getElementById('thirdPlaceSelector').innerHTML = studentOptions;
-                        document.getElementById('gradeWinnersSelector').innerHTML = studentOptions;
-                    }
-                    
-                    renderPlacementLists(program);
-                    if (placementModal) placementModal.style.display = 'flex';
-                }
-            }
-
-            function renderPlacementLists(program) {
-                renderPlacementList('first', program.placements?.first || []);
-                renderPlacementList('second', program.placements?.second || []);
-                renderPlacementList('third', program.placements?.third || []);
-                renderPlacementList('gradewinners', program.placements?.gradewinners || []);
-            }
-
-            function renderPlacementList(place, winners) {
-                let listElement;
-                
-                // Handle different list elements for different placement types
-                if (place === 'gradewinners') {
-                    listElement = document.getElementById('gradeWinnersList');
-                } else {
-                    listElement = document.getElementById(`${place}PlaceList`);
-                }
-                
-                if (!listElement) return;
-                
-                if (!Array.isArray(winners) || winners.length === 0) {
-                    listElement.innerHTML = '<div style="text-align: center; color: #888; padding: 10px;">No winners added yet</div>';
+            // About page form handler
+            function handleForm(e) {
+                e.preventDefault();
+                const name = document.getElementById('name').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const msg = document.getElementById('message').value.trim();
+                if(!name||!email||!msg) {
+                    alert('Please fill all fields');
                     return;
                 }
-                
-                listElement.innerHTML = '';
-                
-                winners.forEach((winner, index) => {
-                    const program = state.programs.find(p => p.id === currentProgramId);
-                    const points = winner.points || calculatePoints(program.name, place, winner.grade || 'No');
-                    const winnerItem = document.createElement('div');
-                    winnerItem.className = 'winner-item';
-                    winnerItem.innerHTML = `
-                        <div class="winner-info">
-                            <span>${winner.name}</span>
-                            <span>Grade: ${winner.grade}</span>
-                            <span class="winner-points">+${points} points</span>
-                        </div>
-                        <button class="remove-winner" data-place="${place}" data-index="${index}">
-                            <i class="fas fa-times"></i>
-                        </button>
-                    `;
-                    listElement.appendChild(winnerItem);
-                });
-                
-                // Add event listeners to remove buttons
-                listElement.querySelectorAll('.remove-winner').forEach(btn => {
-                    btn.onclick = () => {
-                        const place = btn.dataset.place;
-                        const index = parseInt(btn.dataset.index);
-                        
-                        if (currentProgramId) {
-                            const program = state.programs.find(p => p.id === currentProgramId);
-                            if (program && program.placements && Array.isArray(program.placements[place])) {
-                                program.placements[place].splice(index, 1);
-                                renderPlacementLists(program);
-                            }
-                        }
-                    };
-                });
+                alert('Thanks, '+name+' — message simulated as sent. (Add backend to actually send.)');
+                e.target.reset();
             }
 
-            // Make functions globally accessible
-            window.openPlacementEditor = openPlacementEditor;
-            window.showStudentDetails = showStudentDetails;
+            // Set current year in footer
+            document.getElementById('year').textContent = new Date().getFullYear();
 
             // Initial Render
             renderPrograms(); 
             renderStudents(); 
             renderSchedule();
-            updateHomePageData(); // Initialize home page data
         });
     </script>
 </body>
