@@ -171,6 +171,15 @@
             color: rgba(255, 255, 255, 0.7);
         }
         
+        /* Page Sections */
+        .page {
+            display: none;
+        }
+        
+        .page.active {
+            display: block;
+        }
+        
         /* Artelligence Banner Styles */
         .artelligence-banner {
             background: linear-gradient(135deg, #1a0033, #001a33, #000814);
@@ -269,15 +278,6 @@
             background-color: rgba(255, 215, 0, 0.1);
         }
         
-        /* Page Sections */
-        .page {
-            display: none;
-        }
-        
-        .page.active {
-            display: block;
-        }
-        
         /* Home Page Styles */
         .cards-container {
             display: flex;
@@ -323,47 +323,6 @@
             justify-content: center;
             font-size: 14px;
             font-weight: bold;
-        }
-        
-        /* Logo and Header Styles */
-        .logo-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 15px;
-            padding: 10px 20px;
-            margin-bottom: 15px;
-        }
-        
-        .logo-img {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            color: #4ecdc4;
-            border: 2px solid #4ecdc4;
-        }
-        
-        .logo-text {
-            text-align: center;
-        }
-        
-        .logo-text h1 {
-            font-size: 2.5rem;
-            background: linear-gradient(90deg, #ff6b6b, #4ecdc4, #45b7d1);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            filter: drop-shadow(0 0 10px rgba(78, 205, 196, 0.5));
-            margin-bottom: 5px;
-        }
-        
-        .logo-text p {
-            font-size: 0.9rem;
-            color: rgba(255, 255, 255, 0.7);
         }
         
         /* Team Ranks Section */
@@ -797,260 +756,61 @@
         }
         
         /* About Page Styles */
-        .about-container {
-            max-width: 1100px;
+        .about-content {
+            max-width: 800px;
             margin: 0 auto;
             padding: 20px;
         }
         
-        .about-header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 22px;
-        }
-        
-        .about-brand {
-            display: flex;
-            gap: 12px;
-            align-items: center;
-        }
-        
-        .about-logo {
-            width: 56px;
-            height: 56px;
-            border-radius: 10px;
-            background: linear-gradient(135deg, #7dd3fc, #4ade80);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 800;
-            color: #052026;
-        }
-        
-        .about-site-title {
-            font-size: 22px;
-            margin: 0;
-        }
-        
-        .about-lead {
-            margin: 6px 0 0;
-            color: #94a3b8;
-        }
-        
-        .about-nav a {
-            color: #94a3b8;
-            text-decoration: none;
-            margin-left: 18px;
-        }
-        
-        .about-hero {
-            display: grid;
-            grid-template-columns: 1fr 360px;
-            gap: 28px;
-            align-items: start;
-            margin-bottom: 28px;
-        }
-        
-        .about-panel {
-            background: #0b1220;
-            padding: 20px;
-            border-radius: 14px;
-            box-shadow: 0 6px 18px rgba(3,6,18,0.6);
-        }
-        
-        .about-intro h2 {
-            margin: 0 0 8px;
-            font-size: 28px;
-        }
-        
-        .about-intro p {
-            color: #94a3b8;
-            margin: 0 0 12px;
-            line-height: 1.5;
-        }
-        
-        .about-pill {
-            display: inline-block;
-            background: rgba(255,255,255,0.03);
-            padding: 8px 12px;
-            border-radius: 999px;
-            color: #7dd3fc;
-            font-weight: 600;
-            margin-right: 8px;
-        }
-        
-        .about-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 14px;
-            margin-top: 14px;
-        }
-        
-        .about-stat {
-            background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
-            padding: 14px;
-            border-radius: 12px;
-            text-align: center;
-        }
-        
-        .about-stat h3 {
-            margin: 0;
-            font-size: 18px;
-        }
-        
-        .about-stat p {
-            margin: 6px 0 0;
-            color: #94a3b8;
-        }
-        
         .about-section {
-            margin-bottom: 22px;
-        }
-        
-        .about-two-col {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 18px;
-        }
-        
-        .about-team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 14px;
-        }
-        
-        .about-member {
-            display: flex;
-            gap: 12px;
-            align-items: center;
-            padding: 12px;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.05);
             border-radius: 12px;
-            background: linear-gradient(180deg, rgba(255,255,255,0.01), transparent);
         }
         
-        .about-avatar {
-            width: 64px;
-            height: 64px;
-            border-radius: 10px;
-            background: linear-gradient(135deg,#e6eef8 0%, #7dd3fc 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #052026;
-            font-weight: 700;
+        .about-section h2 {
+            color: #4ecdc4;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
         }
         
-        .about-meta h4 {
-            margin: 0 0 4px;
+        .about-section p {
+            line-height: 1.6;
+            margin-bottom: 15px;
         }
         
-        .about-meta p {
-            margin: 0;
-            color: #94a3b8;
-            font-size: 14px;
-        }
-        
-        .about-timeline {
-            padding: 12px;
-            border-radius: 12px;
-            background: linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));
-        }
-        
-        .about-event {
-            display: flex;
-            gap: 12px;
-            padding: 10px 0;
-            border-bottom: 1px dashed rgba(255,255,255,0.03);
-        }
-        
-        .about-event:last-child {
-            border-bottom: none;
-        }
-        
-        .about-year {
-            font-weight: 700;
-            width: 88px;
-            color: #7dd3fc;
-        }
-        
-        .about-values {
-            display: flex;
-            gap: 12px;
-            flex-wrap: wrap;
-        }
-        
-        .about-value {
-            background: rgba(255,255,255,0.03);
-            padding: 10px 14px;
-            border-radius: 10px;
-        }
-        
-        .about-media {
+        .team-members {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
         }
         
-        .about-media img {
-            width: 100%;
-            height: 160px;
-            object-fit: cover;
+        .team-member {
+            background: rgba(255, 255, 255, 0.05);
             border-radius: 10px;
-        }
-        
-        .about-contact-row {
-            display: grid;
-            grid-template-columns: 1fr 380px;
-            gap: 18px;
-        }
-        
-        .about-form {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-        
-        .about-form input, .about-form textarea {
-            background: transparent;
-            border: 1px solid rgba(255,255,255,0.06);
-            padding: 10px;
-            border-radius: 8px;
-            color: inherit;
-        }
-        
-        .about-button {
-            background: #7dd3fc;
-            border: none;
-            padding: 10px 14px;
-            border-radius: 10px;
-            font-weight: 700;
-            cursor: pointer;
-        }
-        
-        .about-footer {
-            margin-top: 28px;
-            padding: 14px;
+            padding: 15px;
             text-align: center;
-            color: #94a3b8;
-            font-size: 14px;
         }
         
-        .fadein {
-            animation: fadeIn .7s ease both;
+        .team-member img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            object-fit: cover;
         }
         
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(8px); }
-            to { opacity: 1; transform: none; }
+        .team-member h4 {
+            margin-bottom: 5px;
         }
         
-        .typing {
-            border-right: 2px solid rgba(255,255,255,0.6);
-            padding-right: 6px;
+        .team-member .role {
+            font-size: 0.8rem;
+            color: #4ecdc4;
         }
         
-        /* Responsive */
         @media (min-width: 768px) {
             .container {
                 max-width: 750px;
@@ -1075,19 +835,6 @@
                 text-align: center;
                 margin-top: 10px;
             }
-        }
-        
-        @media (max-width: 900px) {
-            .about-hero { grid-template-columns: 1fr; }
-            .about-contact-row { grid-template-columns: 1fr; }
-            .about-two-col { grid-template-columns: 1fr; }
-            .about-grid { grid-template-columns: repeat(2, 1fr); }
-        }
-        
-        @media (max-width: 560px) {
-            .about-grid { grid-template-columns: 1fr; }
-            .about-logo { display: none; }
-            .about-brand { gap: 8px; }
         }
     </style>
 </head>
@@ -1157,8 +904,8 @@
                 <h2>Art Festival 2025</h2>
                 <p>Welcome to Artelligence 2025<br>Join the biggest art festival of 2025! Explore competitions, showcase your talent, and win exciting prizes.</p>
                 <div class="banner-buttons">
-                    <a href="#" class="banner-btn" id="explorePrograms">Explore Programs</a>
-                    <a href="#" class="banner-btn secondary" id="knowAboutUs">Know About Us</a>
+                    <a href="#" class="banner-btn" id="exploreProgramsBtn">Explore Programs</a>
+                    <a href="#" class="banner-btn secondary" id="knowAboutUsBtn">Know About Us</a>
                 </div>
             </div>
         </div>
@@ -1234,12 +981,12 @@
                     </div>
                     <div class="top-scorer">
                         <div class="scorer-circle scorer-2nd" data-rank="2nd">2</div>
-                        <div class="scorer-name">Mohammed Midhlaj</div>
+                        <div class="scorer-name">Muhammed Athif</div>
                         <div class="scorer-points">68 Points</div>
                     </div>
                     <div class="top-scorer">
                         <div class="scorer-circle scorer-3rd" data-rank="3rd">3</div>
-                        <div class="scorer-name">Muhammed Athif</div>
+                        <div class="scorer-name">Mohammed Midhlaj</div>
                         <div class="scorer-points">68 Points</div>
                     </div>
                 </div>
@@ -1250,27 +997,22 @@
                 <h2><i class="fas fa-medal"></i> Section Toppers</h2>
                 <div class="toppers-grid">
                     <div class="topper-card">
-                        <div class="topper-icon">Writer</div>
-                        <div class="topper-title">Abdul Basith</div>
+                        <div class="topper-icon">The Writer</div>
+                        <div class="topper-title">Muhammed Faheem K.k</div>
                         <div class="topper-name">Log Topper</div>
                     </div>
                     <div class="topper-card">
-                        <div class="topper-icon">Artist</div>
-                        <div class="topper-title">Muhammed Haseeb, Muhammed Fazal</div>
+                        <div class="topper-icon">The Artist</div>
+                        <div class="topper-title">Muhammed Irfan</div>
                         <div class="topper-name">Creatia Topper</div>
                     </div>
                     <div class="topper-card">
-                        <div class="topper-icon">Intelligent</div>
+                        <div class="topper-icon">The Intelligent</div>
                         <div class="topper-title">Muhammed Athif</div>
                         <div class="topper-name">General Topper</div>
                     </div>
                     <div class="topper-card">
-                        <div class="topper-icon">Vocalist</div>
-                        <div class="topper-title">Muhammed Arshad</div>
-                        <div class="topper-name">Vocalizia Topper</div>
-                    </div>
-                    <div class="topper-card">
-                        <div class="topper-icon">Singer</div>
+                        <div class="topper-icon">The Vocalist</div>
                         <div class="topper-title">Mohammed Midhlaj</div>
                         <div class="topper-name">Vocalizia Topper</div>
                     </div>
@@ -1349,154 +1091,32 @@
 
         <!-- About Page -->
         <section id="about" class="page">
-            <div class="about-container">
-                <header class="about-header">
-                    <div class="about-brand">
-                        <div class="about-logo">A</div>
-                        <div>
-                            <h1 class="about-site-title">Artelligence — About</h1>
-                            <p class="about-lead">We're a creative student team passionate about innovation and excellence.</p>
-                        </div>
-                    </div>
-                    <nav class="about-nav">
-                        <a href="#" data-page="home">Home</a>
-                        <a href="#" data-page="programs">Programs</a>
-                        <a href="#" data-page="team">Team</a>
-                        <a href="#" data-page="contact">Contact</a>
-                    </nav>
-                </header>
-
-                <main>
-                    <section class="about-hero">
-                        <div class="about-panel about-intro fadein">
-                            <span class="about-pill">About Us</span>
-                            <h2>Who we are</h2>
-                            <p>Artelligence is a student-led organization (est. 2021) based in Kerala, South India. Our main focus is to create meaningful learning experiences, host cultural and educational events, and support youth with skills in arts, IT, and public speaking.</p>
-
-                            <div class="about-grid">
-                                <div class="about-stat">
-                                    <h3>50+</h3>
-                                    <p>Events & Workshops</p>
-                                </div>
-                                <div class="about-stat">
-                                    <h3>1200+</h3>
-                                    <p>Participants</p>
-                                </div>
-                                <div class="about-stat">
-                                    <h3>10+</h3>
-                                    <p>Active Projects</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <aside class="about-panel fadein">
-                            <h3>Quick facts</h3>
-                            <p style="color:#94a3b8;margin-bottom:12px">Based in: Kerala, India · Founded: 2021 · Focus: Education • Arts • Skills</p>
-                            <div style="display:flex;gap:8px;margin-bottom:10px">
-                                <button class="about-button" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Join Us</button>
-                                <a href="#" data-page="programs" style="align-self:center;color:#94a3b8;text-decoration:none">See Programs →</a>
-                            </div>
-
-                            <h4 style="margin-top:12px">Contact</h4>
-                            <p style="color:#94a3b8;font-size:14px;margin:6px 0">Email: <a href="mailto:hikmanric18@gmail.com" style="color:#7dd3fc;text-decoration:none">hikmanric18@gmail.com</a></p>
-                            <p style="color:#94a3b8;font-size:13px">Follow us: <a href="#" style="color:#7dd3fc;text-decoration:none">Instagram</a> • <a href="#" style="color:#7dd3fc;text-decoration:none">Facebook</a></p>
-                        </aside>
-                    </section>
-
-                    <section id="mission" class="about-panel fadein">
-                        <h3>Mission & Vision</h3>
-                        <p style="color:#94a3b8;margin-top:6px">Our mission is to inspire creativity, knowledge, and teamwork among students. We envision a community where every young person has the skills and confidence to lead projects, express themselves, and build a brighter future.</p>
-                        <div class="about-two-col" style="margin-top:12px">
-                            <div>
-                                <h4>What we do</h4>
-                                <ul style="color:#94a3b8;line-height:1.7">
-                                    <li>Organise workshops: art, public speaking, coding</li>
-                                    <li>Run events & competitions: drawing, essays, music</li>
-                                    <li>Publish articles and guides through our Publishing Division</li>
-                                    <li>Mentoring and skill-based training for students</li>
-                                </ul>
-                            </div>
-                            <div>
-                                <h4>Achievements & Milestones</h4>
-                                <div class="about-timeline" style="margin-top:8px">
-                                    <div class="about-event"><div class="about-year">2021</div><div><strong>Founded</strong><div style="color:#94a3b8">Small team, big dream — Artelligence begins with a focus on student growth.</div></div></div>
-                                    <div class="about-event"><div class="about-year">2022</div><div><strong>Publishing Division</strong><div style="color:#94a3b8">Launched first magazine and online articles.</div></div></div>
-                                    <div class="about-event"><div class="about-year">2024</div><div><strong>1000+ Participants</strong><div style="color:#94a3b8">Reached a wider student audience with events and courses.</div></div></div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <section id="team" class="about-panel fadein">
-                        <h3>Team</h3>
-                        <p style="color:#94a3b8">Meet the core members who run Artelligence.</p>
-                        <div class="about-team-grid" style="margin-top:12px">
-                            <div class="about-member">
-                                <div class="about-avatar">S</div>
-                                <div class="about-meta"><h4>Shaz</h4><p>Opposition Secretary • IT Expert</p></div>
-                            </div>
-                            <div class="about-member">
-                                <div class="about-avatar">A</div>
-                                <div class="about-meta"><h4>Adnan KP</h4><p>Coordinator • Events</p></div>
-                            </div>
-                            <div class="about-member">
-                                <div class="about-avatar">M</div>
-                                <div class="about-meta"><h4>Muhammed</h4><p>Publications • Writer</p></div>
-                            </div>
-                            <div class="about-member">
-                                <div class="about-avatar">N</div>
-                                <div class="about-meta"><h4>Nav</h4><p>Design & Media</p></div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <section id="story" class="about-panel fadein">
-                        <h3>Our Story</h3>
-                        <p style="color:#94a3b8">It all began in 2021 when a small group of students decided to create something meaningful. We started with small workshops and quickly grew into an organisation that runs regular events, publishes student writing, and connects learners from across the region.</p>
-                    </section>
-
-                    <section id="values" class="about-panel fadein">
-                        <h3>Values & Principles</h3>
-                        <div class="about-values" style="margin-top:10px">
-                            <div class="about-value">Creativity</div>
-                            <div class="about-value">Discipline</div>
-                            <div class="about-value">Community Growth</div>
-                            <div class="about-value">Integrity</div>
-                            <div class="about-value">Curiosity</div>
-                        </div>
-                    </section>
-
-                    <section class="about-panel fadein">
-                        <h3>Gallery</h3>
-                        <div class="about-media" style="margin-top:10px">
-                            <img src="https://ik.imagekit.io/shaz/Prompt%20Generate%20Inspire.jpg?updatedAt=1761135540346" alt="Event image">
-                            <img src="https://ik.imagekit.io/shaz/another-placeholder.jpg" alt="Team photo">
-                        </div>
-                    </section>
-
-                    <section id="contact" class="about-panel fadein">
-                        <h3>Get in touch</h3>
-                        <div class="about-contact-row" style="margin-top:10px">
-                            <div>
-                                <p style="color:#94a3b8">Have a project, collaboration or question? Send us a message and we'll get back as soon as possible.</p>
-                                <div style="margin-top:12px;color:#94a3b8"><strong>Email:</strong> <a href="mailto:hikmanric18@gmail.com" style="color:#7dd3fc;text-decoration:none">hikmanric18@gmail.com</a></div>
-                                <div style="margin-top:6px;color:#94a3b8"><strong>Follow:</strong> <a href="#" style="color:#7dd3fc;text-decoration:none">Instagram</a> • <a href="#" style="color:#7dd3fc;text-decoration:none">Twitter</a></div>
-                            </div>
-
-                            <form class="about-form" onsubmit="handleForm(event)">
-                                <input type="text" id="name" placeholder="Your name" required>
-                                <input type="email" id="email" placeholder="Your email" required>
-                                <textarea id="message" rows="4" placeholder="Your message" required></textarea>
-                                <button type="submit" class="about-button">Send message</button>
-                            </form>
-                        </div>
-                    </section>
-
-                </main>
-
-                <footer class="about-footer">
-                    © <span id="year"></span> Artelligence — Built with passion. • <a href="#" style="color:#94a3b8;text-decoration:none">Privacy</a>
-                </footer>
+            <div class="about-content">
+                <div class="about-section">
+                    <h2>About Artelligence 2025</h2>
+                    <p>Artelligence is the premier art festival of 2025, bringing together talented students from various institutions to showcase their creativity, intelligence, and artistic abilities. Our festival celebrates the intersection of art and intelligence, highlighting how creative expression and intellectual pursuits complement each other.</p>
+                    <p>With competitions spanning across four major categories - Creatia, Log, General, and Vocalizia - Artelligence provides a platform for students to demonstrate their skills in visual arts, writing, general knowledge, and performing arts.</p>
+                </div>
+                
+                <div class="about-section">
+                    <h2>Our Mission</h2>
+                    <p>Our mission is to foster creativity, critical thinking, and collaboration among students through competitive yet friendly artistic and intellectual challenges. We believe that nurturing both artistic expression and intellectual curiosity creates well-rounded individuals prepared for the challenges of tomorrow.</p>
+                </div>
+                
+                <div class="about-section">
+                    <h2>Event Categories</h2>
+                    <p><strong>Creatia:</strong> Visual arts including drawing, painting, calligraphy, and digital art</p>
+                    <p><strong>Log:</strong> Literary arts including essay writing, poetry, and storytelling in multiple languages</p>
+                    <p><strong>General:</strong> Intellectual challenges including quizzes, spelling bees, and problem-solving</p>
+                    <p><strong>Vocalizia:</strong> Performing arts including singing, speech, and dramatic performances</p>
+                </div>
+                
+                <div class="about-section">
+                    <h2>Contact Information</h2>
+                    <p>For inquiries, registration, or sponsorship opportunities, please contact us:</p>
+                    <p>Email: hikmanric18@gmail.com</p>
+                    <p>Follow us on social media for updates and highlights from the festival.</p>
+                </div>
             </div>
         </section>
     </div>
@@ -1509,8 +1129,8 @@
             const sideNav = document.getElementById('sideNav');
             const navOverlay = document.getElementById('navOverlay');
             const navItems = document.querySelectorAll('.nav-item');
-            const exploreProgramsBtn = document.getElementById('explorePrograms');
-            const knowAboutUsBtn = document.getElementById('knowAboutUs');
+            const exploreProgramsBtn = document.getElementById('exploreProgramsBtn');
+            const knowAboutUsBtn = document.getElementById('knowAboutUsBtn');
             
             // Open side navigation
             menuToggle.addEventListener('click', function() {
@@ -1546,13 +1166,13 @@
                 });
             });
 
-            // Banner button functionality
+            // Banner button navigation
             exploreProgramsBtn.addEventListener('click', function(e) {
                 e.preventDefault();
                 // Remove active class from all items
                 navItems.forEach(i => i.classList.remove('active'));
                 // Add active class to programs item
-                document.querySelector('[data-page="programs"]').classList.add('active');
+                document.querySelector('.nav-item[data-page="programs"]').classList.add('active');
                 
                 document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
                 document.getElementById('programs').classList.add('active');
@@ -1563,56 +1183,218 @@
                 // Remove active class from all items
                 navItems.forEach(i => i.classList.remove('active'));
                 // Add active class to about item
-                document.querySelector('[data-page="about"]').classList.add('active');
+                document.querySelector('.nav-item[data-page="about"]').classList.add('active');
                 
                 document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
                 document.getElementById('about').classList.add('active');
             });
 
-            // About page navigation
-            document.querySelectorAll('.about-nav a').forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const page = this.dataset.page;
-                    if (page) {
-                        // Remove active class from all items
-                        navItems.forEach(i => i.classList.remove('active'));
-                        // Add active class to the corresponding item
-                        document.querySelector(`[data-page="${page}"]`).classList.add('active');
-                        
-                        document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-                        document.getElementById(page).classList.add('active');
-                    }
-                });
-            });
-
-            // Sample data for programs, students, and schedule
+            // Programs data
             const PROGRAMS = [
-                {id: 'p1', name: 'Pencil Drawing', category: 'creatia', winners: 'Muhammed Irfan'},
-                {id: 'p2', name: 'Acrylic Painting', category: 'creatia', winners: 'Muhammed Haseeb'},
-                {id: 'p3', name: 'Calligraphy', category: 'creatia', winners: 'Muhammed Alim Zayyan'},
-                {id: 'p4', name: 'Essay Writing (MLM)', category: 'log', winners: 'Muhammed Fazal'},
-                {id: 'p5', name: 'Essay Writing (ENG)', category: 'log', winners: 'Muhammed Fazal, Muhammed Alim Zayyan'},
-                {id: 'p6', name: 'Spelling Bee', category: 'general', winners: 'Muhammed Athif'},
-                {id: 'p7', name: 'Word Fight (ENG)', category: 'general', winners: 'Muhammed Athif'},
-                {id: 'p8', name: 'Song (ENG)', category: 'vocalizia', winners: 'Jawhar Sidheeque'},
-                {id: 'p9', name: 'Song (URD)', category: 'vocalizia', winners: 'Shanaj'},
-                {id: 'p10', name: 'Qira\'th', category: 'vocalizia', winners: 'Muhammed Adhnan M.S'}
+                {id: 'p1', name: 'Pencil Drawing', category: 'creatia', placements: {
+                    first: [{name: 'Muhammed Irfan', grade: 'B'}],
+                    second: [{name: 'Muhammed Haseeb', grade: 'B'}],
+                    third: [{name: 'Sayeed A.S', grade: 'B'}],
+                    gradewinners: [{name: 'Muhammed Athif', grade: 'B'}]
+                }},
+                {id: 'p2', name: 'Acrylic Painting', category: 'creatia', placements: {first: [], second: [], third: [], gradewinners: []}},
+                {id: 'p3', name: 'Calligraphy', category: 'creatia', placements: {first: [], second: [], third: [], gradewinners: [{name: 'Muhammed Alim Zayyan', grade: 'B'}]}},
+                {id: 'p4', name: 'Poster Making', category: 'creatia', placements: {
+                    first: [],
+                    second: [{name: 'Muhammed Fazal', grade: 'No'}],
+                    third: [{name: 'Muhammed Haseeb', grade: 'No'}],
+                    gradewinners: []
+                }},
+                {id: 'p5', name: 'Digital Poster Making', category: 'creatia', placements: {
+                    first: [],
+                    second: [{name: 'Muhammed Swabeeh', grade: 'B'}, {name: 'Mohammed P.M', grade: 'B'}],
+                    third: [{name: 'Muhammed Fazal', grade: 'B'}],
+                    gradewinners: [{name: 'Muhammed Nihal', grade: 'B'}]
+                }},
+                {id: 'p6', name: 'News Paper', category: 'creatia', placements: {first: [{name: 'Team A', grade: 'B'}], second: [{name: 'Team C', grade: 'B'}], third: [{name: 'Team B', grade: 'B'}], gradewinners: []}},
+                {id: 'p8', name: 'Cover Design', category: 'creatia', placements: {
+                    first: [],
+                    second: [{name: 'Team A', grade: 'B'}, {name: 'Team C', grade: 'B'}],
+                    third: [{name: 'Team B', grade: 'B'}],
+                    gradewinners: []
+                }},
+                {id: 'p9', name: 'Essay Writing (MLM)', category: 'log', placements: {
+                    first: [{name: 'Muhammed Fazal', grade: 'A'}],
+                    second: [{name: 'Muhammed Sinan P.a', grade: 'A'}],
+                    third: [{name: 'Muhammed Arshad', grade: 'A'}],
+                    gradewinners: [{name: 'Muhammed Aman', grade: 'B'}, {name: 'Muhammed Nihal', grade: 'B'}]
+                }},
+                {id: 'p10', name: 'Essay Writing (ENG)', category: 'log', placements: {
+                    first: [{name: 'Muhammed Fazal', grade: 'A'}, {name: 'Muhammed Alim Zayyan', grade: 'A'}],
+                    second: [{name: 'Muhammed Aman', grade: 'A'}],
+                    third: [{name: 'Jawhar Sidheeque', grade: 'B'}],
+                    gradewinners: [{name: 'Muhammed Athif', grade: 'B'}]
+                }},
+                {id: 'p11', name: 'Essay Writing (ARB)', category: 'log', placements: {
+                    first: [{name: 'Muhammed Faheem K.k', grade: 'B'}],
+                    second: [{name: 'Abdul Basith', grade: 'B'}],
+                    third: [{name: 'Team B', grade: 'No'}],
+                    gradewinners: []
+                }},
+                {id: 'p12', name: 'Essay Writing (URD)', category: 'log', placements: {
+                    first: [{name: 'Muhammed Adhnan M.S', grade: 'A'}],
+                    second: [{name: 'Mohammed Midhlaj', grade: 'B'}],
+                    third: [{name: 'Muhammed Hanan', grade: 'B'}],
+                    gradewinners: []
+                }},
+                {id: 'p13', name: 'Poem Writing (MLM)', category: 'log', placements: {
+                    first: [{name: 'Muhammed Aslam', grade: 'No'}],
+                    second: [{name: 'Muhammed Sinan P.a', grade: 'No'}, {name: 'Muhammed Nihal', grade: 'No'}],
+                    third: [{name: 'Muhammed Aman', grade: 'B'}, {name: 'Muhammed Arshad', grade: 'B'}, {name: 'Muhammed Swabeeh', grade: 'B'}],
+                    gradewinners: []
+                }},
+                {id: 'p14', name: 'Poem Writing (ENG)', category: 'log', placements: {
+                    first: [{name: 'Muhammed Athif', grade: 'A'}],
+                    second: [{name: 'Muhammed Alim Zayyan', grade: 'B'}, {name: 'Mohammed P.M', grade: 'B'}],
+                    third: [{name: 'Muhammed Fazal', grade: 'B'}],
+                    gradewinners: [{name: 'Muhammed Haseeb', grade: 'B'}]
+                }},
+                {id: 'p15', name: 'Poem Writing (ARB)', category: 'log', placements: {
+                    first: [{name: 'Abdul Basith', grade: 'A'}],
+                    second: [{name: 'Muhammed Adhnan M.S', grade: 'A'}],
+                    third: [{name: 'Muhammed Haseeb', grade: 'A'}],
+                    gradewinners: []
+                }},
+                {id: 'p16', name: 'Poem Writing (URD)', category: 'log', placements: {
+                    first: [{name: 'Mohammed Midhlaj', grade: 'A'}],
+                    second: [{name: 'Muhammed Faheem K.m', grade: 'A'}],
+                    third: [{name: 'Muhammed Rabeeath', grade: 'A'}],
+                    gradewinners: [{name: 'Team B', grade: 'B'}]
+                }},
+                {id: 'p17', name: 'Short Story (ARB)', category: 'log', placements: {
+                    first: [{name: 'Abdul Basith', grade: 'A'}],
+                    second: [{name: 'Muhammed Faheem K.k', grade: 'B'}],
+                    third: [{name: 'Adnan K.p', grade: 'B'}],
+                    gradewinners: [{name: 'Team B', grade: 'B'}]
+                }},
+                {id: 'p18', name: 'Short Story (URD)', category: 'log', placements: {
+                    first: [{name: 'Muhammed Faheem K.k', grade: 'A'}],
+                    second: [{name: 'Mohammed Midhlaj', grade: 'A'}],
+                    third: [{name: 'Muhammed Adhnan M.S', grade: 'A'}],
+                    gradewinners: [{name: 'Muhammed Hanan', grade: 'B'}]
+                }},
+                {id: 'p19', name: 'Spelling Bee', category: 'general', placements: {first: [{name: 'Muhammed Athif', grade: 'B'}], second: [{name: 'Muhammed Fazal', grade: 'No'}], third: [{name: 'Muhammed Alim Zayyan', grade: 'No'}], gradewinners: []}},
+                {id: 'p20', name: 'Word Fight (ENG)', category: 'general', placements: {
+                    first: [{name: 'Muhammed Athif', grade: 'A'}],
+                    second: [{name: 'Jawhar Sidheeque', grade: 'B'}],
+                    third: [{name: 'Muhammed Faheem K.m', grade: 'B'}],
+                    gradewinners: []
+                }},
+                {id: 'p21', name: 'Mulafaza (ARB)', category: 'general', placements: {
+                    first: [{name: 'Muhammed Faheem K.k', grade: 'B'}],
+                    second: [{name: 'Muhammed Adhnan M.S', grade: 'B'}],
+                    third: [{name: 'Abdul Basith', grade: 'B'}],
+                    gradewinners: [{name: 'Muhammed Haseeb', grade: 'B'}, {name: 'Mohammed P.M', grade: 'B'}]
+                }},
+                {id: 'p22', name: 'Swarf IQ', category: 'general', placements: {
+                    first: [{name: 'Abdul Basith', grade: 'A'}],
+                    second: [{name: 'Muhammed Adhnan M.S', grade: 'B'}],
+                    third: [{name: 'Muhammed Aman', grade: 'B'}],
+                    gradewinners: [{name: 'Sayeed A.S', grade: 'B'}, {name: 'Adnan K.p', grade: 'B'}]
+                }},
+                {id: 'p23', name: 'Class Talent', category: 'general', placements: {first: [], second: [], third: [], gradewinners: []}},
+                {id: 'p24', name: 'Hifz', category: 'general', placements: {first: [{name: 'Muhammed Adhnan M.S', grade: 'A'}], second: [{name: 'Muhammed Ameen', grade: 'B'}], third: [{name: 'Muhammed Haseeb,Muhammed Shabeeb', grade: 'B'}], gradewinners: []}},
+                {id: 'p25', name: 'Maths Talent', category: 'general', placements: {first: [{name: 'Muhammed Athif', grade: 'B'}], second: [{name: 'Muhammed Faheem K.m', grade: 'B'},{name: 'Muhammed Shabeeb', grade: 'B'}], third: [{name: 'Adnan K.p', grade: 'No'}], gradewinners: []}},
+                {id: 'p26', name: 'Hindi Vidvan', category: 'general', placements: {
+                    first: [{name: 'Mohammed Midhlaj', grade: 'A'}],
+                    second: [{name: 'Muhammed Fazal', grade: 'A'}],
+                    third: [{name: 'Adnan K.p', grade: 'B'}, {name: 'Muhammed Alim Zayyan', grade: 'B'}],
+                    gradewinners: []
+                }},
+                {id: 'p27', name: 'Padhyaparayanam', category: 'vocalizia', placements: {first: [{name: 'Mohammed Midhlaj', grade: 'A'}], second: [{name: 'Muhammed Hanan', grade: 'A'},{name: 'Abdul Basith', grade: 'A'}], third: [{name: 'Muhammed Fazal', grade: 'B'},{name: 'Muhammed Fazal', grade: 'B'},{name: 'Muhammed Arshad', grade: 'B'}], gradewinners: [{name: 'Aslam', grade: 'B'}]}},
+                {id: 'p28', name: 'Song (ENG)', category: 'vocalizia', placements: {first: [{name: 'Jawhar Sidheeque', grade: 'A'}],
+                     second: [{name: 'Mohammed P.M', grade: 'No'}],
+                      third: [],
+                     gradewinners: []}},
+                {id: 'p29', name: 'Song (URD)', category: 'vocalizia', placements: {first: [{name: 'Shanaj', grade: 'A'}], second: [{name: 'Muhammed Alim Zayyan', grade: 'A'}], third: [{name: 'Muhammed Sinan P.a', grade: 'A'},{name: 'Muhammed Hanan', grade: 'A'}], gradewinners: [{name: 'Muhammed Rabeeath', grade: 'B'},{name: 'Muhammed Faheem K.m', grade: 'B'}]}},
+                {id: 'p30', name: 'Nasheedha', category: 'vocalizia', placements: {first: [{name: 'Mohammed Midhlaj', grade: 'A'},{name: 'Muhammed Adhnan M.S', grade: 'A'}], second: [{name: 'Muhammed Irfan', grade: 'A'}], third: [{name: 'Shanaj', grade: 'B'}], gradewinners: []}},
+                {id: 'p31', name: 'Padapattu', category: 'vocalizia', placements: {first: [{name:'Mohammed Midhlaj', grade: 'A'}], second: [{name:' Shanaj', grade: 'A'}], third: [{name:'Muhammed Hanan', grade: 'B'},{name:'Muhammed Sinan P.a', grade: 'B'}], gradewinners: []}},
+                {id: 'p32', name: 'Qira\'th', category: 'vocalizia', placements: {first: [{name: 'Muhammed Adhnan M.S', grade: 'B'}], second: [{name: 'Muhammed Haseeb', grade: 'B'}], third: [{name: 'Muhammed Faheem K.k', grade: 'No'}], gradewinners: []}},
+                {id: 'p34', name: 'Qawwali', category: 'vocalizia', placements: {first: [], second: [], third: [], gradewinners: []}},
+                {id: 'p35', name: 'Speech & Song', category: 'vocalizia', placements: {first: [{name: 'Team C', grade: 'B'}], second: [{name: 'Team B', grade: 'B'}], third: [{name: 'Team A', grade: 'No'}], gradewinners: []}},
+                {id: 'p35', name: 'Speech & Song', category: 'vocalizia', placements: {first: [{name: 'Team C', grade: 'A'}], second: [], third: [{name: 'Team B', grade: 'No'},{name: 'Team A', grade: 'No'}], gradewinners: []}},
+                {id: 'p36', name: 'Speech (ENG)' , category: 'vocalizia', placements: 
+                {first: [ {name:'Muhammed Athif', grade: 'A'}],
+                second: [{name: 'Mohammed P.M', grade: 'A'}],
+                third: [{name: 'Muhammed Alim Zayyan', grade: 'B'}],
+                gradewinners: [{name: 'Jawhar Sidheeque', grade: 'B'}]}},
+                {id: 'p37', name: 'Speech (MLM)' , category: 'vocalizia', placements: 
+                    {first: [{name: 'Muhammed Arshad', grade: 'A'},{name: 'Muhammed Aman', grade: 'A'}],
+                     second: [{name: 'Muhammed Sinan P.a', grade: 'A'}],
+                      third: [{name: 'Mohammed Midhlaj', grade: 'B'}],
+                     gradewinners: [{name: 'Muhammed Aslam', grade: 'B'},{name: 'Muhammed Alim Zayyan', grade: 'B'}]}},
+                {id: 'p38', name: 'Speech (ARB)', category: 'vocalizia', placements: {first: [], second: [], third: [], gradewinners: []}},
+                {id: 'p39', name: 'Oru Nimisham', category: 'vocalizia', placements: {
+                    first: [{name: 'Muhammed Arshad', grade: 'B'}],
+                    second: [{name: 'Muhammed Fazal', grade: 'No'}],
+                    third: [{name: 'Muhammed Nihal', grade: 'No'}],
+                    gradewinners: []
+                }},
+                {id: 'p40', name: 'Chain Story', category: 'vocalizia', placements: {
+                    first: [{name: 'Muhammed Arshad', grade: 'B'}],
+                    second: [{name: 'Shanaj', grade: 'No'}],
+                    third: [{name: 'Muhammed Irfan', grade: 'No'}],
+                    gradewinners: []
+                }},
+                {id: 'p41', name: 'Wa\'z', category: 'vocalizia', placements: {first: [], second: [], third: [], gradewinners: []}},
+                {id: 'p42', name: 'Story Narration', category: 'vocalizia', placements: {first: [{name: 'Shanaj', grade: 'A'}], second: [{name: 'Muhammed Sinan P.a', grade: 'A'}], third: [{name: 'Muhammed Arshad', grade: 'No'}], gradewinners: []}},
+                {id: 'p43', name: 'Sudoku', category: 'general', placements: {
+                    first: [{name: 'Muhammed Aslam', grade: 'A'}],
+                    second: [{name: 'Muhammed Faheem K.m', grade: 'A'}],
+                    third: [{name: 'Muhammed Athif', grade: 'A'}],
+                    gradewinners: [{name: 'Muhammed Labeeb', grade: 'B'}]
+                }},
+                {id: 'p44', name: 'Translation', category: 'general', placements: {
+                    first: [{name: 'Muhammed Athif', grade: 'A'}],
+                    second: [{name: 'Muhammed Faheem K.k', grade: 'B'}],
+                    third: [{name: 'Muhammed Adhnan M.S', grade: 'B'}],
+                    gradewinners: [{name: 'Abdul Basith', grade: 'B'}]
+                }},
+                {id: 'p46', name: 'Typing Billingual', category: 'general', placements: {first: [], second: [{name: 'Muhammed Swabeeh', grade: 'B'}], third: [{name: 'Muhammed Haseeb', grade: 'B'}], gradewinners: [{name: 'Sayeed A.s', grade: 'B'}]}},
+                {id: 'p47', name: 'GK Quiz', category: 'general', placements: {first: [{name: 'Team C', grade: 'B'}], second: [{name: 'Team B', grade: 'B'}], third: [{name: 'Team A', grade: 'No'}], gradewinners: []}},
+                {id: 'p48', name: 'Geo Giant', category: 'general', placements: {
+                    first: [],
+                    second: [{name: 'Muhammed Shabeeb', grade: 'No'}],
+                    third: [{name: 'Mohammed P.M', grade: 'No'}],
+                    gradewinners: []
+                }}
             ];
 
+            // Students data
             const STUDENTS = [
-                {name: 'Sayeed A.S', team: 'NEONOVA', points: 45},
-                {name: 'Shanaj', team: 'NEONOVA', points: 52},
-                {name: 'Muhammed Aslam', team: 'NEONOVA', points: 38},
-                {name: 'Muhammed Fazal', team: 'NEONOVA', points: 65},
-                {name: 'Muhammed Alim Zayyan', team: 'ASTRO-NOVA', points: 58},
-                {name: 'Muhammed Hanan', team: 'ASTRO-NOVA', points: 42},
-                {name: 'Muhammed Haseeb', team: 'ASTRO-NOVA', points: 49},
-                {name: 'Jawhar Sidheeque', team: 'ASTRO-NOVA', points: 55},
-                {name: 'Abdul Basith', team: 'LUMINOVA', points: 62},
-                {name: 'Muhammed Nihal', team: 'LUMINOVA', points: 47},
-                {name: 'Muhammed Rabeeath', team: 'LUMINOVA', points: 41},
-                {name: 'Muhammed Athif', team: 'LUMINOVA', points: 68}
+                {name: 'Sayeed A.S', team: 'NEONOVA', points: 7}, 
+                {name: 'Shanaj', team: 'NEONOVA', points: 27}, 
+                {name: 'Muhammed Aslam', team: 'NEONOVA', points: 18},
+                {name: 'Muhammed Fazal', team: 'NEONOVA', points: 53}, 
+                {name: 'Muhammed Faheem K.k', team: 'NEONOVA', points: 41}, 
+                {name: 'Muhammed Faheem K.m', team: 'NEONOVA', points: 34},
+                {name: 'Muhammed Aman', team: 'NEONOVA', points: 26}, 
+                {name: 'Muhammed Shabeeb', team: 'NEONOVA', points: 9}, 
+                {name: 'Muhammed Ameen V.s', team: 'NEONOVA', points: 0},
+                {name: 'Muhammed Alim Zayyan', team: 'ASTRO-NOVA', points: 38}, 
+                {name: 'Muhammed Hanan', team: 'ASTRO-NOVA', points: 25}, 
+                {name: 'Muhammed Haseeb', team: 'ASTRO-NOVA', points: 28},
+                {name: 'Jawhar Sidheeque', team: 'ASTRO-NOVA', points: 23}, 
+                {name: 'Adnan K.p', team: 'ASTRO-NOVA', points: 14}, 
+                {name: 'Muhammed Arshad', team: 'ASTRO-NOVA', points: 38},
+                {name: 'Muhammed Adhnan M.S', team: 'ASTRO-NOVA', points: 68}, 
+                {name: 'Team B', team: 'ASTRO-NOVA', points: 49},
+                {name: 'Muhammed Razeen', team: 'ASTRO-NOVA', points: 0}, 
+                {name: 'Muhammed Swabeeh', team: 'ASTRO-NOVA', points: 13},
+                {name: 'Abdul Basith', team: 'LUMINOVA', points: 51}, 
+                {name: 'Muhammed Nihal', team: 'LUMINOVA', points: 10}, 
+                {name: 'Muhammed Rabeeath', team: 'LUMINOVA', points: 9},
+                {name: 'Muhammed Athif', team: 'LUMINOVA', points: 68}, 
+                {name: 'Muhammed Labeeb', team: 'LUMINOVA', points: 3}, 
+                {name: 'Muhammed Sinan P.a', team: 'LUMINOVA', points: 37},
+                {name: 'Mohammed P.M', team: 'LUMINOVA', points: 27}, 
+                {name: 'Mohammed Midhlaj', team: 'LUMINOVA', points: 68}, 
+                {name: 'Muhammed Irfan', team: 'LUMINOVA', points: 17}
             ];
 
             const SCHEDULE = [
@@ -1631,8 +1413,29 @@
 
                 PROGRAMS.forEach((p, i) => {
                     if (category !== 'all' && p.category !== category) return;
+
+                    // Create display text for placements with error handling
+                    let firstNames = '-';
+                    let secondNames = '-';
+                    let thirdNames = '-';
+                    let gradeWinnersNames = '-';
+
+                    if (p.placements) {
+                        if (Array.isArray(p.placements.first)) {
+                            firstNames = p.placements.first.map(w => `${w.name} (${w.grade})`).join(', ') || '-';
+                        }
+                        if (Array.isArray(p.placements.second)) {
+                            secondNames = p.placements.second.map(w => `${w.name} (${w.grade})`).join(', ') || '-';
+                        }
+                        if (Array.isArray(p.placements.third)) {
+                            thirdNames = p.placements.third.map(w => `${w.name} (${w.grade})`).join(', ') || '-';
+                        }
+                        if (Array.isArray(p.placements.gradewinners)) {
+                            gradeWinnersNames = p.placements.gradewinners.map(w => `${w.name} (${w.grade})`).join(', ') || '-';
+                        }
+                    }
                     
-                    const rowText = `${p.name} ${p.category} ${p.winners}`.toLowerCase();
+                    const rowText = `${p.name} ${p.category} ${firstNames} ${secondNames} ${thirdNames} ${gradeWinnersNames}`.toLowerCase();
 
                     if (searchTerm && !rowText.includes(searchTerm)) return;
 
@@ -1642,7 +1445,24 @@
                         <td>${i+1}</td>
                         <td>${p.name}</td>
                         <td><span class="program-category-badge category-${p.category}">${p.category}</span></td>
-                        <td>${p.winners}</td>
+                        <td class="winners-cell">
+                            <div class="winner-item-cell">
+                                <span class="winner-position">1:</span>
+                                <span class="winner-name">${firstNames}</span>
+                            </div>
+                            <div class="winner-item-cell">
+                                <span class="winner-position">2:</span>
+                                <span class="winner-name">${secondNames}</span>
+                            </div>
+                            <div class="winner-item-cell">
+                                <span class="winner-position">3:</span>
+                                <span class="winner-name">${thirdNames}</span>
+                            </div>
+                            <div class="winner-item-cell">
+                                <span class="winner-position">Grade:</span>
+                                <span class="winner-name">${gradeWinnersNames}</span>
+                            </div>
+                        </td>
                     `;
                     
                     tbody.appendChild(tr);
@@ -1689,10 +1509,12 @@
                     // Filter by search term
                     if (searchTerm && !student.name.toLowerCase().includes(searchTerm)) return;
                     
+                    const points = student.points || 0;
+                    
                     const d = document.createElement('div'); 
                     d.className = 'student-card';
                     d.innerHTML = `
-                        <div class="student-points">${student.points.toString().padStart(2, '0')}</div>
+                        <div class="student-points">${points.toString().padStart(2, '0')}</div>
                         <div class="student-info">
                             <h4>${student.name}</h4>
                             <div class="team">${student.team}</div>
@@ -1740,23 +1562,6 @@
                 });
             }
 
-            // About page form handler
-            function handleForm(e) {
-                e.preventDefault();
-                const name = document.getElementById('name').value.trim();
-                const email = document.getElementById('email').value.trim();
-                const msg = document.getElementById('message').value.trim();
-                if(!name||!email||!msg) {
-                    alert('Please fill all fields');
-                    return;
-                }
-                alert('Thanks, '+name+' — message simulated as sent. (Add backend to actually send.)');
-                e.target.reset();
-            }
-
-            // Set current year in footer
-            document.getElementById('year').textContent = new Date().getFullYear();
-
             // Initial Render
             renderPrograms(); 
             renderStudents(); 
@@ -1765,3 +1570,4 @@
     </script>
 </body>
 </html>
+
