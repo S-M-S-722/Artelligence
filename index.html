@@ -1,10 +1,12 @@
-<html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Artelligence - Art Festival 2025</title>
     <link rel="icon" href="https://ik.imagekit.io/shaz/Prompt%20Generate%20Inspire.jpg?updatedAt=1761135540346" type="image/png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         * { 
             box-sizing: border-box; 
@@ -348,7 +350,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 15px;
+            padding: 9px;
             background: rgba(255, 255, 255, 0.05);
             border-radius: 10px;
             border-left: 4px solid;
@@ -709,6 +711,24 @@
             border-radius: 12px;
             transition: all 0.3s ease;
             cursor: pointer;
+            border-left: 4px solid;
+        }
+        
+        .student-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        
+        .student-card[data-team="NEONOVA"] {
+            border-left-color: #ff6b6b;
+        }
+        
+        .student-card[data-team="ASTRO-NOVA"] {
+            border-left-color: #4ecdc4;
+        }
+        
+        .student-card[data-team="LUMINOVA"] {
+            border-left-color: #45b7d1;
         }
         
         .student-points {
@@ -744,6 +764,36 @@
         .student-info .team {
             font-size: 0.8rem;
             color: #4ecdc4;
+        }
+        
+        .student-rank {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-top: 5px;
+        }
+        
+        .team-badge {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 12px;
+            font-size: 0.7rem;
+            font-weight: bold;
+            margin-left: 5px;
+        }
+        
+        .team-NEONOVA {
+            background: #ff6b6b;
+            color: #000;
+        }
+        
+        .team-ASTRO-NOVA {
+            background: #4ecdc4;
+            color: #000;
+        }
+        
+        .team-LUMINOVA {
+            background: #45b7d1;
+            color: #000;
         }
         
         /* Schedule Page Styles */
@@ -825,245 +875,6 @@
         .team-member .role {
             font-size: 0.8rem;
             color: #4ecdc4;
-        }
-        
-        /* Admin Modal Styles */
-        .admin-modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            z-index: 2000;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        .admin-modal.active {
-            display: flex;
-        }
-        
-        .admin-content {
-            background: rgba(10, 10, 20, 0.95);
-            border-radius: 12px;
-            padding: 20px;
-            width: 90%;
-            max-width: 600px;
-            max-height: 80vh;
-            overflow-y: auto;
-        }
-        
-        .admin-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 20px;
-            padding-bottom: 15px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .admin-title {
-            font-size: 1.5rem;
-            color: #4ecdc4;
-        }
-        
-        .close-admin {
-            background: none;
-            border: none;
-            color: white;
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-        
-        .admin-section {
-            margin-bottom: 20px;
-        }
-        
-        .admin-section h3 {
-            margin-bottom: 10px;
-            color: #4ecdc4;
-        }
-        
-        .admin-input {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 6px;
-            background: rgba(255, 255, 255, 0.1);
-            color: white;
-            margin-bottom: 10px;
-        }
-        
-        .admin-select {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 6px;
-            background: rgba(255, 255, 255, 0.1);
-            color: white;
-            margin-bottom: 10px;
-        }
-        
-        .admin-btn-group {
-            display: flex;
-            gap: 10px;
-            margin-top: 15px;
-        }
-        
-        .admin-save-btn {
-            padding: 10px 20px;
-            background: #4ecdc4;
-            color: #000;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            font-weight: bold;
-        }
-        
-        .admin-cancel-btn {
-            padding: 10px 20px;
-            background: rgba(255, 255, 255, 0.1);
-            color: white;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-        }
-        
-        .placement-row {
-            display: flex;
-            gap: 10px;
-            margin-bottom: 10px;
-            align-items: center;
-        }
-        
-        .placement-input {
-            flex: 1;
-            padding: 8px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 4px;
-            background: rgba(255, 255, 255, 0.1);
-            color: white;
-        }
-        
-        .placement-grade {
-            width: 60px;
-            padding: 8px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 4px;
-            background: rgba(255, 255, 255, 0.1);
-            color: white;
-        }
-        
-        .add-placement-btn {
-            padding: 8px 12px;
-            background: #4455ff;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 0.8rem;
-        }
-        
-        .remove-placement-btn {
-            padding: 8px 12px;
-            background: #ff6b6b;
-            color: white;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            font-size: 0.8rem;
-        }
-        
-        /* Password Modal Styles */
-        .password-modal {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.8);
-            z-index: 2000;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        .password-modal.active {
-            display: flex;
-        }
-        
-        .password-content {
-            background: rgba(10, 10, 20, 0.95);
-            border-radius: 12px;
-            padding: 30px;
-            width: 90%;
-            max-width: 400px;
-            text-align: center;
-        }
-        
-        .password-header {
-            margin-bottom: 20px;
-        }
-        
-        .password-title {
-            font-size: 1.5rem;
-            color: #4ecdc4;
-            margin-bottom: 10px;
-        }
-        
-        .password-subtitle {
-            color: rgba(255, 255, 255, 0.7);
-            font-size: 0.9rem;
-        }
-        
-        .password-input {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            border-radius: 6px;
-            background: rgba(255, 255, 255, 0.1);
-            color: white;
-            margin-bottom: 15px;
-            font-size: 1rem;
-        }
-        
-        .password-error {
-            color: #ff6b6b;
-            font-size: 0.8rem;
-            margin-bottom: 15px;
-            display: none;
-        }
-        
-        .password-error.active {
-            display: block;
-        }
-        
-        .password-btn-group {
-            display: flex;
-            gap: 10px;
-        }
-        
-        .password-submit-btn {
-            flex: 1;
-            padding: 12px;
-            background: #4ecdc4;
-            color: #000;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            font-weight: bold;
-        }
-        
-        .password-cancel-btn {
-            flex: 1;
-            padding: 12px;
-            background: rgba(255, 255, 255, 0.1);
-            color: white;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
         }
         
         /* Points Details Modal */
@@ -1209,7 +1020,7 @@
         }
     </style>
 </head>
-<body style="overflow: auto;">
+<body>
     <!-- Top Navigation Bar -->
     <div class="top-nav">
         <div class="top-nav-left">
@@ -1264,142 +1075,26 @@
     <!-- Navigation Overlay -->
     <div class="nav-overlay" id="navOverlay"></div>
 
-    <!-- Password Modal -->
-    <div class="password-modal" id="passwordModal">
-        <div class="password-content">
-            <div class="password-header">
-                <h2 class="password-title">Admin Access</h2>
-                <p class="password-subtitle">Please enter the admin password to continue</p>
-            </div>
-            
-            <input type="password" class="password-input" id="passwordInput" placeholder="Enter password">
-            <div class="password-error" id="passwordError">Incorrect password. Please try again.</div>
-            
-            <div class="password-btn-group">
-                <button class="password-cancel-btn" id="passwordCancelBtn">Cancel</button>
-                <button class="password-submit-btn" id="passwordSubmitBtn">Submit</button>
-            </div>
-        </div>
-    </div>
-
     <!-- Points Details Modal -->
     <div class="points-modal" id="pointsModal">
         <div class="points-content">
             <div class="points-header">
-                <h2 class="points-title" id="pointsStudentName">Muhammed Sinan P.a's Points</h2>
+                <h2 class="points-title" id="pointsStudentName">Student's Points</h2>
                 <button class="close-points" id="closePoints">
                     <i class="fas fa-times"></i>
                 </button>
             </div>
             
             <div class="points-summary">
-                <div class="points-total" id="pointsTotal">47 Points</div>
-                <div id="pointsTeam">Team: LUMINOVA</div>
+                <div class="points-total" id="pointsTotal">0 Points</div>
+                <div id="pointsTeam">Team: </div>
             </div>
             
             <div class="points-breakdown">
                 <h3>Points Breakdown</h3>
                 <div id="pointsBreakdown">
-                            <div class="points-category">
-                                <h4>Log</h4>
-                                <div class="points-list">
-                        
-                                <div class="points-item">
-                                    <div class="points-program">
-                                        <span class="points-position">2nd</span>
-                                        Essay Writing (MLM)
-                                    </div>
-                                    <div class="points-value">+8</div>
-                                </div>
-                            
-                                <div class="points-item">
-                                    <div class="points-program">
-                                        <span class="points-position">2nd</span>
-                                        Poem Writing (MLM)
-                                    </div>
-                                    <div class="points-value">+3</div>
-                                </div>
-                            
-                                </div>
-                            </div>
-                        
-                            <div class="points-category">
-                                <h4>Vocalizia</h4>
-                                <div class="points-list">
-                        
-                                <div class="points-item">
-                                    <div class="points-program">
-                                        <span class="points-position">3rd</span>
-                                        Song (URD)
-                                    </div>
-                                    <div class="points-value">+6</div>
-                                </div>
-                            
-                                <div class="points-item">
-                                    <div class="points-program">
-                                        <span class="points-position">3rd</span>
-                                        Padapattu
-                                    </div>
-                                    <div class="points-value">+4</div>
-                                </div>
-                            
-                                <div class="points-item">
-                                    <div class="points-program">
-                                        <span class="points-position">2nd</span>
-                                        Speech (MLM)
-                                    </div>
-                                    <div class="points-value">+8</div>
-                                </div>
-                            
-                                <div class="points-item">
-                                    <div class="points-program">
-                                        <span class="points-position">2nd</span>
-                                        Story Narration
-                                    </div>
-                                    <div class="points-value">+8</div>
-                                </div>
-                            
-                                </div>
-                            </div>
-                        </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Admin Modal -->
-    <div class="admin-modal" id="adminModal">
-        <div class="admin-content">
-            <div class="admin-header">
-                <h2 class="admin-title">Admin Panel</h2>
-                <button class="close-admin" id="closeAdmin">
-                    <i class="fas fa-times"></i>
-                </button>
-            </div>
-            
-            <div class="admin-section">
-                <h3>Edit Program Placements</h3>
-                <select class="admin-select" id="adminProgramSelect">
-                    <option value="">Select a program</option>
-                </select>
-                
-                <div id="placementContainer">
-                    <!-- Placement rows will be dynamically added here -->
+                    <!-- Points breakdown will be loaded dynamically -->
                 </div>
-                
-                <button class="add-placement-btn" id="addPlacementBtn">Add Placement</button>
-            </div>
-            
-            <div class="admin-section">
-                <h3>Edit Student Points</h3>
-                <select class="admin-select" id="adminStudentSelect">
-                    <option value="">Select a student</option>
-                </select>
-                <input type="number" class="admin-input" id="studentPointsInput" placeholder="Points">
-            </div>
-            
-            <div class="admin-btn-group">
-                <button class="admin-save-btn" id="adminSaveBtn">Save Changes</button>
-                <button class="admin-cancel-btn" id="adminCancelBtn">Cancel</button>
             </div>
         </div>
     </div>
@@ -1566,1234 +1261,9 @@
                             <th>Winners</th>
                         </tr>
                     </thead>
-                    <tbody id="programsTbody"><tr class="program-row" data-category="creatia">
-                        <td>1</td>
-                        <td>Pencil Drawing</td>
-                        <td><span class="program-category-badge category-creatia">Creatia</span></td>
-                        <td class="winners-cell">
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">1st</span>
-                                        <span class="winner-name">Muhammed Irfan</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">2nd</span>
-                                        <span class="winner-name">Muhammed Haseeb</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">3rd</span>
-                                        <span class="winner-name">Sayeed A.S</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">GW</span>
-                                        <span class="winner-name">Muhammed Athif</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                </td>
-                    </tr><tr class="program-row" data-category="creatia">
-                        <td>2</td>
-                        <td>Cartoon Drawing</td>
-                        <td><span class="program-category-badge category-creatia">Creatia</span></td>
-                        <td class="winners-cell">
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">2nd</span>
-                                        <span class="winner-name">Muhammed Alim Zayyan</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">3rd</span>
-                                        <span class="winner-name">Muhammed Haseeb</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                </td>
-                    </tr><tr class="program-row" data-category="creatia">
-                        <td>3</td>
-                        <td>Calligraphy</td>
-                        <td><span class="program-category-badge category-creatia">Creatia</span></td>
-                        <td class="winners-cell">
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">GW</span>
-                                        <span class="winner-name">Muhammed Alim Zayyan</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                </td>
-                    </tr><tr class="program-row" data-category="creatia">
-                        <td>4</td>
-                        <td>Poster Making</td>
-                        <td><span class="program-category-badge category-creatia">Creatia</span></td>
-                        <td class="winners-cell">
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">2nd</span>
-                                        <span class="winner-name">Muhammed Fazal</span>
-                                        <span class="winner-grade">No</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">3rd</span>
-                                        <span class="winner-name">Muhammed Haseeb</span>
-                                        <span class="winner-grade">No</span>
-                                    </div>
-                                </td>
-                    </tr><tr class="program-row" data-category="creatia">
-                        <td>5</td>
-                        <td>Digital Poster Making</td>
-                        <td><span class="program-category-badge category-creatia">Creatia</span></td>
-                        <td class="winners-cell">
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">2nd</span>
-                                        <span class="winner-name">Muhammed Swabeeh</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">2nd</span>
-                                        <span class="winner-name">Mohammed P.M</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">3rd</span>
-                                        <span class="winner-name">Muhammed Fazal</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">GW</span>
-                                        <span class="winner-name">Muhammed Nihal</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                </td>
-                    </tr><tr class="program-row" data-category="creatia">
-                        <td>6</td>
-                        <td>News Paper</td>
-                        <td><span class="program-category-badge category-creatia">Creatia</span></td>
-                        <td class="winners-cell">
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">1st</span>
-                                        <span class="winner-name">Team A</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">2nd</span>
-                                        <span class="winner-name">Team C</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">3rd</span>
-                                        <span class="winner-name">Team B</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                </td>
-                    </tr><tr class="program-row" data-category="creatia">
-                        <td>7</td>
-                        <td>Cover Design</td>
-                        <td><span class="program-category-badge category-creatia">Creatia</span></td>
-                        <td class="winners-cell">
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">2nd</span>
-                                        <span class="winner-name">Team A</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">2nd</span>
-                                        <span class="winner-name">Team C</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">3rd</span>
-                                        <span class="winner-name">Team B</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                </td>
-                    </tr><tr class="program-row" data-category="log">
-                        <td>8</td>
-                        <td>Essay Writing (MLM)</td>
-                        <td><span class="program-category-badge category-log">Log</span></td>
-                        <td class="winners-cell">
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">1st</span>
-                                        <span class="winner-name">Muhammed Fazal</span>
-                                        <span class="winner-grade">A</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">2nd</span>
-                                        <span class="winner-name">Muhammed Sinan P.a</span>
-                                        <span class="winner-grade">A</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">3rd</span>
-                                        <span class="winner-name">Muhammed Arshad</span>
-                                        <span class="winner-grade">A</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">GW</span>
-                                        <span class="winner-name">Muhammed Aman</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">GW</span>
-                                        <span class="winner-name">Muhammed Nihal</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                </td>
-                    </tr><tr class="program-row" data-category="log">
-                        <td>9</td>
-                        <td>Essay Writing (ENG)</td>
-                        <td><span class="program-category-badge category-log">Log</span></td>
-                        <td class="winners-cell">
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">1st</span>
-                                        <span class="winner-name">Muhammed Fazal</span>
-                                        <span class="winner-grade">A</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">1st</span>
-                                        <span class="winner-name">Muhammed Alim Zayyan</span>
-                                        <span class="winner-grade">A</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">2nd</span>
-                                        <span class="winner-name">Muhammed Aman</span>
-                                        <span class="winner-grade">A</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">3rd</span>
-                                        <span class="winner-name">Jawhar Sidheeque</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">GW</span>
-                                        <span class="winner-name">Muhammed Athif</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                </td>
-                    </tr><tr class="program-row" data-category="log">
-                        <td>10</td>
-                        <td>Essay Writing (ARB)</td>
-                        <td><span class="program-category-badge category-log">Log</span></td>
-                        <td class="winners-cell">
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">1st</span>
-                                        <span class="winner-name">Muhammed Faheem K.k</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">2nd</span>
-                                        <span class="winner-name">Abdul Basith</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">3rd</span>
-                                        <span class="winner-name">Team B</span>
-                                        <span class="winner-grade">No</span>
-                                    </div>
-                                </td>
-                    </tr><tr class="program-row" data-category="log">
-                        <td>11</td>
-                        <td>Essay Writing (URD)</td>
-                        <td><span class="program-category-badge category-log">Log</span></td>
-                        <td class="winners-cell">
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">1st</span>
-                                        <span class="winner-name">Muhammed Adhnan M.S</span>
-                                        <span class="winner-grade">A</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">2nd</span>
-                                        <span class="winner-name">Mohammed Midhlaj</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">3rd</span>
-                                        <span class="winner-name">Muhammed Hanan</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                </td>
-                    </tr><tr class="program-row" data-category="log">
-                        <td>12</td>
-                        <td>Poem Writing (MLM)</td>
-                        <td><span class="program-category-badge category-log">Log</span></td>
-                        <td class="winners-cell">
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">1st</span>
-                                        <span class="winner-name">Muhammed Aslam</span>
-                                        <span class="winner-grade">No</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">2nd</span>
-                                        <span class="winner-name">Muhammed Sinan P.a</span>
-                                        <span class="winner-grade">No</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">2nd</span>
-                                        <span class="winner-name">Muhammed Nihal</span>
-                                        <span class="winner-grade">No</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">3rd</span>
-                                        <span class="winner-name">Muhammed Aman</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">3rd</span>
-                                        <span class="winner-name">Muhammed Arshad</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">3rd</span>
-                                        <span class="winner-name">Muhammed Swabeeh</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                </td>
-                    </tr><tr class="program-row" data-category="log">
-                        <td>13</td>
-                        <td>Poem Writing (ENG)</td>
-                        <td><span class="program-category-badge category-log">Log</span></td>
-                        <td class="winners-cell">
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">1st</span>
-                                        <span class="winner-name">Muhammed Athif</span>
-                                        <span class="winner-grade">A</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">2nd</span>
-                                        <span class="winner-name">Muhammed Alim Zayyan</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">2nd</span>
-                                        <span class="winner-name">Mohammed P.M</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">3rd</span>
-                                        <span class="winner-name">Muhammed Fazal</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">GW</span>
-                                        <span class="winner-name">Muhammed Haseeb</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                </td>
-                    </tr><tr class="program-row" data-category="log">
-                        <td>14</td>
-                        <td>Poem Writing (ARB)</td>
-                        <td><span class="program-category-badge category-log">Log</span></td>
-                        <td class="winners-cell">
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">1st</span>
-                                        <span class="winner-name">Abdul Basith</span>
-                                        <span class="winner-grade">A</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">2nd</span>
-                                        <span class="winner-name">Muhammed Adhnan M.S</span>
-                                        <span class="winner-grade">A</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">3rd</span>
-                                        <span class="winner-name">Muhammed Haseeb</span>
-                                        <span class="winner-grade">A</span>
-                                    </div>
-                                </td>
-                    </tr><tr class="program-row" data-category="log">
-                        <td>15</td>
-                        <td>Poem Writing (URD)</td>
-                        <td><span class="program-category-badge category-log">Log</span></td>
-                        <td class="winners-cell">
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">1st</span>
-                                        <span class="winner-name">Mohammed Midhlaj</span>
-                                        <span class="winner-grade">A</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">2nd</span>
-                                        <span class="winner-name">Muhammed Faheem K.m</span>
-                                        <span class="winner-grade">A</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">3rd</span>
-                                        <span class="winner-name">Muhammed Rabeeath</span>
-                                        <span class="winner-grade">A</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">GW</span>
-                                        <span class="winner-name">Team B</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                </td>
-                    </tr><tr class="program-row" data-category="log">
-                        <td>16</td>
-                        <td>Short Story (ARB)</td>
-                        <td><span class="program-category-badge category-log">Log</span></td>
-                        <td class="winners-cell">
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">1st</span>
-                                        <span class="winner-name">Abdul Basith</span>
-                                        <span class="winner-grade">A</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">2nd</span>
-                                        <span class="winner-name">Muhammed Faheem K.k</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">3rd</span>
-                                        <span class="winner-name">Adnan K.p</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">GW</span>
-                                        <span class="winner-name">Team B</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                </td>
-                    </tr><tr class="program-row" data-category="log">
-                        <td>17</td>
-                        <td>Short Story (URD)</td>
-                        <td><span class="program-category-badge category-log">Log</span></td>
-                        <td class="winners-cell">
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">1st</span>
-                                        <span class="winner-name">Muhammed Faheem K.k</span>
-                                        <span class="winner-grade">A</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">2nd</span>
-                                        <span class="winner-name">Mohammed Midhlaj</span>
-                                        <span class="winner-grade">A</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">3rd</span>
-                                        <span class="winner-name">Muhammed Adhnan M.S</span>
-                                        <span class="winner-grade">A</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">GW</span>
-                                        <span class="winner-name">Muhammed Hanan</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                </td>
-                    </tr><tr class="program-row" data-category="general">
-                        <td>18</td>
-                        <td>Spelling Bee</td>
-                        <td><span class="program-category-badge category-general">General</span></td>
-                        <td class="winners-cell">
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">1st</span>
-                                        <span class="winner-name">Muhammed Athif</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">2nd</span>
-                                        <span class="winner-name">Muhammed Fazal</span>
-                                        <span class="winner-grade">No</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">3rd</span>
-                                        <span class="winner-name">Muhammed Alim Zayyan</span>
-                                        <span class="winner-grade">No</span>
-                                    </div>
-                                </td>
-                    </tr><tr class="program-row" data-category="general">
-                        <td>19</td>
-                        <td>Word Fight (ENG)</td>
-                        <td><span class="program-category-badge category-general">General</span></td>
-                        <td class="winners-cell">
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">1st</span>
-                                        <span class="winner-name">Muhammed Athif</span>
-                                        <span class="winner-grade">A</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">2nd</span>
-                                        <span class="winner-name">Jawhar Sidheeque</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">3rd</span>
-                                        <span class="winner-name">Muhammed Faheem K.m</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                </td>
-                    </tr><tr class="program-row" data-category="general">
-                        <td>20</td>
-                        <td>Mulafaza (ARB)</td>
-                        <td><span class="program-category-badge category-general">General</span></td>
-                        <td class="winners-cell">
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">1st</span>
-                                        <span class="winner-name">Muhammed Faheem K.k</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">2nd</span>
-                                        <span class="winner-name">Muhammed Adhnan M.S</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">3rd</span>
-                                        <span class="winner-name">Abdul Basith</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">GW</span>
-                                        <span class="winner-name">Muhammed Haseeb</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">GW</span>
-                                        <span class="winner-name">Mohammed P.M</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                </td>
-                    </tr><tr class="program-row" data-category="general">
-                        <td>21</td>
-                        <td>Swarf IQ</td>
-                        <td><span class="program-category-badge category-general">General</span></td>
-                        <td class="winners-cell">
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">1st</span>
-                                        <span class="winner-name">Abdul Basith</span>
-                                        <span class="winner-grade">A</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">2nd</span>
-                                        <span class="winner-name">Muhammed Adhnan M.S</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">3rd</span>
-                                        <span class="winner-name">Muhammed Aman</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">GW</span>
-                                        <span class="winner-name">Sayeed A.S</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">GW</span>
-                                        <span class="winner-name">Adnan K.p</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                </td>
-                    </tr><tr class="program-row" data-category="general">
-                        <td>22</td>
-                        <td>Class Talent</td>
-                        <td><span class="program-category-badge category-general">General</span></td>
-                        <td class="winners-cell">
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">1st</span>
-                                        <span class="winner-name">Muhammed Sinan P.a </span>
-                                        <span class="winner-grade">A</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">2nd</span>
-                                        <span class="winner-name">Muhammed Aman </span>
-                                        <span class="winner-grade">A</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">3rd</span>
-                                        <span class="winner-name">Muhammed Arshad,Team B</span>
-                                        <span class="winner-grade">A</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">GW</span>
-                                        <span class="winner-name">Mohammed Midhlaj   </span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                </td>
-                    </tr><tr class="program-row" data-category="general">
-                        <td>23</td>
-                        <td>Hifz</td>
-                        <td><span class="program-category-badge category-general">General</span></td>
-                        <td class="winners-cell">
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">1st</span>
-                                        <span class="winner-name">Muhammed Adhnan M.S</span>
-                                        <span class="winner-grade">A</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">2nd</span>
-                                        <span class="winner-name">Muhammed Ameen V.s</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">3rd</span>
-                                        <span class="winner-name">Muhammed Haseeb,Muhammed Shabeeb</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                </td>
-                    </tr><tr class="program-row" data-category="general">
-                        <td>24</td>
-                        <td>Maths Talent</td>
-                        <td><span class="program-category-badge category-general">General</span></td>
-                        <td class="winners-cell">
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">1st</span>
-                                        <span class="winner-name">Muhammed Athif</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">2nd</span>
-                                        <span class="winner-name">Muhammed Faheem K.m</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">2nd</span>
-                                        <span class="winner-name">Muhammed Shabeeb</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">3rd</span>
-                                        <span class="winner-name">Adnan K.p</span>
-                                        <span class="winner-grade">No</span>
-                                    </div>
-                                </td>
-                    </tr><tr class="program-row" data-category="general">
-                        <td>25</td>
-                        <td>Hindi Vidvan</td>
-                        <td><span class="program-category-badge category-general">General</span></td>
-                        <td class="winners-cell">
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">1st</span>
-                                        <span class="winner-name">Mohammed Midhlaj</span>
-                                        <span class="winner-grade">A</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">2nd</span>
-                                        <span class="winner-name">Muhammed Fazal</span>
-                                        <span class="winner-grade">A</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">3rd</span>
-                                        <span class="winner-name">Adnan K.p</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">3rd</span>
-                                        <span class="winner-name">Muhammed Alim Zayyan</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                </td>
-                    </tr><tr class="program-row" data-category="vocalizia">
-                        <td>26</td>
-                        <td>Padhyaparayanam</td>
-                        <td><span class="program-category-badge category-vocalizia">Vocalizia</span></td>
-                        <td class="winners-cell">
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">1st</span>
-                                        <span class="winner-name">Mohammed Midhlaj</span>
-                                        <span class="winner-grade">A</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">2nd</span>
-                                        <span class="winner-name">Muhammed Hanan</span>
-                                        <span class="winner-grade">A</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">2nd</span>
-                                        <span class="winner-name">Abdul Basith</span>
-                                        <span class="winner-grade">A</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">3rd</span>
-                                        <span class="winner-name">Muhammed Fazal</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                       
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">3rd</span>
-                                        <span class="winner-name">Muhammed Arshad</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">GW</span>
-                                        <span class="winner-name">Aslam</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                </td>
-                    </tr><tr class="program-row" data-category="vocalizia">
-                        <td>27</td>
-                        <td>Song (ENG)</td>
-                        <td><span class="program-category-badge category-vocalizia">Vocalizia</span></td>
-                        <td class="winners-cell">
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">1st</span>
-                                        <span class="winner-name">Jawhar Sidheeque</span>
-                                        <span class="winner-grade">A</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">2nd</span>
-                                        <span class="winner-name">Mohammed P.M</span>
-                                        <span class="winner-grade">No</span>
-                                    </div>
-                                </td>
-                    </tr><tr class="program-row" data-category="vocalizia">
-                        <td>28</td>
-                        <td>Song (URD)</td>
-                        <td><span class="program-category-badge category-vocalizia">Vocalizia</span></td>
-                        <td class="winners-cell">
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">1st</span>
-                                        <span class="winner-name">Shanaj</span>
-                                        <span class="winner-grade">A</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">2nd</span>
-                                        <span class="winner-name">Muhammed Alim Zayyan</span>
-                                        <span class="winner-grade">A</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">3rd</span>
-                                        <span class="winner-name">Muhammed Sinan P.a</span>
-                                        <span class="winner-grade">A</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">3rd</span>
-                                        <span class="winner-name">Muhammed Hanan</span>
-                                        <span class="winner-grade">A</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">GW</span>
-                                        <span class="winner-name">Muhammed Rabeeath</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">GW</span>
-                                        <span class="winner-name">Muhammed Faheem K.m</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                </td>
-                    </tr><tr class="program-row" data-category="vocalizia">
-                        <td>29</td>
-                        <td>Nasheedha</td>
-                        <td><span class="program-category-badge category-vocalizia">Vocalizia</span></td>
-                        <td class="winners-cell">
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">1st</span>
-                                        <span class="winner-name">Mohammed Midhlaj</span>
-                                        <span class="winner-grade">A</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">1st</span>
-                                        <span class="winner-name">Muhammed Adhnan M.S</span>
-                                        <span class="winner-grade">A</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">2nd</span>
-                                        <span class="winner-name">Muhammed Irfan</span>
-                                        <span class="winner-grade">A</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">3rd</span>
-                                        <span class="winner-name">Shanaj</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                </td>
-                    </tr><tr class="program-row" data-category="vocalizia">
-                        <td>30</td>
-                        <td>Padapattu</td>
-                        <td><span class="program-category-badge category-vocalizia">Vocalizia</span></td>
-                        <td class="winners-cell">
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">1st</span>
-                                        <span class="winner-name">Mohammed Midhlaj</span>
-                                        <span class="winner-grade">A</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">2nd</span>
-                                        <span class="winner-name"> Shanaj</span>
-                                        <span class="winner-grade">A</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">3rd</span>
-                                        <span class="winner-name">Muhammed Hanan</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">3rd</span>
-                                        <span class="winner-name">Muhammed Sinan P.a</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                </td>
-                    </tr><tr class="program-row" data-category="vocalizia">
-                        <td>31</td>
-                        <td>Qira'th</td>
-                        <td><span class="program-category-badge category-vocalizia">Vocalizia</span></td>
-                        <td class="winners-cell">
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">1st</span>
-                                        <span class="winner-name">Muhammed Adhnan M.S</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">2nd</span>
-                                        <span class="winner-name">Muhammed Haseeb</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">3rd</span>
-                                        <span class="winner-name">Muhammed Faheem K.k</span>
-                                        <span class="winner-grade">No</span>
-                                    </div>
-                                </td>
-                    </tr><tr class="program-row" data-category="vocalizia">
-                        <td>32</td>
-                        <td>Qawwali</td>
-                        <td><span class="program-category-badge category-vocalizia">Vocalizia</span></td>
-                        <td class="winners-cell">
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">1st</span>
-                                        <span class="winner-name">Team A</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">2nd</span>
-                                        <span class="winner-name">Team B</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">3rd</span>
-                                        <span class="winner-name">Team C</span>
-                                        <span class="winner-grade">No</span>
-                                    </div>
-                                </td>
-                    </tr><tr class="program-row" data-category="vocalizia">
-                        <td>33</td>
-                        <td>Speech &amp; Song</td>
-                        <td><span class="program-category-badge category-vocalizia">Vocalizia</span></td>
-                        <td class="winners-cell">
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">1st</span>
-                                        <span class="winner-name">Team C</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">2nd</span>
-                                        <span class="winner-name">Team B</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">3rd</span>
-                                        <span class="winner-name">Team A</span>
-                                        <span class="winner-grade">No</span>
-                                    </div>
-                                </td>
-                    </tr><tr class="program-row" data-category="vocalizia">
-                        <td>34</td>
-                        <td>Speech (ENG)</td>
-                        <td><span class="program-category-badge category-vocalizia">Vocalizia</span></td>
-                        <td class="winners-cell">
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">1st</span>
-                                        <span class="winner-name">Muhammed Athif</span>
-                                        <span class="winner-grade">A</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">2nd</span>
-                                        <span class="winner-name">Mohammed P.M</span>
-                                        <span class="winner-grade">A</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">3rd</span>
-                                        <span class="winner-name">Muhammed Alim Zayyan</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">GW</span>
-                                        <span class="winner-name">Jawhar Sidheeque</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                </td>
-                    </tr><tr class="program-row" data-category="vocalizia">
-                        <td>35</td>
-                        <td>Speech (MLM)</td>
-                        <td><span class="program-category-badge category-vocalizia">Vocalizia</span></td>
-                        <td class="winners-cell">
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">1st</span>
-                                        <span class="winner-name">Muhammed Arshad</span>
-                                        <span class="winner-grade">A</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">1st</span>
-                                        <span class="winner-name">Muhammed Aman</span>
-                                        <span class="winner-grade">A</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">2nd</span>
-                                        <span class="winner-name">Muhammed Sinan P.a</span>
-                                        <span class="winner-grade">A</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">3rd</span>
-                                        <span class="winner-name">Mohammed Midhlaj</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">GW</span>
-                                        <span class="winner-name">Muhammed Aslam</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">GW</span>
-                                        <span class="winner-name">Muhammed Alim Zayyan</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                </td>
-                    </tr><tr class="program-row" data-category="vocalizia">
-                        <td>36</td>
-                        <td>Speech (ARB)</td>
-                        <td><span class="program-category-badge category-vocalizia">Vocalizia</span></td>
-                        <td class="winners-cell">
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">1st</span>
-                                        <span class="winner-name">Muhammed Adhnan M.S</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">2nd</span>
-                                        <span class="winner-name">Abdul Basith</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">3rd</span>
-                                        <span class="winner-name">Sayeed A.S</span>
-                                        <span class="winner-grade">No</span>
-                                    </div>
-                                </td>
-                    </tr><tr class="program-row" data-category="vocalizia">
-                        <td>37</td>
-                        <td>Oru Nimisham</td>
-                        <td><span class="program-category-badge category-vocalizia">Vocalizia</span></td>
-                        <td class="winners-cell">
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">1st</span>
-                                        <span class="winner-name">Muhammed Arshad</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">2nd</span>
-                                        <span class="winner-name">Muhammed Fazal</span>
-                                        <span class="winner-grade">No</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">3rd</span>
-                                        <span class="winner-name">Muhammed Nihal</span>
-                                        <span class="winner-grade">No</span>
-                                    </div>
-                                </td>
-                    </tr><tr class="program-row" data-category="vocalizia">
-                        <td>38</td>
-                        <td>Chain Story</td>
-                        <td><span class="program-category-badge category-vocalizia">Vocalizia</span></td>
-                        <td class="winners-cell">
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">1st</span>
-                                        <span class="winner-name">Muhammed Arshad</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">2nd</span>
-                                        <span class="winner-name">Shanaj</span>
-                                        <span class="winner-grade">No</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">3rd</span>
-                                        <span class="winner-name">Muhammed Irfan</span>
-                                        <span class="winner-grade">No</span>
-                                    </div>
-                                </td>
-                    </tr><tr class="program-row" data-category="vocalizia">
-                        <td>39</td>
-                        <td>Wa'z</td>
-                        <td><span class="program-category-badge category-vocalizia">Vocalizia</span></td>
-                        <td class="winners-cell">
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">1st</span>
-                                        <span class="winner-name">Muhammed Hanan    </span>
-                                        <span class="winner-grade">A</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">1st</span>
-                                        <span class="winner-name">Shanaj        </span>
-                                        <span class="winner-grade">A</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">2nd</span>
-                                        <span class="winner-name">Muhammed Labeeb </span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">3rd</span>
-                                        <span class="winner-name">Mohammed Midhlaj   </span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">GW</span>
-                                        <span class="winner-name">Muhammed Aslam    </span>
-                                        <span class="winner-grade">A</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">GW</span>
-                                        <span class="winner-name">Team B        </span>
-                                        <span class="winner-grade">A</span>
-                                    </div>
-                                </td>
-                    </tr><tr class="program-row" data-category="vocalizia">
-                        <td>40</td>
-                        <td>Story Narration</td>
-                        <td><span class="program-category-badge category-vocalizia">Vocalizia</span></td>
-                        <td class="winners-cell">
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">1st</span>
-                                        <span class="winner-name">Shanaj</span>
-                                        <span class="winner-grade">A</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">2nd</span>
-                                        <span class="winner-name">Muhammed Sinan P.a</span>
-                                        <span class="winner-grade">A</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">3rd</span>
-                                        <span class="winner-name">Muhammed Arshad</span>
-                                        <span class="winner-grade">No</span>
-                                    </div>
-                                </td>
-                    </tr><tr class="program-row" data-category="general">
-                        <td>41</td>
-                        <td>Sudoku</td>
-                        <td><span class="program-category-badge category-general">General</span></td>
-                        <td class="winners-cell">
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">1st</span>
-                                        <span class="winner-name">Muhammed Aslam</span>
-                                        <span class="winner-grade">A</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">2nd</span>
-                                        <span class="winner-name">Muhammed Faheem K.m</span>
-                                        <span class="winner-grade">A</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">3rd</span>
-                                        <span class="winner-name">Muhammed Athif</span>
-                                        <span class="winner-grade">A</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">GW</span>
-                                        <span class="winner-name">Muhammed Labeeb</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                </td>
-                    </tr><tr class="program-row" data-category="general">
-                        <td>42</td>
-                        <td>Translation</td>
-                        <td><span class="program-category-badge category-general">General</span></td>
-                        <td class="winners-cell">
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">1st</span>
-                                        <span class="winner-name">Muhammed Athif</span>
-                                        <span class="winner-grade">A</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">2nd</span>
-                                        <span class="winner-name">Muhammed Faheem K.k</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">3rd</span>
-                                        <span class="winner-name">Muhammed Adhnan M.S</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">GW</span>
-                                        <span class="winner-name">Abdul Basith</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                </td>
-                    </tr><tr class="program-row" data-category="general">
-                        <td>43</td>
-                        <td>Typing Billingual</td>
-                        <td><span class="program-category-badge category-general">General</span></td>
-                        <td class="winners-cell">
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">2nd</span>
-                                        <span class="winner-name">Muhammed Swabeeh</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">3rd</span>
-                                        <span class="winner-name">Muhammed Haseeb</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">GW</span>
-                                        <span class="winner-name">Sayeed A.s</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                </td>
-                    </tr><tr class="program-row" data-category="general">
-                        <td>44</td>
-                        <td>GK Quiz</td>
-                        <td><span class="program-category-badge category-general">General</span></td>
-                        <td class="winners-cell">
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">1st</span>
-                                        <span class="winner-name">Team C</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">2nd</span>
-                                        <span class="winner-name">Team B</span>
-                                        <span class="winner-grade">B</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">3rd</span>
-                                        <span class="winner-name">Team A</span>
-                                        <span class="winner-grade">No</span>
-                                    </div>
-                                </td>
-                    </tr><tr class="program-row" data-category="general">
-                        <td>45</td>
-                        <td>Geo Giant</td>
-                        <td><span class="program-category-badge category-general">General</span></td>
-                        <td class="winners-cell">
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">2nd</span>
-                                        <span class="winner-name">Muhammed Shabeeb</span>
-                                        <span class="winner-grade">No</span>
-                                    </div>
-                                
-                                    <div class="winner-item-cell">
-                                        <span class="winner-position">3rd</span>
-                                        <span class="winner-name">Mohammed P.M</span>
-                                        <span class="winner-grade">No</span>
-                                    </div>
-                                </td>
-                    </tr></tbody>
+                    <tbody id="programsTbody">
+                        <!-- Programs will be loaded dynamically -->
+                    </tbody>
                 </table>
             </div>
         </section>
@@ -2812,199 +1282,17 @@
                 <input type="text" id="studentSearch" class="search-input" placeholder="Search student...">
             </div>
             
-            <div class="students-grid" id="studentsGrid"><div class="student-card" data-team="ASTRO-NOVA" data-id="s16">
-                        <div class="student-points" data-id="s16">76</div>
-                        <div class="student-info">
-                            <h4>Muhammed Adhnan M.S</h4>
-                            <div class="team">ASTRO-NOVA</div>
-                        </div>
-                    </div><div class="student-card" data-team="LUMINOVA" data-id="s27">
-                        <div class="student-points" data-id="s27">75</div>
-                        <div class="student-info">
-                            <h4>Mohammed Midhlaj</h4>
-                            <div class="team">LUMINOVA</div>
-                        </div>
-                    </div><div class="student-card" data-team="LUMINOVA" data-id="s23">
-                        <div class="student-points" data-id="s23">68</div>
-                        <div class="student-info">
-                            <h4>Muhammed Athif</h4>
-                            <div class="team">LUMINOVA</div>
-                        </div>
-                    </div><div class="student-card" data-team="LUMINOVA" data-id="s20">
-                        <div class="student-points" data-id="s20">57</div>
-                        <div class="student-info">
-                            <h4>Abdul Basith</h4>
-                            <div class="team">LUMINOVA</div>
-                        </div>
-                    </div><div class="student-card" data-team="NEONOVA" data-id="s5">
-                        <div class="student-points" data-id="s5">53</div>
-                        <div class="student-info">
-                            <h4>Muhammed Fazal</h4>
-                            <div class="team">NEONOVA</div>
-                        </div>
-                    </div><div class="student-card" data-team="LUMINOVA" data-id="s25">
-                        <div class="student-points" data-id="s25">47</div>
-                        <div class="student-info">
-                            <h4>Muhammed Sinan P.a</h4>
-                            <div class="team">LUMINOVA</div>
-                        </div>
-                    </div><div class="student-card" data-team="ASTRO-NOVA" data-id="s17">
-                        <div class="student-points" data-id="s17">46</div>
-                        <div class="student-info">
-                            <h4>Team B</h4>
-                            <div class="team">ASTRO-NOVA</div>
-                        </div>
-                    </div><div class="student-card" data-team="ASTRO-NOVA" data-id="s10">
-                        <div class="student-points" data-id="s10">45</div>
-                        <div class="student-info">
-                            <h4>Muhammed Alim Zayyan</h4>
-                            <div class="team">ASTRO-NOVA</div>
-                        </div>
-                    </div><div class="student-card" data-team="ASTRO-NOVA" data-id="s15">
-                        <div class="student-points" data-id="s15">44</div>
-                        <div class="student-info">
-                            <h4>Muhammed Arshad</h4>
-                            <div class="team">ASTRO-NOVA</div>
-                        </div>
-                    </div><div class="student-card" data-team="NEONOVA" data-id="s6">
-                        <div class="student-points" data-id="s6">39</div>
-                        <div class="student-info">
-                            <h4>Muhammed Faheem K.k</h4>
-                            <div class="team">NEONOVA</div>
-                        </div>
-                    </div><div class="student-card" data-team="NEONOVA" data-id="s3">
-                        <div class="student-points" data-id="s3">37</div>
-                        <div class="student-info">
-                            <h4>Shanaj</h4>
-                            <div class="team">NEONOVA</div>
-                        </div>
-                    </div><div class="student-card" data-team="NEONOVA" data-id="s8">
-                        <div class="student-points" data-id="s8">37</div>
-                        <div class="student-info">
-                            <h4>Muhammed Aman</h4>
-                            <div class="team">NEONOVA</div>
-                        </div>
-                    </div><div class="student-card" data-team="ASTRO-NOVA" data-id="s11">
-                        <div class="student-points" data-id="s11">35</div>
-                        <div class="student-info">
-                            <h4>Muhammed Hanan</h4>
-                            <div class="team">ASTRO-NOVA</div>
-                        </div>
-                    </div><div class="student-card" data-team="ASTRO-NOVA" data-id="s12">
-                        <div class="student-points" data-id="s12">33</div>
-                        <div class="student-info">
-                            <h4>Muhammed Haseeb</h4>
-                            <div class="team">ASTRO-NOVA</div>
-                        </div>
-                    </div><div class="student-card" data-team="NEONOVA" data-id="s7">
-                        <div class="student-points" data-id="s7">29</div>
-                        <div class="student-info">
-                            <h4>Muhammed Faheem K.m</h4>
-                            <div class="team">NEONOVA</div>
-                        </div>
-                    </div><div class="student-card" data-team="LUMINOVA" data-id="s26">
-                        <div class="student-points" data-id="s26">27</div>
-                        <div class="student-info">
-                            <h4>Mohammed P.M</h4>
-                            <div class="team">LUMINOVA</div>
-                        </div>
-                    </div><div class="student-card" data-team="ASTRO-NOVA" data-id="s13">
-                        <div class="student-points" data-id="s13">23</div>
-                        <div class="student-info">
-                            <h4>Jawhar Sidheeque</h4>
-                            <div class="team">ASTRO-NOVA</div>
-                        </div>
-                    </div><div class="student-card" data-team="NEONOVA" data-id="s4">
-                        <div class="student-points" data-id="s4">21</div>
-                        <div class="student-info">
-                            <h4>Muhammed Aslam</h4>
-                            <div class="team">NEONOVA</div>
-                        </div>
-                    </div><div class="student-card" data-team="LUMINOVA" data-id="s28">
-                        <div class="student-points" data-id="s28">17</div>
-                        <div class="student-info">
-                            <h4>Muhammed Irfan</h4>
-                            <div class="team">LUMINOVA</div>
-                        </div>
-                    </div><div class="student-card" data-team="ASTRO-NOVA" data-id="s19">
-                        <div class="student-points" data-id="s19">13</div>
-                        <div class="student-info">
-                            <h4>Muhammed Swabeeh</h4>
-                            <div class="team">ASTRO-NOVA</div>
-                        </div>
-                    </div><div class="student-card" data-team="ASTRO-NOVA" data-id="s14">
-                        <div class="student-points" data-id="s14">12</div>
-                        <div class="student-info">
-                            <h4>Adnan K.p</h4>
-                            <div class="team">ASTRO-NOVA</div>
-                        </div>
-                    </div><div class="student-card" data-team="LUMINOVA" data-id="s21">
-                        <div class="student-points" data-id="s21">10</div>
-                        <div class="student-info">
-                            <h4>Muhammed Nihal</h4>
-                            <div class="team">LUMINOVA</div>
-                        </div>
-                    </div><div class="student-card" data-team="NEONOVA" data-id="s9">
-                        <div class="student-points" data-id="s9">9</div>
-                        <div class="student-info">
-                            <h4>Muhammed Shabeeb</h4>
-                            <div class="team">NEONOVA</div>
-                        </div>
-                    </div><div class="student-card" data-team="LUMINOVA" data-id="s22">
-                        <div class="student-points" data-id="s22">9</div>
-                        <div class="student-info">
-                            <h4>Muhammed Rabeeath</h4>
-                            <div class="team">LUMINOVA</div>
-                        </div>
-                    </div><div class="student-card" data-team="LUMINOVA" data-id="s24">
-                        <div class="student-points" data-id="s24">9</div>
-                        <div class="student-info">
-                            <h4>Muhammed Labeeb</h4>
-                            <div class="team">LUMINOVA</div>
-                        </div>
-                    </div><div class="student-card" data-team="NEONOVA" data-id="s2">
-                        <div class="student-points" data-id="s2">7</div>
-                        <div class="student-info">
-                            <h4>Sayeed A.S</h4>
-                            <div class="team">NEONOVA</div>
-                        </div>
-                    </div><div class="student-card" data-team="NEONOVA" data-id="s1">
-                        <div class="student-points" data-id="s1">6</div>
-                        <div class="student-info">
-                            <h4>Muhammed Ameen V.s</h4>
-                            <div class="team">NEONOVA</div>
-                        </div>
-                    </div><div class="student-card" data-team="ASTRO-NOVA" data-id="s18">
-                        <div class="student-points" data-id="s18">1</div>
-                        <div class="student-info">
-                            <h4>Muhammed Razeen</h4>
-                            <div class="team">ASTRO-NOVA</div>
-                        </div>
-                    </div></div>
+            <div class="students-grid" id="studentsGrid">
+                <!-- Students will be loaded dynamically -->
+            </div>
         </section>
 
         <!-- Schedule Page -->
         <section id="schedule" class="page">
             <h2>Schedule</h2>
-            <div class="schedule-list" id="scheduleList"><div class="schedule-item">
-                        <div class="schedule-date">October 1, 2025</div>
-                        <div class="schedule-event">Opening &amp; Inauguration</div>
-                    </div><div class="schedule-item">
-                        <div class="schedule-date">October 2, 2025</div>
-                        <div class="schedule-event">Creatia events - Pencil Drawing &amp; Painting</div>
-                    </div><div class="schedule-item">
-                        <div class="schedule-date">October 3, 2025</div>
-                        <div class="schedule-event">Log events - Essays &amp; Poems</div>
-                    </div><div class="schedule-item">
-                        <div class="schedule-date">October 3, 2025</div>
-                        <div class="schedule-event">General-IQ Programs</div>
-                    </div><div class="schedule-item">
-                        <div class="schedule-date">October 4, 2025</div>
-                        <div class="schedule-event">Vocalizia - Songs &amp; Group Performances</div>
-                    </div><div class="schedule-item">
-                        <div class="schedule-date">October 3, 2025</div>
-                        <div class="schedule-event">Closing &amp; Award Ceremony</div>
-                    </div></div>
+            <div class="schedule-list" id="scheduleList">
+                <!-- Schedule will be loaded dynamically -->
+            </div>
         </section>
 
         <!-- About Page -->
@@ -3050,25 +1338,6 @@
             const exploreProgramsBtn = document.getElementById('exploreProgramsBtn');
             const knowAboutUsBtn = document.getElementById('knowAboutUsBtn');
             
-            // Admin functionality
-            const adminBtn = document.getElementById('adminBtn');
-            const adminModal = document.getElementById('adminModal');
-            const closeAdmin = document.getElementById('closeAdmin');
-            const adminCancelBtn = document.getElementById('adminCancelBtn');
-            const adminSaveBtn = document.getElementById('adminSaveBtn');
-            const adminProgramSelect = document.getElementById('adminProgramSelect');
-            const adminStudentSelect = document.getElementById('adminStudentSelect');
-            const studentPointsInput = document.getElementById('studentPointsInput');
-            const placementContainer = document.getElementById('placementContainer');
-            const addPlacementBtn = document.getElementById('addPlacementBtn');
-            
-            // Password functionality
-            const passwordModal = document.getElementById('passwordModal');
-            const passwordInput = document.getElementById('passwordInput');
-            const passwordError = document.getElementById('passwordError');
-            const passwordSubmitBtn = document.getElementById('passwordSubmitBtn');
-            const passwordCancelBtn = document.getElementById('passwordCancelBtn');
-            
             // Points functionality
             const pointsModal = document.getElementById('pointsModal');
             const closePoints = document.getElementById('closePoints');
@@ -3076,9 +1345,6 @@
             const pointsTotal = document.getElementById('pointsTotal');
             const pointsTeam = document.getElementById('pointsTeam');
             const pointsBreakdown = document.getElementById('pointsBreakdown');
-            
-            // Admin password (you can change this to any password you want)
-            const ADMIN_PASSWORD = "artelligence2025";
             
             // Points system
             const POINTS_SYSTEM = {
@@ -3090,7 +1356,39 @@
                 gradeB: 3
             };
             
-            // Programs data
+            // Students data with updated points
+            const STUDENTS = [
+                {id: 's1', name: 'Muhammed Adhnan M.S', team: 'ASTRO-NOVA', points: 76},
+                {id: 's2', name: 'Mohammed Midhlaj', team: 'LUMINOVA', points: 75},
+                {id: 's3', name: 'Muhammed Athif', team: 'LUMINOVA', points: 68},
+                {id: 's4', name: 'Abdul Basith', team: 'LUMINOVA', points: 57},
+                {id: 's5', name: 'Muhammed Fazal', team: 'NEONOVA', points: 53},
+                {id: 's6', name: 'Muhammed Sinan P.a', team: 'LUMINOVA', points: 47},
+                {id: 's7', name: 'Team B', team: 'ASTRO-NOVA', points: 46},
+                {id: 's8', name: 'Muhammed Alim Zayyan', team: 'ASTRO-NOVA', points: 45},
+                {id: 's9', name: 'Muhammed Arshad', team: 'ASTRO-NOVA', points: 44},
+                {id: 's10', name: 'Muhammed Faheem K.k', team: 'NEONOVA', points: 39},
+                {id: 's11', name: 'Shanaj', team: 'NEONOVA', points: 45},
+                {id: 's12', name: 'Muhammed Aman', team: 'NEONOVA', points: 37},
+                {id: 's13', name: 'Muhammed Hanan', team: 'ASTRO-NOVA', points: 35},
+                {id: 's14', name: 'Muhammed Haseeb', team: 'ASTRO-NOVA', points: 33},
+                {id: 's15', name: 'Muhammed Faheem K.m', team: 'NEONOVA', points: 29},
+                {id: 's16', name: 'Mohammed P.M', team: 'LUMINOVA', points: 27},
+                {id: 's17', name: 'Jawhar Sidheeque', team: 'ASTRO-NOVA', points: 23},
+                {id: 's18', name: 'Muhammed Aslam', team: 'NEONOVA', points: 21},
+                {id: 's19', name: 'Muhammed Irfan', team: 'LUMINOVA', points: 17},
+                {id: 's20', name: 'Muhammed Swabeeh', team: 'ASTRO-NOVA', points: 13},
+                {id: 's21', name: 'Adnan K.p', team: 'ASTRO-NOVA', points: 12},
+                {id: 's22', name: 'Muhammed Nihal', team: 'LUMINOVA', points: 10},
+                {id: 's23', name: 'Muhammed Shabeeb', team: 'NEONOVA', points: 9},
+                {id: 's24', name: 'Muhammed Rabeeath', team: 'LUMINOVA', points: 9},
+                {id: 's25', name: 'Muhammed Labeeb', team: 'LUMINOVA', points: 9},
+                {id: 's26', name: 'Sayeed A.S', team: 'NEONOVA', points: 7},
+                {id: 's27', name: 'Muhammed Ameen V.s', team: 'NEONOVA', points: 6},
+                {id: 's28', name: 'Muhammed Razeen', team: 'ASTRO-NOVA', points: 1}
+            ];
+
+            // Programs data with placements
             const PROGRAMS = [
                 {id: 'p1', name: 'Pencil Drawing', category: 'creatia', placements: {
                     first: [{name: 'Muhammed Irfan', grade: 'B'}],
@@ -3098,11 +1396,18 @@
                     third: [{name: 'Sayeed A.S', grade: 'B'}],
                     gradewinners: [{name: 'Muhammed Athif', grade: 'B'}]
                 }},
-                {id: 'p2', name: 'Cartoon Drawing', category: 'creatia', placements: {first: [], second: [{name: 'Muhammed Alim Zayyan', grade: 'B'}
-                ], third: [
-                    {name: 'Muhammed Haseeb', grade: 'B'}
-                ], gradewinners: []}},
-                {id: 'p3', name: 'Calligraphy', category: 'creatia', placements: {first: [], second: [], third: [], gradewinners: [{name: 'Muhammed Alim Zayyan', grade: 'B'}]}},
+                {id: 'p2', name: 'Cartoon Drawing', category: 'creatia', placements: {
+                    first: [],
+                    second: [{name: 'Muhammed Alim Zayyan', grade: 'B'}],
+                    third: [{name: 'Muhammed Haseeb', grade: 'B'}],
+                    gradewinners: []
+                }},
+                {id: 'p3', name: 'Calligraphy', category: 'creatia', placements: {
+                    first: [],
+                    second: [],
+                    third: [],
+                    gradewinners: [{name: 'Muhammed Alim Zayyan', grade: 'B'}]
+                }},
                 {id: 'p4', name: 'Poster Making', category: 'creatia', placements: {
                     first: [],
                     second: [{name: 'Muhammed Fazal', grade: 'No'}],
@@ -3115,204 +1420,246 @@
                     third: [{name: 'Muhammed Fazal', grade: 'B'}],
                     gradewinners: [{name: 'Muhammed Nihal', grade: 'B'}]
                 }},
-                {id: 'p6', name: 'News Paper', category: 'creatia', placements: {first: [{name: 'Team A', grade: 'B'}], second: [{name: 'Team C', grade: 'B'}], third: [{name: 'Team B', grade: 'B'}], gradewinners: []}},
-                {id: 'p8', name: 'Cover Design', category: 'creatia', placements: {
+                {id: 'p6', name: 'News Paper', category: 'creatia', placements: {
+                    first: [{name: 'Team A', grade: 'B'}],
+                    second: [{name: 'Team C', grade: 'B'}],
+                    third: [{name: 'Team B', grade: 'B'}],
+                    gradewinners: []
+                }},
+                {id: 'p7', name: 'Cover Design', category: 'creatia', placements: {
                     first: [],
                     second: [{name: 'Team A', grade: 'B'}, {name: 'Team C', grade: 'B'}],
                     third: [{name: 'Team B', grade: 'B'}],
                     gradewinners: []
                 }},
-                {id: 'p9', name: 'Essay Writing (MLM)', category: 'log', placements: {
+                {id: 'p8', name: 'Essay Writing (MLM)', category: 'log', placements: {
                     first: [{name: 'Muhammed Fazal', grade: 'A'}],
                     second: [{name: 'Muhammed Sinan P.a', grade: 'A'}],
                     third: [{name: 'Muhammed Arshad', grade: 'A'}],
                     gradewinners: [{name: 'Muhammed Aman', grade: 'B'}, {name: 'Muhammed Nihal', grade: 'B'}]
                 }},
-                {id: 'p10', name: 'Essay Writing (ENG)', category: 'log', placements: {
+                {id: 'p9', name: 'Essay Writing (ENG)', category: 'log', placements: {
                     first: [{name: 'Muhammed Fazal', grade: 'A'}, {name: 'Muhammed Alim Zayyan', grade: 'A'}],
                     second: [{name: 'Muhammed Aman', grade: 'A'}],
                     third: [{name: 'Jawhar Sidheeque', grade: 'B'}],
                     gradewinners: [{name: 'Muhammed Athif', grade: 'B'}]
                 }},
-                {id: 'p11', name: 'Essay Writing (ARB)', category: 'log', placements: {
+                {id: 'p10', name: 'Essay Writing (ARB)', category: 'log', placements: {
                     first: [{name: 'Muhammed Faheem K.k', grade: 'B'}],
                     second: [{name: 'Abdul Basith', grade: 'B'}],
                     third: [{name: 'Team B', grade: 'No'}],
                     gradewinners: []
                 }},
-                {id: 'p12', name: 'Essay Writing (URD)', category: 'log', placements: {
+                {id: 'p11', name: 'Essay Writing (URD)', category: 'log', placements: {
                     first: [{name: 'Muhammed Adhnan M.S', grade: 'A'}],
                     second: [{name: 'Mohammed Midhlaj', grade: 'B'}],
                     third: [{name: 'Muhammed Hanan', grade: 'B'}],
                     gradewinners: []
                 }},
-                {id: 'p13', name: 'Poem Writing (MLM)', category: 'log', placements: {
+                {id: 'p12', name: 'Poem Writing (MLM)', category: 'log', placements: {
                     first: [{name: 'Muhammed Aslam', grade: 'No'}],
                     second: [{name: 'Muhammed Sinan P.a', grade: 'No'}, {name: 'Muhammed Nihal', grade: 'No'}],
                     third: [{name: 'Muhammed Aman', grade: 'B'}, {name: 'Muhammed Arshad', grade: 'B'}, {name: 'Muhammed Swabeeh', grade: 'B'}],
                     gradewinners: []
                 }},
-                {id: 'p14', name: 'Poem Writing (ENG)', category: 'log', placements: {
+                {id: 'p13', name: 'Poem Writing (ENG)', category: 'log', placements: {
                     first: [{name: 'Muhammed Athif', grade: 'A'}],
                     second: [{name: 'Muhammed Alim Zayyan', grade: 'B'}, {name: 'Mohammed P.M', grade: 'B'}],
                     third: [{name: 'Muhammed Fazal', grade: 'B'}],
                     gradewinners: [{name: 'Muhammed Haseeb', grade: 'B'}]
                 }},
-                {id: 'p15', name: 'Poem Writing (ARB)', category: 'log', placements: {
+                {id: 'p14', name: 'Poem Writing (ARB)', category: 'log', placements: {
                     first: [{name: 'Abdul Basith', grade: 'A'}],
                     second: [{name: 'Muhammed Adhnan M.S', grade: 'A'}],
                     third: [{name: 'Muhammed Haseeb', grade: 'A'}],
                     gradewinners: []
                 }},
-                {id: 'p16', name: 'Poem Writing (URD)', category: 'log', placements: {
+                {id: 'p15', name: 'Poem Writing (URD)', category: 'log', placements: {
                     first: [{name: 'Mohammed Midhlaj', grade: 'A'}],
                     second: [{name: 'Muhammed Faheem K.m', grade: 'A'}],
                     third: [{name: 'Muhammed Rabeeath', grade: 'A'}],
                     gradewinners: [{name: 'Team B', grade: 'B'}]
                 }},
-                {id: 'p17', name: 'Short Story (ARB)', category: 'log', placements: {
+                {id: 'p16', name: 'Short Story (ARB)', category: 'log', placements: {
                     first: [{name: 'Abdul Basith', grade: 'A'}],
                     second: [{name: 'Muhammed Faheem K.k', grade: 'B'}],
                     third: [{name: 'Adnan K.p', grade: 'B'}],
                     gradewinners: [{name: 'Team B', grade: 'B'}]
                 }},
-                {id: 'p18', name: 'Short Story (URD)', category: 'log', placements: {
+                {id: 'p17', name: 'Short Story (URD)', category: 'log', placements: {
                     first: [{name: 'Muhammed Faheem K.k', grade: 'A'}],
                     second: [{name: 'Mohammed Midhlaj', grade: 'A'}],
                     third: [{name: 'Muhammed Adhnan M.S', grade: 'A'}],
                     gradewinners: [{name: 'Muhammed Hanan', grade: 'B'}]
                 }},
-                {id: 'p19', name: 'Spelling Bee', category: 'general', placements: {first: [{name: 'Muhammed Athif', grade: 'B'}], second: [{name: 'Muhammed Fazal', grade: 'No'}], third: [{name: 'Muhammed Alim Zayyan', grade: 'No'}], gradewinners: []}},
-                {id: 'p20', name: 'Word Fight (ENG)', category: 'general', placements: {
+                {id: 'p18', name: 'Spelling Bee', category: 'general', placements: {
+                    first: [{name: 'Muhammed Athif', grade: 'B'}],
+                    second: [{name: 'Muhammed Fazal', grade: 'No'}],
+                    third: [{name: 'Muhammed Alim Zayyan', grade: 'No'}],
+                    gradewinners: []
+                }},
+                {id: 'p19', name: 'Word Fight (ENG)', category: 'general', placements: {
                     first: [{name: 'Muhammed Athif', grade: 'A'}],
                     second: [{name: 'Jawhar Sidheeque', grade: 'B'}],
                     third: [{name: 'Muhammed Faheem K.m', grade: 'B'}],
                     gradewinners: []
                 }},
-                {id: 'p21', name: 'Mulafaza (ARB)', category: 'general', placements: {
+                {id: 'p20', name: 'Mulafaza (ARB)', category: 'general', placements: {
                     first: [{name: 'Muhammed Faheem K.k', grade: 'B'}],
                     second: [{name: 'Muhammed Adhnan M.S', grade: 'B'}],
                     third: [{name: 'Abdul Basith', grade: 'B'}],
                     gradewinners: [{name: 'Muhammed Haseeb', grade: 'B'}, {name: 'Mohammed P.M', grade: 'B'}]
                 }},
-                {id: 'p22', name: 'Swarf IQ', category: 'general', placements: {
+                {id: 'p21', name: 'Swarf IQ', category: 'general', placements: {
                     first: [{name: 'Abdul Basith', grade: 'A'}],
                     second: [{name: 'Muhammed Adhnan M.S', grade: 'B'}],
                     third: [{name: 'Muhammed Aman', grade: 'B'}],
                     gradewinners: [{name: 'Sayeed A.S', grade: 'B'}, {name: 'Adnan K.p', grade: 'B'}]
                 }},
-                {id: 'p23', name: 'Class Talent', category: 'general', placements: {first: [{name: 'Muhammed Sinan P.a ', grade: 'A'}], second: [{name: 'Muhammed Aman ', grade: 'A'}], third: [{name: 'Muhammed Arshad,Team B', grade: 'A'}], gradewinners: [
-                    {name: 'Mohammed Midhlaj   ', grade: 'B'}
-                ]}},
-                {id: 'p24', name: 'Hifz', category: 'general', placements: {first: [{name: 'Muhammed Adhnan M.S', grade: 'A'}], second: [{name: 'Muhammed Ameen V.s', grade: 'B'}], third: [{name: 'Muhammed Haseeb,Muhammed Shabeeb', grade: 'B'}], gradewinners: []}},
-                {id: 'p25', name: 'Maths Talent', category: 'general', placements: {first: [{name: 'Muhammed Athif', grade: 'B'}], second: [{name: 'Muhammed Faheem K.m', grade: 'B'},{name: 'Muhammed Shabeeb', grade: 'B'}], third: [{name: 'Adnan K.p', grade: 'No'}], gradewinners: []}},
-                {id: 'p26', name: 'Hindi Vidvan', category: 'general', placements: {
+                {id: 'p22', name: 'Class Talent', category: 'general', placements: {
+                    first: [{name: 'Muhammed Sinan P.a', grade: 'A'}],
+                    second: [{name: 'Muhammed Aman', grade: 'A'}],
+                    third: [{name: 'Muhammed Arshad,Team B', grade: 'A'}],
+                    gradewinners: [{name: 'Mohammed Midhlaj', grade: 'B'}]
+                }},
+                {id: 'p23', name: 'Hifz', category: 'general', placements: {
+                    first: [{name: 'Muhammed Adhnan M.S', grade: 'A'}],
+                    second: [{name: 'Muhammed Ameen V.s', grade: 'B'}],
+                    third: [{name: 'Muhammed Haseeb,Muhammed Shabeeb', grade: 'B'}],
+                    gradewinners: []
+                }},
+                {id: 'p24', name: 'Maths Talent', category: 'general', placements: {
+                    first: [{name: 'Muhammed Athif', grade: 'B'}],
+                    second: [{name: 'Muhammed Faheem K.m', grade: 'B'}, {name: 'Muhammed Shabeeb', grade: 'B'}],
+                    third: [{name: 'Adnan K.p', grade: 'No'}],
+                    gradewinners: []
+                }},
+                {id: 'p25', name: 'Hindi Vidvan', category: 'general', placements: {
                     first: [{name: 'Mohammed Midhlaj', grade: 'A'}],
                     second: [{name: 'Muhammed Fazal', grade: 'A'}],
                     third: [{name: 'Adnan K.p', grade: 'B'}, {name: 'Muhammed Alim Zayyan', grade: 'B'}],
                     gradewinners: []
                 }},
-                {id: 'p27', name: 'Padhyaparayanam', category: 'vocalizia', placements: {first: [{name: 'Mohammed Midhlaj', grade: 'A'}], second: [{name: 'Muhammed Hanan', grade: 'A'},{name: 'Abdul Basith', grade: 'A'}], third: [{name: 'Muhammed Fazal', grade: 'B'},{name: 'Muhammed Arshad', grade: 'B'}], gradewinners: [{name: 'Aslam', grade: 'B'}]}},
-                {id: 'p28', name: 'Song (ENG)', category: 'vocalizia', placements: {first: [{name: 'Jawhar Sidheeque', grade: 'A'}],
-                second: [{name: 'Mohammed P.M', grade: 'No'}],
-                third: [],
-                gradewinners: []}},
-                {id: 'p29', name: 'Song (URD)', category: 'vocalizia', placements: {first: [{name: 'Shanaj', grade: 'A'}], second: [{name: 'Muhammed Alim Zayyan', grade: 'A'}], third: [{name: 'Muhammed Sinan P.a', grade: 'A'},{name: 'Muhammed Hanan', grade: 'A'}], gradewinners: [{name: 'Muhammed Rabeeath', grade: 'B'},{name: 'Muhammed Faheem K.m', grade: 'B'}]}},
-                {id: 'p30', name: 'Nasheedha', category: 'vocalizia', placements: {first: [{name: 'Mohammed Midhlaj', grade: 'A'},{name: 'Muhammed Adhnan M.S', grade: 'A'}], second: [{name: 'Muhammed Irfan', grade: 'A'}], third: [{name: 'Shanaj', grade: 'B'}], gradewinners: []}},
-                {id: 'p31', name: 'Padapattu', category: 'vocalizia', placements: {first: [{name:'Mohammed Midhlaj', grade: 'A'}], second: [{name:' Shanaj', grade: 'A'}], third: [{name:'Muhammed Hanan', grade: 'B'},{name:'Muhammed Sinan P.a', grade: 'B'}], gradewinners: []}},
-                {id: 'p32', name: 'Qira\'th', category: 'vocalizia', placements: {first: [{name: 'Muhammed Adhnan M.S', grade: 'B'}], second: [{name: 'Muhammed Haseeb', grade: 'B'}], third: [{name: 'Muhammed Faheem K.k', grade: 'No'}], gradewinners: []}},
-                {id: 'p34', name: 'Qawwali', category: 'vocalizia', placements: {first: [{name: 'Team A', grade: 'B'}], second: [{name: 'Team B', grade: 'B'}], third: [{name: 'Team C', grade: 'No'}], gradewinners: []}},
-                {id: 'p35', name: 'Speech & Song', category: 'vocalizia', placements: {first: [{name: 'Team C', grade: 'B'}], second: [{name: 'Team B', grade: 'B'}], third: [{name: 'Team A', grade: 'No'}], gradewinners: []}},
-                {id: 'p36', name: 'Speech (ENG)' , category: 'vocalizia', placements:
-                {first: [ {name:'Muhammed Athif', grade: 'A'}],
-                second: [{name: 'Mohammed P.M', grade: 'A'}],
-                third: [{name: 'Muhammed Alim Zayyan', grade: 'B'}],
-                gradewinners: [{name: 'Jawhar Sidheeque', grade: 'B'}]}},
-                {id: 'p37', name: 'Speech (MLM)' , category: 'vocalizia', placements:
-                {first: [{name: 'Muhammed Arshad', grade: 'A'},{name: 'Muhammed Aman', grade: 'A'}],
-                second: [{name: 'Muhammed Sinan P.a', grade: 'A'}],
-                third: [{name: 'Mohammed Midhlaj', grade: 'B'}],
-                gradewinners: [{name: 'Muhammed Aslam', grade: 'B'},{name: 'Muhammed Alim Zayyan', grade: 'B'}]}},
-                {id: 'p38', name: 'Speech (ARB)', category: 'vocalizia', placements: {
+                {id: 'p26', name: 'Padhyaparayanam', category: 'vocalizia', placements: {
+                    first: [{name: 'Mohammed Midhlaj', grade: 'A'}],
+                    second: [{name: 'Muhammed Hanan', grade: 'A'}, {name: 'Abdul Basith', grade: 'A'}],
+                    third: [{name: 'Muhammed Fazal', grade: 'B'}, {name: 'Muhammed Arshad', grade: 'B'}],
+                    gradewinners: [{name: 'Aslam', grade: 'B'}]
+                }},
+                {id: 'p27', name: 'Song (ENG)', category: 'vocalizia', placements: {
+                    first: [{name: 'Jawhar Sidheeque', grade: 'A'}],
+                    second: [{name: 'Mohammed P.M', grade: 'No'}],
+                    third: [],
+                    gradewinners: []
+                }},
+                {id: 'p28', name: 'Song (URD)', category: 'vocalizia', placements: {
+                    first: [{name: 'Shanaj', grade: 'A'}],
+                    second: [{name: 'Muhammed Alim Zayyan', grade: 'A'}],
+                    third: [{name: 'Muhammed Sinan P.a', grade: 'A'}, {name: 'Muhammed Hanan', grade: 'A'}],
+                    gradewinners: [{name: 'Muhammed Rabeeath', grade: 'B'}, {name: 'Muhammed Faheem K.m', grade: 'B'}]
+                }},
+                {id: 'p29', name: 'Nasheedha', category: 'vocalizia', placements: {
+                    first: [{name: 'Mohammed Midhlaj', grade: 'A'}, {name: 'Muhammed Adhnan M.S', grade: 'A'}],
+                    second: [{name: 'Muhammed Irfan', grade: 'A'}],
+                    third: [{name: 'Shanaj', grade: 'B'}],
+                    gradewinners: []
+                }},
+                {id: 'p30', name: 'Padapattu', category: 'vocalizia', placements: {
+                    first: [{name: 'Mohammed Midhlaj', grade: 'A'}],
+                    second: [{name: 'Shanaj', grade: 'A'}],
+                    third: [{name: 'Muhammed Hanan', grade: 'B'}, {name: 'Muhammed Sinan P.a', grade: 'B'}],
+                    gradewinners: []
+                }},
+                {id: 'p31', name: 'Qira\'th', category: 'vocalizia', placements: {
+                    first: [{name: 'Muhammed Adhnan M.S', grade: 'B'}],
+                    second: [{name: 'Muhammed Haseeb', grade: 'B'}],
+                    third: [{name: 'Muhammed Faheem K.k', grade: 'No'}],
+                    gradewinners: []
+                }},
+                {id: 'p32', name: 'Qawwali', category: 'vocalizia', placements: {
+                    first: [{name: 'Team A', grade: 'B'}],
+                    second: [{name: 'Team B', grade: 'B'}],
+                    third: [{name: 'Team C', grade: 'No'}],
+                    gradewinners: []
+                }},
+                {id: 'p33', name: 'Speech & Song', category: 'vocalizia', placements: {
+                    first: [{name: 'Team C', grade: 'B'}],
+                    second: [{name: 'Team B', grade: 'B'}],
+                    third: [{name: 'Team A', grade: 'No'}],
+                    gradewinners: []
+                }},
+                {id: 'p34', name: 'Speech (ENG)', category: 'vocalizia', placements: {
+                    first: [{name: 'Muhammed Athif', grade: 'A'}],
+                    second: [{name: 'Mohammed P.M', grade: 'A'}],
+                    third: [{name: 'Muhammed Alim Zayyan', grade: 'B'}],
+                    gradewinners: [{name: 'Jawhar Sidheeque', grade: 'B'}]
+                }},
+                {id: 'p35', name: 'Speech (MLM)', category: 'vocalizia', placements: {
+                    first: [{name: 'Muhammed Arshad', grade: 'A'}, {name: 'Muhammed Aman', grade: 'A'}],
+                    second: [{name: 'Muhammed Sinan P.a', grade: 'A'}],
+                    third: [{name: 'Mohammed Midhlaj', grade: 'B'}],
+                    gradewinners: [{name: 'Muhammed Aslam', grade: 'B'}, {name: 'Muhammed Alim Zayyan', grade: 'B'}]
+                }},
+                {id: 'p36', name: 'Speech (ARB)', category: 'vocalizia', placements: {
                     first: [{name: 'Muhammed Adhnan M.S', grade: 'B'}],
                     second: [{name: 'Abdul Basith', grade: 'B'}],
                     third: [{name: 'Sayeed A.S', grade: 'No'}],
                     gradewinners: []
                 }},
-                {id: 'p39', name: 'Oru Nimisham', category: 'vocalizia', placements: {
+                {id: 'p37', name: 'Oru Nimisham', category: 'vocalizia', placements: {
                     first: [{name: 'Muhammed Arshad', grade: 'B'}],
                     second: [{name: 'Muhammed Fazal', grade: 'No'}],
                     third: [{name: 'Muhammed Nihal', grade: 'No'}],
                     gradewinners: []
                 }},
-                {id: 'p40', name: 'Chain Story', category: 'vocalizia', placements: {
+                {id: 'p38', name: 'Chain Story', category: 'vocalizia', placements: {
                     first: [{name: 'Muhammed Arshad', grade: 'B'}],
                     second: [{name: 'Shanaj', grade: 'No'}],
                     third: [{name: 'Muhammed Irfan', grade: 'No'}],
                     gradewinners: []
                 }},
-                {id: 'p41', name: 'Wa\'z', category: 'vocalizia', placements: {first: [
-                    {name: 'Muhammed Hanan    ', grade: 'A'},{name: 'Shanaj        ', grade: 'A'}
-                ], second: [
-                    {name: 'Muhammed Labeeb ', grade: 'B'}],
-              third: [
-{name: 'Mohammed Midhlaj   ', grade: 'B'}
-                ], gradewinners: [
-                    {name: 'Muhammed Aslam    ', grade: 'A'},{name: 'Team B        ', grade: 'A'}
-                ]}},
-                {id: 'p42', name: 'Story Narration', category: 'vocalizia', placements: {first: [{name: 'Shanaj', grade: 'A'}], second: [{name: 'Muhammed Sinan P.a', grade: 'A'}], third: [{name: 'Muhammed Arshad', grade: 'No'}], gradewinners: []}},
-                {id: 'p43', name: 'Sudoku', category: 'general', placements: {
+                {id: 'p39', name: 'Wa\'z', category: 'vocalizia', placements: {
+                    first: [{name: 'Muhammed Hanan', grade: 'A'}, {name: 'Shanaj', grade: 'A'}],
+                    second: [{name: 'Muhammed Labeeb', grade: 'B'}],
+                    third: [{name: 'Mohammed Midhlaj', grade: 'B'}],
+                    gradewinners: [{name: 'Muhammed Aslam', grade: 'A'}, {name: 'Team B', grade: 'A'}]
+                }},
+                {id: 'p40', name: 'Story Narration', category: 'vocalizia', placements: {
+                    first: [{name: 'Shanaj', grade: 'A'}],
+                    second: [{name: 'Muhammed Sinan P.a', grade: 'A'}],
+                    third: [{name: 'Muhammed Arshad', grade: 'No'}],
+                    gradewinners: []
+                }},
+                {id: 'p41', name: 'Sudoku', category: 'general', placements: {
                     first: [{name: 'Muhammed Aslam', grade: 'A'}],
                     second: [{name: 'Muhammed Faheem K.m', grade: 'A'}],
                     third: [{name: 'Muhammed Athif', grade: 'A'}],
                     gradewinners: [{name: 'Muhammed Labeeb', grade: 'B'}]
                 }},
-                {id: 'p44', name: 'Translation', category: 'general', placements: {
+                {id: 'p42', name: 'Translation', category: 'general', placements: {
                     first: [{name: 'Muhammed Athif', grade: 'A'}],
                     second: [{name: 'Muhammed Faheem K.k', grade: 'B'}],
                     third: [{name: 'Muhammed Adhnan M.S', grade: 'B'}],
                     gradewinners: [{name: 'Abdul Basith', grade: 'B'}]
                 }},
-                {id: 'p46', name: 'Typing Billingual', category: 'general', placements: {first: [], second: [{name: 'Muhammed Swabeeh', grade: 'B'}], third: [{name: 'Muhammed Haseeb', grade: 'B'}], gradewinners: [{name: 'Sayeed A.s', grade: 'B'}]}},
-                {id: 'p47', name: 'GK Quiz', category: 'general', placements: {first: [{name: 'Team C', grade: 'B'}], second: [{name: 'Team B', grade: 'B'}], third: [{name: 'Team A', grade: 'No'}], gradewinners: []}},
-                {id: 'p48', name: 'Geo Giant', category: 'general', placements: {
+                {id: 'p43', name: 'Typing Billingual', category: 'general', placements: {
+                    first: [],
+                    second: [{name: 'Muhammed Swabeeh', grade: 'B'}],
+                    third: [{name: 'Muhammed Haseeb', grade: 'B'}],
+                    gradewinners: [{name: 'Sayeed A.s', grade: 'B'}]
+                }},
+                {id: 'p44', name: 'GK Quiz', category: 'general', placements: {
+                    first: [{name: 'Team C', grade: 'B'}],
+                    second: [{name: 'Team B', grade: 'B'}],
+                    third: [{name: 'Team A', grade: 'No'}],
+                    gradewinners: []
+                }},
+                {id: 'p45', name: 'Geo Giant', category: 'general', placements: {
                     first: [],
                     second: [{name: 'Muhammed Shabeeb', grade: 'No'}],
                     third: [{name: 'Mohammed P.M', grade: 'No'}],
                     gradewinners: []
                 }}
-            ];
-
-            // Students data - Updated with correct points
-            const STUDENTS = [
-                {id: 's1', name: 'Muhammed Ameen V.s', team: 'NEONOVA', points: 6},
-                {id: 's2', name: 'Sayeed A.S', team: 'NEONOVA', points: 7},
-                {id: 's3', name: 'Shanaj', team: 'NEONOVA', points: 37},
-                {id: 's4', name: 'Muhammed Aslam', team: 'NEONOVA', points: 21},
-                {id: 's5', name: 'Muhammed Fazal', team: 'NEONOVA', points: 53},
-                {id: 's6', name: 'Muhammed Faheem K.k', team: 'NEONOVA', points: 39},
-                {id: 's7', name: 'Muhammed Faheem K.m', team: 'NEONOVA', points: 29},
-                {id: 's8', name: 'Muhammed Aman', team: 'NEONOVA', points:37},
-                {id: 's9', name: 'Muhammed Shabeeb', team: 'NEONOVA', points: 9},
-                {id: 's10', name: 'Muhammed Alim Zayyan', team: 'ASTRO-NOVA', points: 45},
-                {id: 's11', name: 'Muhammed Hanan', team: 'ASTRO-NOVA', points: 35},
-                {id: 's12', name: 'Muhammed Haseeb', team: 'ASTRO-NOVA', points: 33},
-                {id: 's13', name: 'Jawhar Sidheeque', team: 'ASTRO-NOVA', points: 23},
-                {id: 's14', name: 'Adnan K.p', team: 'ASTRO-NOVA', points: 12},
-                {id: 's15', name: 'Muhammed Arshad', team: 'ASTRO-NOVA', points: 44},
-                {id: 's16', name: 'Muhammed Adhnan M.S', team: 'ASTRO-NOVA', points: 76},
-                {id: 's17', name: 'Team B', team: 'ASTRO-NOVA', points: 46},
-                {id: 's18', name: 'Muhammed Razeen', team: 'ASTRO-NOVA', points:1},
-                {id: 's19', name: 'Muhammed Swabeeh', team: 'ASTRO-NOVA', points: 13},
-                {id: 's20', name: 'Abdul Basith', team: 'LUMINOVA', points: 57},
-                {id: 's21', name: 'Muhammed Nihal', team: 'LUMINOVA', points: 10},
-                {id: 's22', name: 'Muhammed Rabeeath', team: 'LUMINOVA', points: 9},
-                {id: 's23', name: 'Muhammed Athif', team: 'LUMINOVA', points: 68},
-                {id: 's24', name: 'Muhammed Labeeb', team: 'LUMINOVA', points: 9},
-                {id: 's25', name: 'Muhammed Sinan P.a', team: 'LUMINOVA', points: 47},
-                {id: 's26', name: 'Mohammed P.M', team: 'LUMINOVA', points: 27},
-                {id: 's27', name: 'Mohammed Midhlaj', team: 'LUMINOVA', points: 75},
-                {id: 's28', name: 'Muhammed Irfan', team: 'LUMINOVA', points: 17}
             ];
 
             const SCHEDULE = [
@@ -3381,52 +1728,6 @@
                 document.getElementById('about').classList.add('active');
             });
 
-            // Admin functionality
-            adminBtn.addEventListener('click', function() {
-                // Show password modal first
-                passwordModal.classList.add('active');
-                passwordInput.value = '';
-                passwordError.classList.remove('active');
-            });
-            
-            // Password submission
-            passwordSubmitBtn.addEventListener('click', function() {
-                const enteredPassword = passwordInput.value;
-                
-                if (enteredPassword === ADMIN_PASSWORD) {
-                    // Correct password - show admin panel
-                    passwordModal.classList.remove('active');
-                    adminModal.classList.add('active');
-                    populateAdminDropdowns();
-                } else {
-                    // Incorrect password - show error
-                    passwordError.classList.add('active');
-                    passwordInput.value = '';
-                    passwordInput.focus();
-                }
-            });
-            
-            // Password cancellation
-            passwordCancelBtn.addEventListener('click', function() {
-                passwordModal.classList.remove('active');
-            });
-            
-            // Close admin modal
-            closeAdmin.addEventListener('click', function() {
-                adminModal.classList.remove('active');
-            });
-            
-            adminCancelBtn.addEventListener('click', function() {
-                adminModal.classList.remove('active');
-            });
-            
-            // Close admin modal when clicking outside
-            adminModal.addEventListener('click', function(e) {
-                if (e.target === adminModal) {
-                    adminModal.classList.remove('active');
-                }
-            });
-            
             // Close points modal
             closePoints.addEventListener('click', function() {
                 pointsModal.classList.remove('active');
@@ -3566,7 +1867,7 @@
                 // Sort students by points in descending order
                 const sortedStudents = [...STUDENTS].sort((a, b) => b.points - a.points);
                 
-                sortedStudents.forEach(student => {
+                sortedStudents.forEach((student, index) => {
                     const card = document.createElement('div');
                     card.className = 'student-card';
                     card.dataset.team = student.team;
@@ -3575,8 +1876,9 @@
                     card.innerHTML = `
                         <div class="student-points" data-id="${student.id}">${student.points}</div>
                         <div class="student-info">
-                            <h4>${student.name}</h4>
+                            <h4>${student.name} <span class="team-badge team-${student.team.replace('-', '')}">${student.team}</span></h4>
                             <div class="team">${student.team}</div>
+                            <div class="student-rank">Rank: ${index + 1}</div>
                         </div>
                     `;
                     
@@ -3814,248 +2116,7 @@
                 // Show the modal
                 pointsModal.classList.add('active');
             }
-            
-            function populateAdminDropdowns() {
-                // Populate program dropdown
-                adminProgramSelect.innerHTML = '<option value="">Select a program</option>';
-                PROGRAMS.forEach(program => {
-                    const option = document.createElement('option');
-                    option.value = program.id;
-                    option.textContent = program.name;
-                    adminProgramSelect.appendChild(option);
-                });
-                
-                // Populate student dropdown
-                adminStudentSelect.innerHTML = '<option value="">Select a student</option>';
-                STUDENTS.forEach(student => {
-                    const option = document.createElement('option');
-                    option.value = student.id;
-                    option.textContent = student.name;
-                    adminStudentSelect.appendChild(option);
-                });
-                
-                // Set up program selection change
-                adminProgramSelect.addEventListener('change', function() {
-                    const programId = this.value;
-                    if (programId) {
-                        const program = PROGRAMS.find(p => p.id === programId);
-                        loadPlacementsForProgram(program);
-                    } else {
-                        placementContainer.innerHTML = '';
-                    }
-                });
-                
-                // Set up add placement button
-                addPlacementBtn.addEventListener('click', function() {
-                    addPlacementRow();
-                });
-            }
-            
-            function loadPlacementsForProgram(program) {
-                placementContainer.innerHTML = '';
-                
-                // Add first place rows
-                program.placements.first.forEach(placement => {
-                    addPlacementRow('first', placement.name, placement.grade);
-                });
-                
-                // Add second place rows
-                program.placements.second.forEach(placement => {
-                    addPlacementRow('second', placement.name, placement.grade);
-                });
-                
-                // Add third place rows
-                program.placements.third.forEach(placement => {
-                    addPlacementRow('third', placement.name, placement.grade);
-                });
-                
-                // Add grade winner rows
-                program.placements.gradewinners.forEach(placement => {
-                    addPlacementRow('gradewinners', placement.name, placement.grade);
-                });
-            }
-            
-            function addPlacementRow(position = 'first', name = '', grade = '') {
-                const row = document.createElement('div');
-                row.className = 'placement-row';
-                
-                const positionSelect = document.createElement('select');
-                positionSelect.className = 'placement-input';
-                positionSelect.innerHTML = `
-                    <option value="first" ${position === 'first' ? 'selected' : ''}>1st Place</option>
-                    <option value="second" ${position === 'second' ? 'selected' : ''}>2nd Place</option>
-                    <option value="third" ${position === 'third' ? 'selected' : ''}>3rd Place</option>
-                    <option value="gradewinners" ${position === 'gradewinners' ? 'selected' : ''}>Grade Winner</option>
-                `;
-                
-                const nameInput = document.createElement('input');
-                nameInput.type = 'text';
-                nameInput.className = 'placement-input';
-                nameInput.placeholder = 'Student name';
-                nameInput.value = name;
-                
-                const gradeInput = document.createElement('input');
-                gradeInput.type = 'text';
-                gradeInput.className = 'placement-grade';
-                gradeInput.placeholder = 'Grade';
-                gradeInput.value = grade;
-                
-                const removeBtn = document.createElement('button');
-                removeBtn.type = 'button';
-                removeBtn.className = 'remove-placement-btn';
-                removeBtn.innerHTML = '<i class="fas fa-trash"></i>';
-                removeBtn.addEventListener('click', function() {
-                    row.remove();
-                });
-                
-                row.appendChild(positionSelect);
-                row.appendChild(nameInput);
-                row.appendChild(gradeInput);
-                row.appendChild(removeBtn);
-                
-                placementContainer.appendChild(row);
-            }
-            
-            // Save admin changes
-            adminSaveBtn.addEventListener('click', function() {
-                // Get selected program
-                const programId = adminProgramSelect.value;
-                if (programId) {
-                    const program = PROGRAMS.find(p => p.id === programId);
-                    
-                    // Clear existing placements
-                    program.placements = {
-                        first: [],
-                        second: [],
-                        third: [],
-                        gradewinners: []
-                    };
-                    
-                    // Get all placement rows
-                    const placementRows = document.querySelectorAll('.placement-row');
-                    
-                    placementRows.forEach(row => {
-                        const position = row.querySelector('select').value;
-                        const name = row.querySelector('input[type="text"]').value;
-                        const grade = row.querySelector('.placement-grade').value;
-                        
-                        if (name.trim() !== '') {
-                            program.placements[position].push({
-                                name: name,
-                                grade: grade
-                            });
-                        }
-                    });
-                    
-                    // Recalculate student points
-                    recalculateStudentPoints();
-                    
-                    // Reload programs and students
-                    loadPrograms();
-                    loadStudents();
-                }
-                
-                // Get selected student and update points
-                const studentId = adminStudentSelect.value;
-                if (studentId && studentPointsInput.value) {
-                    const student = STUDENTS.find(s => s.id === studentId);
-                    student.points = parseInt(studentPointsInput.value);
-                    
-                    // Reload students
-                    loadStudents();
-                }
-                
-                // Close admin modal
-                adminModal.classList.remove('active');
-                
-                // Show success message (you could implement a toast notification here)
-                alert('Changes saved successfully!');
-            });
-            
-            function recalculateStudentPoints() {
-                // Reset all student points
-                STUDENTS.forEach(student => {
-                    student.points = 0;
-                });
-                
-                // Calculate points from programs
-                PROGRAMS.forEach(program => {
-                    const placements = program.placements;
-                    
-                    // First place
-                    placements.first.forEach(winner => {
-                        const student = STUDENTS.find(s => s.name === winner.name);
-                        if (student) {
-                            let points = POINTS_SYSTEM.first;
-                            if (winner.grade === 'A') points += POINTS_SYSTEM.gradeA;
-                            else if (winner.grade === 'B') points += POINTS_SYSTEM.gradeB;
-                            student.points += points;
-                        }
-                    });
-                    
-                    // Second place
-                    placements.second.forEach(winner => {
-                        const student = STUDENTS.find(s => s.name === winner.name);
-                        if (student) {
-                            let points = POINTS_SYSTEM.second;
-                            if (winner.grade === 'A') points += POINTS_SYSTEM.gradeA;
-                            else if (winner.grade === 'B') points += POINTS_SYSTEM.gradeB;
-                            student.points += points;
-                        }
-                    });
-                    
-                    // Third place
-                    placements.third.forEach(winner => {
-                        const student = STUDENTS.find(s => s.name === winner.name);
-                        if (student) {
-                            let points = POINTS_SYSTEM.third;
-                            if (winner.grade === 'A') points += POINTS_SYSTEM.gradeA;
-                            else if (winner.grade === 'B') points += POINTS_SYSTEM.gradeB;
-                            student.points += points;
-                        }
-                    });
-                    
-                    // Grade winners
-                    placements.gradewinners.forEach(winner => {
-                        const student = STUDENTS.find(s => s.name === winner.name);
-                        if (student) {
-                            student.points += POINTS_SYSTEM.gradewinners;
-                        }
-                    });
-                });
-            }
         });
     </script>
-
-
-<audio class="audio-output" style="display: none;"></audio><div id="volume-booster-visusalizer">
-                    <div class="sound">
-                        <div class="sound-icon"></div>
-                        <div class="sound-wave sound-wave_one"></div>
-                        <div class="sound-wave sound-wave_two"></div>
-                        <div class="sound-wave sound-wave_three"></div>
-                    </div>
-                    <div class="segments-box">
-                        <div data-range="1-20" class="segment"><span></span></div>
-                        <div data-range="21-40" class="segment"><span></span></div>
-                        <div data-range="41-60" class="segment"><span></span></div>
-                        <div data-range="61-80" class="segment"><span></span></div>
-                        <div data-range="81-100" class="segment"><span></span></div>
-                    </div>
-                </div>
-
-<audio class="audio-output" style="display: none;"></audio><div id="volume-booster-visusalizer">
-                    <div class="sound">
-                        <div class="sound-icon"></div>
-                        <div class="sound-wave sound-wave_one"></div>
-                        <div class="sound-wave sound-wave_two"></div>
-                        <div class="sound-wave sound-wave_three"></div>
-                    </div>
-                    <div class="segments-box">
-                        <div data-range="1-20" class="segment"><span></span></div>
-                        <div data-range="21-40" class="segment"><span></span></div>
-                        <div data-range="41-60" class="segment"><span></span></div>
-                        <div data-range="61-80" class="segment"><span></span></div>
-                        <div data-range="81-100" class="segment"><span></span></div>
-                    </div>
-                </div></body></html>
+</body>
+</html>
