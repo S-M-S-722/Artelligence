@@ -1018,7 +1018,35 @@
         }
     </style>
 </head>
-<body style="overflow: auto;">
+<body>
+
+<!-- Loading Screen -->
+<div id="loadingPage" style="position:fixed;top:0;left:0;width:100%;height:100%;background:linear-gradient(135deg,#0b0222,#001226);color:#fff;display:flex;flex-direction:column;justify-content:center;align-items:center;z-index:9999;font-family:'Montserrat',sans-serif;">
+  <div style="text-align:center;">
+    <div id="loadTitle" style="font-size:3rem;opacity:0;animation:loaderTitleIn 1s forwards;">Artelligence</div>
+    <div id="loadSub" style="font-size:1.4rem;margin-top:8px;opacity:0;animation:loaderSubIn 1s 0.8s forwards;">Art Festival 2K25</div>
+    <div id="dots" style="display:flex;gap:8px;justify-content:center;margin-top:18px;opacity:0;animation:dotsAppear 0.2s 1.6s forwards;">
+      <span class="ldot" style="width:10px;height:10px;background:#fff;border-radius:50%;display:inline-block;opacity:0;"></span>
+      <span class="ldot" style="width:10px;height:10px;background:#fff;border-radius:50%;display:inline-block;opacity:0;"></span>
+      <span class="ldot" style="width:10px;height:10px;background:#fff;border-radius:50%;display:inline-block;opacity:0;"></span>
+    </div>
+  </div>
+</div>
+
+<style>
+@keyframes loaderTitleIn { from{opacity:0; transform:translateY(10px);} to{opacity:1; transform:translateY(0);} }
+@keyframes loaderSubIn { from{opacity:0; transform:translateY(8px);} to{opacity:1; transform:translateY(0);} }
+
+@keyframes dotsPulse {
+  0% { opacity: 1; transform: translateY(0); }
+  50% { opacity: 0.2; transform: translateY(-4px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* dots appear at ~4s and animate for 1s, then loader fades out at 6s */
+@keyframes dotsAppear { from{opacity:0;} to{opacity:1;} }
+</style>
+ style="overflow: auto;">
     <!-- Top Navigation Bar -->
     <div class="top-nav">
         <div class="top-nav-left">
@@ -1027,7 +1055,14 @@
             </button>
             <div class="top-nav-logo">Artelligence</div>
         </div>
+        
+        <button class="admin-btn" id="signinNavBtn">
+            <i class="fas fa-user"></i> Sign In
+        </button>
         <button class="admin-btn" id="adminBtn">
+            <i class="fas fa-lock"></i> Admin
+        </button>
+
             <i class="fas fa-lock"></i> Admin
         </button>
     </div>
@@ -1101,7 +1136,7 @@
     <div class="artelligence-banner">
         <div class="banner-content">
             <div class="banner-logo">
-                <img src="https://ik.imagekit.io/shaz/Prompt%20Generate%20Inspire.jpg?updatedAt=1761135540346" alt="Artelligence Logo">
+                <img src="https://ik.imagekit.io/shaz/Prompt_Generate_Inspire-removebg-sdcopy.png?updatedAt=1761890600992" alt="Artelligence Logo">
             </div>
             <div class="banner-text">
                 <h1>Artelligence</h1>
@@ -2708,22 +2743,22 @@
         <section id="schedule" class="page">
             <h2>Schedule</h2>
             <div class="schedule-list" id="scheduleList"><div class="schedule-item">
-                        <div class="schedule-date">September 19, 2025</div>
+                        <div class="schedule-date">October 1, 2025</div>
                         <div class="schedule-event">Opening &amp; Inauguration</div>
                     </div><div class="schedule-item">
-                        <div class="schedule-date">September 21, 2025</div>
+                        <div class="schedule-date">October 2, 2025</div>
                         <div class="schedule-event">Creatia events - Pencil Drawing &amp; Painting</div>
                     </div><div class="schedule-item">
-                        <div class="schedule-date">September 24, 2025</div>
+                        <div class="schedule-date">October 3, 2025</div>
                         <div class="schedule-event">Log events - Essays &amp; Poems</div>
                     </div><div class="schedule-item">
-                        <div class="schedule-date">October 1, 2025</div>
+                        <div class="schedule-date">October 3, 2025</div>
                         <div class="schedule-event">General-IQ Programs</div>
                     </div><div class="schedule-item">
-                        <div class="schedule-date">October 6, 2025</div>
+                        <div class="schedule-date">October 4, 2025</div>
                         <div class="schedule-event">Vocalizia - Songs &amp; Group Performances</div>
                     </div><div class="schedule-item">
-                        <div class="schedule-date">November 1, 2025</div>
+                        <div class="schedule-date">October 3, 2025</div>
                         <div class="schedule-event">Closing &amp; Award Ceremony</div>
                     </div></div>
         </section>
@@ -3567,4 +3602,309 @@
                         <div data-range="61-80" class="segment"><span></span></div>
                         <div data-range="81-100" class="segment"><span></span></div>
                     </div>
-                </div></body></html>
+                </div>
+<audio class="audio-output" style="display: none;"></audio><div id="volume-booster-visusalizer">
+                    <div class="sound">
+                        <div class="sound-icon"></div>
+                        <div class="sound-wave sound-wave_one"></div>
+                        <div class="sound-wave sound-wave_two"></div>
+                        <div class="sound-wave sound-wave_three"></div>
+                    </div>
+                    <div class="segments-box">
+                        <div data-range="1-20" class="segment"><span></span></div>
+                        <div data-range="21-40" class="segment"><span></span></div>
+                        <div data-range="41-60" class="segment"><span></span></div>
+                        <div data-range="61-80" class="segment"><span></span></div>
+<!-- Sign-In Overlay -->
+<div id="signinPage" style="display:none;position:fixed;inset:0;background:rgba(3,3,8,0.98);z-index:8000;display:flex;align-items:center;justify-content:center;">
+  <div style="width:92%;max-width:420px;padding:28px;border-radius:12px;background:rgba(255,255,255,0.04);color:#fff;font-family:'Montserrat',sans-serif;">
+    <div style="text-align:center;">
+      <h1 style="margin:0;font-size:2rem;background:linear-gradient(90deg,#ff6b6b,#4ecdc4,#45b7d1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;">Artelligence</h1>
+      <p style="margin:6px 0 14px;color:#ccc;">Sign in to continue</p>
+    </div>
+    <div style="display:flex;flex-direction:column;gap:8px;">
+      <label style="color:#ddd;font-size:0.9rem;">Email</label>
+      <input id="si-email" type="email" placeholder="Enter your email" style="padding:10px;border-radius:8px;border:none;background:rgba(255,255,255,0.06);color:#fff;">
+      <label style="color:#ddd;font-size:0.9rem;margin-top:6px;">Password</label>
+      <input id="si-password" type="password" placeholder="Enter your password" style="padding:10px;border-radius:8px;border:none;background:rgba(255,255,255,0.06);color:#fff;">
+      <button id="emailSigninBtn" style="margin-top:8px;padding:11px;border-radius:8px;border:none;background:#FFD700;color:#000;font-weight:700;cursor:pointer;">Sign In</button>
+    </div>
+    <div style="text-align:center;margin-top:12px;color:#bbb;">or</div>
+    <div style="display:flex;flex-direction:column;gap:8px;margin-top:10px;">
+      <button id="googleSigninBtn" style="padding:10px;border-radius:8px;border:none;background:#4285F4;color:#fff;cursor:pointer;">Continue with Google</button>
+      <button id="appleSigninBtn" style="padding:10px;border-radius:8px;border:none;background:#111;color:#fff;cursor:pointer;">Continue with Apple</button>
+    </div>
+    <p style="color:#aaa;text-align:center;margin-top:12px;font-size:0.9rem;">Don't have an account? <a href='#' style='color:#4ecdc4;'>Sign up</a></p>
+    <div style="text-align:center;margin-top:8px;"><button id="closeSignin" style="background:none;border:none;color:#9aa;cursor:pointer;">Close</button></div>
+  </div>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const loading = document.getElementById('loadingPage');
+  const dots = document.querySelectorAll('.ldot');
+  const signinPage = document.getElementById('signinPage');
+  const signinNavBtn = document.getElementById('signinNavBtn');
+  const closeSignin = document.getElementById('closeSignin');
+  const emailBtn = document.getElementById('emailSigninBtn');
+  const googleBtn = document.getElementById('googleSigninBtn');
+  const appleBtn = document.getElementById('appleSigninBtn');
+  const menuToggle = document.getElementById('menuToggle');
+  const sideNav = document.getElementById('sideNav');
+  const navOverlay = document.getElementById('navOverlay');
+  const navItems = document.querySelectorAll('.nav-item');
+  let signedIn = false;
+
+  // Show dots animation only for ~1s near the end of the loader period
+  function animateDotsOnce() {
+    dots.forEach((d, i) => {
+      d.style.opacity = '1';
+      d.style.animation = 'dotsPulse 1s ' + (i*0.12) + 's ease-in-out forwards';
+    });
+    // after 1s hide dots (they'll still pulse once)
+    setTimeout(() => {
+      dots.forEach(d => d.style.opacity = '0');
+    }, 1000);
+  }
+
+  // Schedule loader: total 6s, animate dots at 4.5s so they pulse for ~1s, then fade out at 6s with 1s fade
+  setTimeout(() => animateDotsOnce(), 4500);
+  setTimeout(() => {
+    loading.style.transition = 'opacity 1s ease';
+    loading.style.opacity = '0';
+    setTimeout(() => loading.style.display = 'none', 1000);
+  }, 6000);
+
+  // Signin button opens overlay
+  if (signinNavBtn) signinNavBtn.addEventListener('click', () => signinPage.style.display = 'flex');
+  if (closeSignin) closeSignin.addEventListener('click', () => signinPage.style.display = 'none');
+
+  // Mock sign-in logic (placeholder for Firebase)
+  function completeSignIn() {
+    signedIn = true;
+    signinPage.style.display = 'none';
+    alert('✅ Signed in — navigation unlocked.');
+  }
+  if (emailBtn) emailBtn.addEventListener('click', () => {
+    const email = document.getElementById('si-email').value;
+    const pass = document.getElementById('si-password').value;
+    if (email && pass) completeSignIn();
+    else alert('Please fill in email and password.');
+  });
+  if (googleBtn) googleBtn.addEventListener('click', completeSignIn);
+  if (appleBtn) appleBtn.addEventListener('click', completeSignIn);
+
+  // Lock hamburger until signed in
+  if (menuToggle) menuToggle.addEventListener('click', (e) => {
+    if (!signedIn) {
+      alert('Please sign in to access other pages.');
+      return;
+    }
+    sideNav.classList.add('active');
+    navOverlay.classList.add('active');
+  });
+
+  // Close side nav
+  const closeNav = document.getElementById('closeNav');
+  if (closeNav) closeNav.addEventListener('click', () => {
+    sideNav.classList.remove('active');
+    navOverlay.classList.remove('active');
+  });
+  if (navOverlay) navOverlay.addEventListener('click', () => {
+    sideNav.classList.remove('active');
+    navOverlay.classList.remove('active');
+  });
+
+  // Prevent navigation to other pages until signed in
+  navItems.forEach(item => {
+    item.addEventListener('click', (ev) => {
+      const target = item.dataset.page;
+      if (!signedIn && target !== 'home') {
+        ev.preventDefault();
+        alert('Please sign in to access other pages.');
+        // open sign-in overlay automatically
+        signinPage.style.display = 'flex';
+        return;
+      }
+      // normal navigation
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+      const el = document.getElementById(target);
+      if (el) el.classList.add('active');
+      document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+      item.classList.add('active');
+      sideNav.classList.remove('active');
+      navOverlay.classList.remove('active');
+    });
+  });
+});
+</script>
+
+<!-- Firebase SDKs -->
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.0/firebase-analytics.js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Initialize Firebase
+  const firebaseConfig = {
+    apiKey: "AIzaSyB5Rd3MQcqiQpUdVe5YXUjvEXJtV3wZCxM",
+    authDomain: "artelligence-d81be.firebaseapp.com",
+    projectId: "artelligence-d81be",
+    storageBucket: "artelligence-d81be.firebasestorage.app",
+    messagingSenderId: "305187396487",
+    appId: "1:305187396487:web:6147c1df9269a74e715122",
+    measurementId: "G-TWWLP9W5W8"
+  };
+  firebase.initializeApp(firebaseConfig);
+  const auth = firebase.auth();
+
+  // Utility: replace element with clone to remove old listeners
+  function replaceWithClone(el) {
+    if (!el) return null;
+    const clone = el.cloneNode(true);
+    el.parentNode.replaceChild(clone, el);
+    return clone;
+  }
+
+  // Elements
+  const signinPage = document.getElementById('signinPage');
+  const signinNavBtn = document.getElementById('signinNavBtn');
+  const closeSignin = document.getElementById('closeSignin');
+  const emailBtn = document.getElementById('emailSigninBtn');
+  const googleBtn = document.getElementById('googleSigninBtn');
+  const appleBtn = document.getElementById('appleSigninBtn');
+  const emailInput = document.getElementById('si-email') || document.getElementById('email');
+  const passInput = document.getElementById('si-password') || document.getElementById('password');
+  let currentUser = null;
+
+  // Clean previous menuToggle listener by cloning and re-adding our listener
+  const oldMenu = document.getElementById('menuToggle');
+  const menuToggle = replaceWithClone(oldMenu) || oldMenu;
+  const sideNav = document.getElementById('sideNav');
+  const navOverlay = document.getElementById('navOverlay');
+
+  // Replace nav items to remove old listeners
+  const navItems = Array.from(document.querySelectorAll('.nav-item'));
+  const clonedNavItems = navItems.map(item => {
+    const clone = item.cloneNode(true);
+    item.parentNode.replaceChild(clone, item);
+    return clone;
+  });
+
+  function openSideNav() {
+    sideNav.classList.add('active');
+    navOverlay.classList.add('active');
+  }
+  function closeSideNav() {
+    sideNav.classList.remove('active');
+    navOverlay.classList.remove('active');
+  }
+
+  // New menuToggle behavior: check auth state
+  menuToggle.addEventListener('click', (e) => {
+    if (!auth.currentUser) {
+      alert('Please sign in to access other pages.');
+      // open sign-in overlay
+      if (signinPage) signinPage.style.display = 'flex';
+      return;
+    }
+    openSideNav();
+  });
+
+  // Close nav handlers
+  const closeNav = document.getElementById('closeNav');
+  if (closeNav) {
+    const closeNavClone = replaceWithClone(closeNav);
+    closeNavClone.addEventListener('click', closeSideNav);
+  }
+  if (navOverlay) {
+    navOverlay.addEventListener('click', closeSideNav);
+  }
+
+  // Wire nav items: block navigation until auth present
+  clonedNavItems.forEach(item => {
+    item.addEventListener('click', (ev) => {
+      const target = item.dataset.page;
+      if (!auth.currentUser && target !== 'home') {
+        ev.preventDefault();
+        alert('Please sign in to access other pages.');
+        if (signinPage) signinPage.style.display = 'flex';
+        return;
+      }
+      // navigate
+      document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+      const el = document.getElementById(target);
+      if (el) el.classList.add('active');
+      document.querySelectorAll('.nav-item').forEach(n => n.classList.remove('active'));
+      item.classList.add('active');
+      closeSideNav();
+    });
+  });
+
+  // Sign-in modal open/close
+  if (signinNavBtn) {
+    const signinNavBtnClone = replaceWithClone(signinNavBtn);
+    signinNavBtnClone.addEventListener('click', () => { if (signinPage) signinPage.style.display = 'flex'; });
+  }
+  if (closeSignin) {
+    const closeSigninClone = replaceWithClone(closeSignin);
+    closeSigninClone.addEventListener('click', () => { if (signinPage) signinPage.style.display = 'none'; });
+  }
+
+  // Firebase sign-in handlers
+  if (emailBtn) {
+    const emailBtnClone = replaceWithClone(emailBtn);
+    emailBtnClone.addEventListener('click', async () => {
+      const email = (emailInput && emailInput.value) || '';
+      const pass = (passInput && passInput.value) || '';
+      if (!email || !pass) {
+        alert('Please fill in email and password.');
+        return;
+      }
+      try {
+        const userCred = await auth.signInWithEmailAndPassword(email, pass);
+        currentUser = userCred.user;
+        if (signinPage) signinPage.style.display = 'none';
+        alert('✅ Signed in successfully as ' + (currentUser.email || 'user') + '!');
+      } catch (err) {
+        alert('❌ ' + err.message);
+      }
+    });
+  }
+
+  if (googleBtn) {
+    const googleBtnClone = replaceWithClone(googleBtn);
+    googleBtnClone.addEventListener('click', async () => {
+      const provider = new firebase.auth.GoogleAuthProvider();
+      try {
+        const result = await auth.signInWithPopup(provider);
+        currentUser = result.user;
+        if (signinPage) signinPage.style.display = 'none';
+        alert('✅ Signed in with Google as ' + (currentUser.email || 'user') + '!');
+      } catch (err) {
+        alert('❌ ' + err.message);
+      }
+    });
+  }
+
+  if (appleBtn) {
+    const appleBtnClone = replaceWithClone(appleBtn);
+    appleBtnClone.addEventListener('click', () => {
+      alert('⚠️ Apple sign-in is not configured. Use Google or Email/Password.');
+    });
+  }
+
+  // Monitor auth state to unlock navigation automatically
+  auth.onAuthStateChanged(user => {
+    if (user) {
+      currentUser = user;
+      // You can update UI here to reflect signed-in state
+      document.body.setAttribute('data-signed-in', 'true');
+    } else {
+      currentUser = null;
+      document.body.removeAttribute('data-signed-in');
+    }
+  });
+});
+</script>
