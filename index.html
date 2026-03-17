@@ -1860,14 +1860,6 @@
             // Banner button navigation
             exploreProgramsBtn.addEventListener('click', function(e) {
                 e.preventDefault();
-                
-                const scrollBtn = document.getElementById('scrollDown');
-scrollBtn.addEventListener('click', () => {
-    window.scrollTo({
-        top: window.innerHeight * 0.8, // Scrolls roughly to the start of the content
-        behavior: 'smooth'
-    });
-});
                 // Remove active class from all items
                 navItems.forEach(i => i.classList.remove('active'));
                 // Add active class to programs item
